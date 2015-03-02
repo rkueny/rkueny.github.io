@@ -1,0 +1,153 @@
+---
+title: 'Symfony Live 2011 Paris &#8211; Mon retour'
+author: R.Kueny
+layout: post
+permalink: /developpement-web/symfony-live-2011-paris-mon-retour
+categories:
+  - Actualités
+  - Développement Web
+  - Le blog
+---
+<p style="text-align: center;">
+  <a href="http://rkueny.fr/wp-content/uploads/2011/03/sflive2011.jpg" rel="lightbox[1165]"><img class="size-full wp-image-1166" title="Symfony Live 2011 Paris" src="http://rkueny.fr/wp-content/uploads/2011/03/sflive2011.jpg" alt="Symfony Live 2011 Paris" width="530" height="209" /></a>
+</p>
+
+<p style="text-align: center;">
+  <strong>Symfony Live 2011 à Paris</strong>
+</p>
+
+<p style="text-align: left;">
+  Comme je vous le disais précédemment je me suis rendu au Symfony Live à Paris. Au programme, deux jours de conférences, de rencontres et de découvertes du Symfony 2.
+</p>
+
+<p style="text-align: left;">
+  Je n&rsquo;ai pas pu assister comme je voulais à toutes ces conférences étant donné que je n&rsquo;étais pas très bien le deuxième jour et pour diverses raisons hors-professionnelles. Cependant, je dois dire que de voir autant de geek rassemblés pour le même sujet est quelque chose à voir <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
+</p>
+
+<p style="text-align: left;">
+  Lors de &laquo;&nbsp;<a title="Le Web" href="http://rkueny.fr/developpement-web/leweb10" target="_blank">LeWeb</a>&nbsp;&raquo; j&rsquo;étais plutôt entouré de marketeur ou de commerciaux. La je dois avouer que cela m&rsquo;a fait plaisir <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
+</p>
+
+<p style="text-align: left;">
+  Du coup, plutôt que de revenir sur le contenu des conférences, que vous trouverez surement sur d&rsquo;autres blogs et surement mieux relayé, j&rsquo;ai préféré vous décrire le petit moment que j&rsquo;ai passé avec Fabien Potencier.
+</p>
+
+<p style="text-align: left;">
+  Je remercie Emilie Viel pour m&rsquo;avoir accordé ce petit moment, c&rsquo;était bien sympa de discuter avec lui.
+</p>
+
+<p style="text-align: left;">
+  [ D&rsquo;ailleurs voici la liste des <a title="Slides des conférences de Symfony Live 2011 à Paris" href="https://docs.google.com/document/pub?id=1rXrCNX25JArMq5TEHJOFiJjnmsKjRX4JpUoFxTXqob0&pli=1" target="_blank">slides des conférences</a> ]
+</p>
+
+<p style="text-align: left;">
+  <!--more-->
+  
+  <strong> </strong>
+</p>
+
+<p style="text-align: left;">
+  <strong>Entretien avec Fabien Potencier</strong>
+</p>
+
+<div id="attachment_1171" style="width: 160px" class="wp-caption alignleft">
+  <a style="margin: 0 10px 10px 0;" href="http://rkueny.fr/wp-content/uploads/2011/03/fabien-potencier.jpg" rel="lightbox[1165]"><img class="size-thumbnail wp-image-1171" title="Fabien potencier - Symfony" src="http://rkueny.fr/wp-content/uploads/2011/03/fabien-potencier-150x150.jpg" alt="Fabien potencier - Symfony" width="150" height="150" /></a>
+  
+  <p class="wp-caption-text">
+    Fabien Potencier
+  </p>
+</div>
+
+<p style="text-align: left;">
+  La discussion était très naturelle. En fait, je n&rsquo;ai pas énormément joué avec Symfony premier du nom. Du coup, c&rsquo;est vraiment avec curiosité que j&rsquo;abordai cette discussion. Du coup, voici ce qui en est ressorti.
+</p>
+
+<p style="text-align: left;">
+  Un dernier point, on me présentait souvent le personnage comme quelqu&rsquo;un de prétentieux et de peu recommandable. Pour ma part, j&rsquo;ai trouvé quelqu&rsquo;un de passionnant, passionné et de calé sur son travail. C&rsquo;était vraiment une agréable surprise.
+</p>
+
+<p style="text-align: left;">
+  <strong>La rivalité Symfony / Zend Framework</strong>
+</p>
+
+<p style="text-align: left;">
+  On compare souvent ces deux framework. Il faut dire que dans le milieu professionnel se sont les deux à s&rsquo;être réellement imposés. Du coup, je me demandais comment Symfony 2 se positionnait par rapport au Zend Framework et au monde l&rsquo;entreprise.
+</p>
+
+<p style="text-align: left;">
+  On le sait, et c&rsquo;est encore le cas du 2, Symfony cible essentiellement le monde de l&rsquo;entreprise. Fabien Potencier était très clair par rapport au Zend Framework. Zend ne pourra pas évoluer sans copier Symfony 2. En tout cas, il ne voit pas comment il pourrait.
+</p>
+
+<p style="text-align: left;">
+  Il trouve aussi que Zend n&rsquo;est pas très actif en ce moment contrairement à sf2, qui d&rsquo;ailleurs à vu sa sortie repoussée étant donné le grand nombre de contributions. En effet, 150 contributeurs en un mois et plus de 300 pull-requests accompagnent le projet. Cela montre bien l&rsquo;engouement de la communauté pour ce projet, qui j&rsquo;espère ne nous décevra pas !!!
+</p>
+
+<p style="text-align: left;">
+  <strong>L&rsquo;utilisation du terminal dans Symfony 2</strong>
+</p>
+
+En parlant, je demandais aussi si l&rsquo;utilisation du terminal allait être de nouveau mis en avant dans symfony 2. Sa réponse fût simple. &laquo;&nbsp;*Un développeur qui ne sait-pas utiliser le terminal est-il un bon développeur ? Non. Alors pourquoi je ne laisserai pas l&rsquo;utilisation du terminal ? De plus, si on veux écrire du code à la main on peut, le terminal simplifie juste la vie <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />*&laquo;&nbsp;.
+
+<p style="text-align: left;">
+  <strong>La migration Symfony 1.4 &#8211;> Symfony 2</strong>
+</p>
+
+<p style="text-align: left;">
+  On m&rsquo;avait posé la question je l&rsquo;ai donc posée aussi <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> Réponse courte là aussi :
+</p>
+
+<p style="text-align: left;">
+  &laquo;&nbsp;Si ton projet fonctionne sous sf 1.4 pourquoi le passer à sf 2 ?&nbsp;&raquo; En gros, c&rsquo;est possible mais pas besoin de le faire. Le support de sf 1 est assuré jusqu&rsquo;en 2012, ensuite vous pouvez toujours faire appel à Sensio Labs. D&rsquo;ailleurs Marc Hugon a dit pareil dans sa conférence sur la migration.
+</p>
+
+<p style="text-align: left;">
+  <a href="http://rkueny.fr/wp-content/uploads/2011/03/symfony2.jpeg" rel="lightbox[1165]"><img class="aligncenter size-medium wp-image-1180" title="Symfony 2" src="http://rkueny.fr/wp-content/uploads/2011/03/symfony2-300x120.jpg" alt="Symfony 2" width="300" height="120" /></a>
+</p>
+
+<p style="text-align: left;">
+  <strong>La modularité de Symfony 2</strong>
+</p>
+
+<p style="text-align: left;">
+  Un des &laquo;&nbsp;on-dit&nbsp;&raquo; du premier Symfony était son manque de modularité (par rapport à Zend par exemple). Cela l&rsquo;a un peu énervé ^^ En me disant que par exemple le système de form de sf était bien plus modulaire que celui de Zend. Bref, symfony 2 est extrêmement modulaire. Ce qui fera plaisir à tout le monde <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
+</p>
+
+<p style="text-align: left;">
+  D&rsquo;ailleurs il n&rsquo;y a plus d&rsquo;architecture imposée juste une conseillée par Fabien. Cela permettant de respecter des normes en entreprise par exemple. Qu&rsquo;on sache où est quoi.
+</p>
+
+<p style="text-align: left;">
+  <strong>Une application légère avec Symfony 2 ?</strong>
+</p>
+
+<p style="text-align: left;">
+  L&rsquo;un des reproches de la première mouture de Symfony était aussi son poids. Du coup, c&rsquo;était peu recommandé pour des applications de petite à moyenne taille.
+</p>
+
+<p style="text-align: left;">
+  Le cœur de Symfony 2 fait 100 lignes. Du coup, cela peut être bon pour des petites applications. Je demande néanmoins à voir cela en pratique. On sait bien souvent qu&rsquo;un framework prend beaucoup de place !
+</p>
+
+<p style="text-align: left;">
+  <strong>Symfony utilise beaucoup &#8230;</strong>
+</p>
+
+<p style="text-align: left;">
+  le protocole http. Et ça c&rsquo;est &#8230; cool <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /> C&rsquo;est utilisé pour le cache par exemple. C&rsquo;est ce qui fait de Symfony 2 un framework ultra rapide.
+</p>
+
+<p style="text-align: left;">
+  D&rsquo;ailleurs Fabien me disait que ce protocole était sous utilisé dans les applications web, de par sa méconnaissance des développeurs php actuelles !
+</p>
+
+<p style="text-align: left;">
+  &nbsp;
+</p>
+
+<p style="text-align: left;">
+  Voilà c&rsquo;est tout. J&rsquo;ai été passionné par cet entretien et vivement que je trouve du temps pour mettre les mains dans le cambouis de symfony 2 <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
+</p>
+
+<p style="text-align: left;">
+  &nbsp;
+</p>
