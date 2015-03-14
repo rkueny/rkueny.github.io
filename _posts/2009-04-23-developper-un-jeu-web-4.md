@@ -28,11 +28,11 @@ Vous faites un jeu où un dangereuse virus se propage. Tout les gens doivent pre
 
 &#8211; Vous pouvez aussi mettre une page d&rsquo;accueil normale. C&rsquo;est ce que choisissent la plupart des sites. Cela permet de tenir au courant les visiteurs de l&rsquo;évolution du site, de votre vie si vous le désirez aussi.
 
-Les deux méthodes se valent même si je penche plutôt vers l&rsquo;immersion totale du joueur. Pour tenir les joueurs au courant un blog de développement fait l&rsquo;affaire je pense. A vous de choisir ! Et oui, c&rsquo;est bien d&rsquo;être le créateur vous pouvez choisir ce que vous voulez <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
+Les deux méthodes se valent même si je penche plutôt vers l&rsquo;immersion totale du joueur. Pour tenir les joueurs au courant un blog de développement fait l&rsquo;affaire je pense. A vous de choisir ! Et oui, c&rsquo;est bien d&rsquo;être le créateur vous pouvez choisir ce que vous voulez !
 
 Une fois le premier aperçu passé ne perdez pas le visiteur ! Le design, l&rsquo;ergonomie et la navigation sont très liés. Ne polluez pas le joueur par des liens de partout, des boutons sans logique etc&#8230; L&rsquo;interface de votre jeu doit être pensée jusque dans les détails. N&rsquo;oubliez pas que même si vous avez la meilleure façon de résoudre les combats par exemple, il faut que votre interface soit intuitive et confortable.
 
-De nos jours, beaucoup de joueurs jugent un jeu sur son interface, son design. Pouvons-nous les blamer ? Que voient-ils ? Tous ne sont pas des développeur web en puissance ! J&rsquo;avoue que moi-même je ne joue pas à certains jeux super bien pensé, car non-ergonomique,non-intuitif et franchement moche <img src="http://rkueny.fr/wp-includes/images/smilies/icon_biggrin.gif" alt=":D" class="wp-smiley" /> Prenez donc le temps de penser à cela c&rsquo;est très important.
+De nos jours, beaucoup de joueurs jugent un jeu sur son interface, son design. Pouvons-nous les blamer ? Que voient-ils ? Tous ne sont pas des développeur web en puissance ! J&rsquo;avoue que moi-même je ne joue pas à certains jeux super bien pensé, car non-ergonomique,non-intuitif et franchement moche ! Prenez donc le temps de penser à cela c&rsquo;est très important.
 
 Continuons le cheminement de l&rsquo;utilisateur. Avant de s&rsquo;inscrire le joueur aime savoir si cela vaut le coup. Il y a plusieurs façons de faire pour lui montrer un aperçu.
 
@@ -42,7 +42,7 @@ Continuons le cheminement de l&rsquo;utilisateur. Avant de s&rsquo;inscrire le j
 
 &#8211; ma préférée, la visite guidée. Un sorte de mini-tutoriel du jeu. Le site chicken-fight le propose (pas très bien mis en page je trouve). Il y a aussi des screenshots mais accompagnés d&rsquo;explication, d&rsquo;aide. C&rsquo;est un peu plus long à mettre en place mais c&rsquo;est assez représentatif du jeu je trouve.
 
-Allez plus que deux points à aborder et nous arriverons à la fin de cet article ^^ courage <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /> Nous allons parlé de l&rsquo;inscription et des premières minutes dans le jeu.
+Allez plus que deux points à aborder et nous arriverons à la fin de cet article ^^ courage ! Nous allons parlé de l&rsquo;inscription et des premières minutes dans le jeu.
 
 Au niveau de l&rsquo;inscription à votre jeu deux écoles s&rsquo;affrontent. Certains disent que plus l&rsquo;inscription est développée plus cela montre une profondeur de jeu, et il y a ceux qui fuient dès qu&rsquo;il y a plus de trois champs. De mon côté je conseille un petit mix des deux. Je conseil une inscription en plusieurs temps.
 
@@ -52,19 +52,11 @@ Ensuite, l&rsquo;inscription finie (courte, longue ou mix) le joueur se retrouve
 
 J&rsquo;ai abandonné le jeu adelhian.net, par exemple, car je ne savais pas trop ce qu&rsquo;il fallait faire. Pourtant, très beau graphisme, très belle ergonomie mais voilà&#8230; j&rsquo;aime pas être perdu <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
 
-Je ne peux que vous conseiller d&rsquo;essayer le jeu [Raid Of Chaos][1]. Je pense que c&rsquo;est un très bon exemple pour ce tutoriel. Inspirez vous en <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" />
-
+Je ne peux que vous conseiller d&rsquo;essayer le jeu [Raid Of Chaos][1]. Je pense que c&rsquo;est un très bon exemple pour ce tutoriel. Inspirez vous en !
 J&rsquo;espère que vous avez saisi les différentes pistes que je vous ai fournies. C&rsquo;est une étape très importante et qui demande du travail. Quand je vous disais que ce n&rsquo;est pas facile de créer un jeu !!!
 
 Je tiens aussi à dire que cette série d&rsquo;article se concentre sur la conception théorique d&rsquo;un jeu. Après cette série de billets il y aura d&rsquo;autres articles (indépendants) sur la programmation d&rsquo;un jeu web. Je dis cela au vu des différentes remarques que l&rsquo;on m&rsquo;a faites.
 
-See you later <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" />
-
-[>>> Article suivant][2]
-
-<p style="text-align:center">
-  <br />
-</p>
+See you later !
 
  [1]: http://www.raidofchaos.com
- [2]: http://rkueny.fr/developpement-web/developper-un-jeu-web-5

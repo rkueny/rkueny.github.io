@@ -98,4 +98,4 @@ categories:
 
  [1]: http://www.jeuweb.net/
  [2]: http://creajeu.net
- [3]: http://rkueny.fr/developpement-web/developper-un-jeu-web-2
+ [3]: {{ site.baseurl }}/developpement-web/developper-un-jeu-web-2/

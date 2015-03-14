@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div id="results">
+  <h1><!-- `key` listing for `value` --></h1>
+
+  <ul class="results">
+    <!-- results lists -->
+  </ul>
+</div>
+
+<script>
+
+ 
+$(function() {
+
+	var getParam = function(param) {
+		var queryString = window.location.search.substring(1),
+		queries = queryString.split('&');
+		for (var i in queries) {
+			var pair = queries[i].split('=');
+			if (pair[0] === param) {
+				return decodeURI(pair[1]);
+			}
+		}
+		return null;
+	};
+
+	var parameters = ['category', 'tags'];
+	var map = {}
+	for (var idx in parameters) {
+		map[parameters[idx]] = getParam(parameters[idx]);
+	}
+
+	$.each(map, function(type, value) {
+		if (value !== null) {
+			$.getJSON('/search.json', function(data) {
+
+				$.each(data, function(type, value) {
+					if (value !== null) {
+						var post = value;
+
+						var title = post.title;
+						var link = post.href;
+
+						$( ".results" ).append("<li><a href='"+link+"'>"+title+"</a>");
+					}
+				});
+
+			});
+		}
+	});
+});
+
+
+</script>

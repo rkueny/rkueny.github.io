@@ -7,19 +7,13 @@ categories:
   - Actualités
   - Développement Web
 ---
+
 Je me permets de relayer un événement qui me parait intéressant. En effet, on a souvent l&rsquo;impression d&rsquo;être seul sur un projet ou devant ses problèmes. L&rsquo;excellent blog [La ferme du web][1] organise une rencontre des gens du web.
 
 <p style="text-align: left;">
-  <div style="width: 460px" class="wp-caption aligncenter">
-    <img title="Event La ferme du web" src="http://event.lafermeduweb.net/images/promo/promo450px.jpg" alt="Event La ferme du web" width="450" height="250" />
-    
-    <p class="wp-caption-text">
-      Event "La ferme du web"
-    </p>
-  </div>
   
   <p style="text-align: left;">
-    Pour plus d&rsquo;informations : <a href="http://event.lafermeduweb.net">cliquez ici</a>
+    [Pour plus d&rsquo;informations : cliquez ici][1]
   </p>
   
   <p style="text-align: left;">

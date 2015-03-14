@@ -7,6 +7,7 @@ categories:
   - Développement Web
   - Jeu Web
 ---
+
 Troisième jour, troisième article. Nous allons enfin rentrer dans le plus concret. La phase que je vais aborder est essentiel pour toute création d&rsquo;un jeu web (et même d&rsquo;un site web en général).
 
 **Créateur de jeu web, mais avant tout concepteur**
@@ -78,14 +79,8 @@ Nous allons achever là ce billet pour aujourd&rsquo;hui. Retenez-en l&rsquo;imp
 
 Demain, nous allons aborder une partie de la conception qui se tourne vers les joueurs. La partie traite de plusieurs petits sujets, vous verrez cela demain.
 
-See you later <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" />
+See you later !
 
-[>>>> Article suivant][3]
-
-<p style="text-align:center">
-  <br />
-</p>
 
  [1]: http://www.jeuweb.net/board/mmorpg-php-mon-cahier-des-charges-t-4695.html
  [2]: http://www.jeuweb.net/board/cahier-des-charges-t-3480.html
- [3]: http://rkueny.fr/jeu-web/developper-un-jeu-web-4

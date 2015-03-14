@@ -62,4 +62,4 @@ See you later <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gi
   <br />
 </p>
 
- [1]: http://rkueny.fr/developpement-web/developper-un-jeu-web-3
+ [1]: {{ site.baseurl }}/developpement-web/developper-un-jeu-web-3

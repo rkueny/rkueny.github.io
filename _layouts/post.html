@@ -2,8 +2,10 @@
 layout: default
 ---
 
+<div id="indicator"><div id="scrollPercentLabel"></div></div>
+
 <!-- Post Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+<header class="intro-header parallax-window" data-parallax="scroll" data-image-src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -29,6 +31,22 @@ layout: default
 
                 <hr>
 
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'rkueny';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</hr />
+
                 <ul class="pager">
                     {% if page.previous.url %}
                     <li class="previous">
@@ -47,4 +65,7 @@ layout: default
     </div>
 </article>
 
-<hr>
+<hr />
+
+<script src="{{ "/js/percentage.js" | prepend: site.baseurl }}"></script>
+
