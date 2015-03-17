@@ -31,3 +31,6 @@ Je suis passé sur Disqus. Tout les anciens commentaires ont été importés dep
 ## La suite du programme
 
 Rien ne change :) Je vais continuer à blogger comme je le fais. Je vais bientôt mettre à jour certains articles qui en ont besoin et continuer à en publier d'autres.
+
+Le site est hébergé sur Github : https://github.com/rkueny/rkueny.github.io
+
