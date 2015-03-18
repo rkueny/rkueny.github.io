@@ -1,10 +1,10 @@
 # Site settings
-title: R.Kueny
+title: R.Kueny | Developer web
 header-img: img/home-bg.png
-email: raphael@rkueny.fr
-description: "Description meta"
+email: raphael@kueny.fr
+description: "R.Kueny développeur web à Toulouse. J'utilise PHP, Symfony2, les API (réseaux sociaux notamment). Je fais aussi du développement mobile à l'aide de Titanium Appcelerator"
 baseurl: ""
-url: "http://rkueny.github.io/"
+url: "http://rkueny.fr"
 twitter_username: rkueny
 github_username:  rkueny
 facebook_username:  rkueny.freelance
