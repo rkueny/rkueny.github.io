@@ -415,3 +415,9 @@ body {
   background: #3498db;
   width: 80%;
 }
+
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
