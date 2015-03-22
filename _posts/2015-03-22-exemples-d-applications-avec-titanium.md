@@ -26,7 +26,7 @@ Lorsque l'équipe officielle de Titanium sort 2 applis en open source ça vaut l
 
 ## Movies
 
-![Movies](http://127.0.0.1:4000/img/movies-app-screenshot.png){: .center-image }
+![Movies](/img/movies-app-screenshot.png){: .center-image }
 
 "Movies is an internal app we built to demonstrate how with Appcelerator you can use JavaScript to deliver beautiful, high-performance native apps entirely indistinguishable from those built in Java or Objective-C (or Swift). "
 
