@@ -19,11 +19,11 @@ intro: Quand on a fini le développement, les souffrances ne sont pas finies ! I
 header-img: img/etoiledemer.jpg
 ---
 
-Lorsque l'on a fini de développeur son application, on a qu'une seule hâte, la publier sur les différents stores. La tâche peut cependant se révéler assez longue. Voici 2 outils pour vous faciliter la vie.
+Lorsque l'on a fini de développer son application, on a qu'une seule hâte, la publier sur les différents stores. La tâche peut cependant se révéler assez longue. Voici 2 outils pour vous faciliter la vie.
 
 ## LaunchKit - Screenshot Builder
 
-Si vous publiez votre application sur l'Apple Store n'hésitez pas à utiliser ce service. En quelques clics, et en uploadant vos screenshots vous obtiendrez ce genre d'images : (vous pouvez éditer la couleur, choisir un iPhone blanc ou noirn choisir le texte et sa position)
+Si vous publiez votre application sur l'Apple Store, n'hésitez pas à utiliser ce service. En quelques clics, et en uploadant vos screenshots vous obtiendrez ce genre d'images : (vous pouvez éditer la couleur, choisir un iPhone blanc ou noir choisir le texte et sa position)
 
 <img src="{{ site.url }}/img/ios/screen1.jpg" alt="Screen 1 iOS" style="margin:0 auto" />
 
