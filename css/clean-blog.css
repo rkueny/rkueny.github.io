@@ -26,10 +26,6 @@ a:hover,
 a:focus {
   color: #0085a1;
 }
-a img:hover,
-a img:focus {
-  cursor: zoom-in;
-}
 blockquote {
   color: #808080;
   font-style: italic;
@@ -421,3 +417,8 @@ body {
     margin: 0 auto;
     display: block;
 }
+
+.grid-sizer,.grid-item { width: 20%; }
+.grid-item--width2 { width: 40%; }
+.grid-item--width3 { width: 60%; }
+.grid-item--width4 { width: 80%; }

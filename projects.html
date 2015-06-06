@@ -1,0 +1,32 @@
+---
+layout: page
+title: "Projets"
+description: "I build some stuffs"
+header-img: "img/projects.jpg"
+---
+
+<div class="grid">
+  <div class="grid-sizer"></div>
+  <div class="grid-item grid-item--width4">
+  	<a href="{{ site.baseurl }}/loverpass-app" style="cursor:pointer;">
+  		<img src="{{ site.baseurl }}/img/projects/overpass-appli.jpg" alt="L'Over Pass" />
+  	</a>
+  </div>
+  <div class="grid-item " style="background:green;height:100px">
+  	<a href="{{ site.baseurl }}/loverpass-website" style="cursor:pointer;">
+  		<img src="{{ site.baseurl }}/img/projects/overpass-website.jpg" alt="Website L'Over Pass" />
+  	</a>
+  </div>
+</div>
+
+<script type="text/javascript" src="{{ site.baseurl }}/js/isotope.min.js"></script>
+
+<script>
+$('.grid').isotope({
+	itemSelector: '.grid-item',
+  	percentPosition: true,
+  	masonry: {
+    	columnWidth: '.grid-sizer'
+  	}
+})
+</script>
