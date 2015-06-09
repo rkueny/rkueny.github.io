@@ -1,5 +1,5 @@
 ---
-title: "Forcer l'orientation de l'application pour iOS et Android"
+title: "Forcer l'orientation de l'application pour iOS et Android avec Titanium"
 author: R.Kueny
 layout: post
 permalink: /developpement-mobile/forcer-l-orientation-de-l-application-pour-ios-et-android
