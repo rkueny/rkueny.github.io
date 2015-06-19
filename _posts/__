@@ -1,0 +1,41 @@
+---
+title: "Sniffer ce qui sort de votre iPhone"
+author: R.Kueny
+layout: post
+permalink: /developpement-mobile/sniffer-ce-qui-sort-de-votre-iphone
+categories:
+  - Développement mobile
+tags:
+  - mobile
+  - ios
+  - iphone
+  - paquet
+  - wireshark
+  - analyse
+  - trames
+  - apple
+  - mac
+intro: Cela peut toujours vous intéresser de savoir quelles sont les requêtes qui sortent de votre iPhone. Nous allons voir simplement comment mettre cela en place sur votre mac.
+header-img: img/post-bg-device-orientation.jpg
+---
+
+Cela peut toujours vous intéresser de savoir quelles sont les requêtes qui sortent de votre iPhone. Nous allons voir simplement comment mettre cela en place sur votre mac.
+
+### Récupèrez l'UDID de votre iPhone
+
+Il vous faut d'abord récupérer l'UDID (identifiant unique) de votre iPhone. Pour cela, connectez le à votre mac et rendez vous dans iTunes. Allez sur l'icone de votre iPhone, puis cliquez sur "Numéro de série : XXXXXX". Vous devriez voir s'afficher votre UDID. Faites un clic droit et cliquez sur "copiez". Vous avez votre UDID dans votre presse-papier.
+
+### Ecoutez votre iPhone
+
+Ouvrez votre terminal, tapez : `rvictl -s VOTRE_UDID`
+
+Tapez ensuite, `ifconfig -l`, dans la liste vous devriez voir marqué `rvi0`. Il s'agit de l'interface virtuel de votre iPhone.
+
+### Installez Wireshark
+
+....
+
+### Sniffez
+
+qdssqdq
+
