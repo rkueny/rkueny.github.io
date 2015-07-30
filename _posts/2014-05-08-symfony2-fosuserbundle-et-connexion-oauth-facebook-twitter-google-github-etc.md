@@ -253,7 +253,7 @@ Après la création de ce fichier, il vous faut le déclarer comme service. Ce n
 
 Nous avons fini ici la configuration du plugin. Vous pouvez ajouter les logins à votre site via le render du plugin :
 
-{% highlight html %}{% raw %}{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+<pre>{% raw %}{% if is_granted('IS_AUTHENTICATED_FULLY') %}
     Hello {{ app.user.username }}
 
     <a href="{{ path('fos_user_security_logout') }}">
@@ -261,7 +261,7 @@ Nous avons fini ici la configuration du plugin. Vous pouvez ajouter les logins �
     </a>
 {% else %}
     {{ render(url('hwi_oauth_connect')) }}
-{% endif %}{% endraw %}{% endhighlight %}
+{% endif %}{% endraw %}</pre>
 
 En ajoutant bien entendu la route qui va bien avec :
 
