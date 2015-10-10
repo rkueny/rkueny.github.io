@@ -266,7 +266,7 @@ Nous avons fini ici la configuration du plugin. Vous pouvez ajouter les logins �
 En ajoutant bien entendu la route qui va bien avec :
 
 <pre>hwi_oauth_login:
-  resource: "@HWIOAuthBundle/Resources/config/routing.login.xml
+  resource: "@HWIOAuthBundle/Resources/config/routing.login.xml"
   prefix: /login</pre>
 
 Vous avez désormais un site acceptant les logins de différents services <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> N&rsquo;hésitez pas si vous avez des questions, je suis peut être passé trop vite sur certains points.
