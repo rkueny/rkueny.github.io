@@ -78,8 +78,8 @@ Une fois ceci fait, ajoutez la propriété facebookId à votre entité User. Pui
 Nous allons nous attaquer à la configuration  du security.yml. Rien de bien compliqué à nouveau.  
 Tout d&rsquo;abord, dans votre parameters.yml ajoutez l&rsquo;id de votre application Facebook ainsi que la clé secrète.
 
-<pre>oauth.facebook.id = "id_app"
-oauth.facebook.secret = "secret_key_app"</pre>
+<pre>oauth.facebook.id: "id_app"
+oauth.facebook.secret: "secret_key_app"</pre>
 
 Puis mettez à jour votre fichier de config, en ajoutant ceci :
 
