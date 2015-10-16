@@ -422,3 +422,5 @@ body {
 .grid-item--width2 { width: 40%; }
 .grid-item--width3 { width: 60%; }
 .grid-item--width4 { width: 80%; }
+
+#search-input { width: 100%;}
