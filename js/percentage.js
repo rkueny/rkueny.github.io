@@ -7,7 +7,12 @@ $(document).ready(function() {
 		scrollTop = $(window).scrollTop();
 		var docHeight = $(document).height();
 		var winHeight = $(window).height();
-		var scrollPercent = (scrollTop) / (docHeight - winHeight);
+
+		var topArticle = $('#contentarticle').offset().top;
+		var heightArticle = $('#contentarticle').height()
+		var heightT= topArticle + heightArticle;
+
+		var scrollPercent = (scrollTop) / (heightT);
 		var scrollPercentRounded = Math.round(scrollPercent*100)/100;
 		 
 		percentage = scrollPercentRounded * 100;
