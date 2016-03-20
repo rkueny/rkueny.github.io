@@ -416,6 +416,11 @@ body {
 {
     margin: 0 auto;
     display: block;
+    text-align: center;
+}
+
+.center-image img {
+  margin: 0 auto;
 }
 
 .grid-sizer,.grid-item { width: 20%; }
