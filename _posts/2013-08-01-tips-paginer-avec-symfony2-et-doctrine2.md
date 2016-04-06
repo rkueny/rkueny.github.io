@@ -62,12 +62,12 @@ Pour cela, ce n&rsquo;est pas très compliqué. Il vous faut passer par le Query
 
 Une fois ceci fait, dans votre vue (Twig)
 
-```
+{% highlight html %}{% raw %}
 {% for p in range(1, nombrePage) %}
-  <li{% if p == page %} class="active"{% endif %}>
-    <a href="{{ path('sdzblog_accueil', {'page': p}) }}">{{ p }}</a>
-  </li>
+    <li{% if p == page %} class="active"{% endif %}>
+        <a href="{{ path('sdzblog_accueil', {'page': p}) }}">{{ p }}</a>
+    </li>
 {% endfor %}
-```
+{% endraw %}{% endhighlight %}
 
 Et voilà, Enjoy !
