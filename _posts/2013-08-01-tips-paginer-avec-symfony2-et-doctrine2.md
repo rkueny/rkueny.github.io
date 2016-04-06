@@ -62,18 +62,12 @@ Pour cela, ce n&rsquo;est pas très compliqué. Il vous faut passer par le Query
 
 Une fois ceci fait, dans votre vue (Twig)
 
-<div class="wp_syntax">
-  <table>
-    <tr>      
-      <td class="code">
-        <pre class="html" style="font-family:monospace;">{% for p in range(1, nombrePage) %}
-  &lt;li{% if p == page %} class="active"{% endif %}&gt;
-    &lt;a href="\{\{ path('sdzblog_accueil', {'page': p}) }}"&gt;\{\{ p }}&lt;/a&gt;
-  &lt;/li&gt;
-{% endfor %}</pre>
-      </td>
-    </tr>
-  </table>
-</div>
+```
+{% for p in range(1, nombrePage) %}
+  <li{% if p == page %} class="active"{% endif %}>
+    <a href="{{ path('sdzblog_accueil', {'page': p}) }}">{{ p }}</a>
+  </li>
+{% endfor %}
+```
 
 Et voilà, Enjoy !
