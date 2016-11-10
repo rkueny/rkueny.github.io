@@ -5,15 +5,28 @@ description: "Web & Mobile Developer in Toulouse"
 
 {% for post in paginator.posts %}
 <div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">{{ post.title }}</h2>
-        {% if post.intro %}
-        <h3 class="post-subtitle">
-            {{ post.intro }}
-        </h3>
-        {% endif %}
-    </a>
-    <p class="post-meta">Posté le {{ post.date | date: "%d/%m/%Y" }}</p>
+    {% if post.layout == 'medium' %}
+
+      <a href="{{ post.urlMedium }}">
+          <h2 class="post-title">{{ post.title }}</h2>
+          {% if post.intro %}
+          <h3 class="post-subtitle">
+              {{ post.intro }}
+          </h3>
+          {% endif %}
+      </a>
+      <p class="post-meta">Posté le {{ post.date | date: "%d/%m/%Y" }}</p>
+    {% else %}
+      <a href="{{ post.url | prepend: site.baseurl }}">
+          <h2 class="post-title">{{ post.title }}</h2>
+          {% if post.intro %}
+          <h3 class="post-subtitle">
+              {{ post.intro }}
+          </h3>
+          {% endif %}
+      </a>
+      <p class="post-meta">Posté le {{ post.date | date: "%d/%m/%Y" }}</p>
+    {% endif %}
 </div>
 <hr>
 {% endfor %}
