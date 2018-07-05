@@ -1,8 +1,8 @@
 # Site settings
-title: R.Kueny Développeur web
+title: R.Kueny
 header-img: img/home-bg.png
 email: raphael@kueny.fr
-description: "R.Kueny développeur web à Toulouse. J'utilise PHP, Symfony2, les API (réseaux sociaux notamment). Je fais aussi du développement mobile à l'aide de Titanium Appcelerator"
+description: "R.Kueny CTO @ Monkees/Publicis - Toulouse."
 baseurl: ""
 url: "http://rkueny.fr"
 twitter_username: rkueny
