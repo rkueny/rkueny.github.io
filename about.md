@@ -5,12 +5,19 @@ description: "In web I trust"
 header-img: "img/about-bg.jpg"
 ---
 
-Actuellement en poste en tant que CTO à Monkees/Publicis à Toulouse.
+Actuellement en poste en tant que CTO à Monkees/Publicis à Toulouse, je poursuis aussi une activité freelance en parallèle.
 
 Je me décris souvent comme un amoureux du dev et du code. Je code à longueur de journée. Que ce soit pour le travail, le plaisir ou pour me challenger.
 
-Je joue avec les API des réseaux sociaux et j'apporte mon conseil là dessus. Je fais aussi beaucoup de choses avec Symfony2.
+Je joue avec les API des réseaux sociaux et j'apporte mon conseil là dessus. Je fais aussi beaucoup de choses avec Symfony.
 
 J'écris aussi du JS avec React et ReactNative essentiellement.
 
 Et comme vous pouvez le voir sur le blog, j'écris pour partager mes découvertes, mes idées ou mon savoir. Si vous voulez discuter avec moi n'hésitez pas à me passer le bonjour sur twitter, promis je ne mords pas !
+
+**#php**
+**#symfony** 
+**#api**
+**#wordpress**
+**#react**
+**#reactNative**

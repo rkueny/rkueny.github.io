@@ -7,7 +7,6 @@ baseurl: ""
 url: "http://rkueny.fr"
 twitter_username: rkueny
 github_username:  rkueny
-facebook_username:  rkueny.freelance
 
 # Build settings
 markdown: kramdown
