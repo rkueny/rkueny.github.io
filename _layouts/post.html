@@ -1,75 +1,36 @@
----
-layout: default
----
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
 
-<div id="indicator"><div id="scrollPercentLabel"></div></div>
+{% include head.html %}
 
-<!-- Post Header -->
-<header class="intro-header parallax-window" data-parallax="scroll" data-image-src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <h1>{{ page.title }}</h1>
-                    {% if page.subtitle %}
-                    <h2 class="subheading">{{ page.subtitle }}</h2>
-                    {% endif %}
-                    <span class="meta pull-right">Posté le {{ page.date | date: "%d/%m/%Y" }}</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+<body>
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-                <div id="contentarticle">
-
-				    {{ content }}
-
-                </div>    
-
-                <hr>
-
-                <div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'rkueny';
+    {% include header.html %} 
     
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    
+<!-- Main -->
+<div id="main" class="alt">
 
-</hr />
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>{{ page.title }}</h1>
+		</header>
+		{% if page.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>{% endif %}
+		<p>{{ content }}</p>
+	</div>
+</section>
 
-                <ul class="pager">
-                    {% if page.previous.url %}
-                    <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Article précédent</a>
-                    </li>
-                    {% endif %}
-                    {% if page.next.url %}
-                    <li class="next">
-                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Article suivant &rarr;</a>
-                    </li>
-                    {% endif %}
-                </ul>
+</div>
 
-            </div>
-        </div>
-    </div>
-</article>
+    {% include footer.html %}
 
-<hr />
+</body>
 
-<script src="{{ "/js/percentage.js" | prepend: site.baseurl }}"></script>
-
+</html>

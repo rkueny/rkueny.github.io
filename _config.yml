@@ -1,19 +1,36 @@
-# Site settings
+# site settings
 title: R.Kueny
-header-img: img/home-bg.png
+subtitle: expert Syfmony
 email: raphael@kueny.fr
-description: "R.Kueny CTO @ Monkees/Publicis - Toulouse."
-baseurl: ""
-url: "http://rkueny.fr"
-twitter_username: rkueny
-github_username:  rkueny
+description: Expert Symfony (mais PHP avant tout), et aussi habile<br /> dans le domaine JS notamment avec React & React Native.
+baseurl: # the subpath of your site, e.g. /blog
+url: # the base hostname & protocol for your site
+author:
+street_address: 12 impasse des violettes
+city: Ayguesvives
+state: ""
+zip_code: 31450
+country: France
+phone: ""
 
-# Build settings
+# homepage tiles
+tiles-source: pages # accepts "posts" or "pages"
+tiles-count: 6
+
+# social settings
+500px_url:
+facebook_url:
+github_url: https://github.com/rkueny
+gitlab_url:
+googleplus_url:
+instagram_url:
+linkedin_url: https://www.linkedin.com/in/rkueny
+pinterest_url:
+slack_url:
+twitter_url: https://twitter.com/rkueny
+
+# build settings
 markdown: kramdown
-highlighter: pygments
-permalink: pretty
-paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
-# Gems
-gems : [jekyll-paginate]
+sass:
+  style: compressed

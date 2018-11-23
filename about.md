@@ -1,23 +1,13 @@
 ---
-layout: page
-title: "A propos"
-description: "In web I trust"
-header-img: "img/about-bg.jpg"
+layout: post
+title: À propos
+description: Lorem ipsum dolor est
+image: assets/images/pic11.jpg
+nav-menu: true
 ---
 
-Actuellement en poste en tant que CTO à Monkees/Publicis à Toulouse, je poursuis aussi une activité freelance en parallèle.
+Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.
 
-Je me décris souvent comme un amoureux du dev et du code. Je code à longueur de journée. Que ce soit pour le travail, le plaisir ou pour me challenger.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
 
-Je joue avec les API des réseaux sociaux et j'apporte mon conseil là dessus. Je fais aussi beaucoup de choses avec Symfony.
-
-J'écris aussi du JS avec React et ReactNative essentiellement.
-
-Et comme vous pouvez le voir sur le blog, j'écris pour partager mes découvertes, mes idées ou mon savoir. Si vous voulez discuter avec moi n'hésitez pas à me passer le bonjour sur twitter, promis je ne mords pas !
-
-**#php**
-**#symfony** 
-**#api**
-**#wordpress**
-**#react**
-**#reactNative**
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.
