@@ -26,7 +26,7 @@ nav-menu: true
 <!-- Two -->
 <section id="two" class="spotlights">
 	<section>
-		<a href="generic.html" class="image">
+		<a href="https://loverpass.fr" target="_blank" class="image">
 			<img src="assets/images/logo_loverpass.jpg" alt="Site et application mobile L'Overpass" data-position="center center" />
 		</a>
 		<div class="content">
@@ -50,7 +50,7 @@ nav-menu: true
 		</div>
 	</section>
 	<section>
-		<a href="generic.html" class="image">
+		<a href="https://www.hockey-boxers-de-bordeaux.fr/" target="_blank" class="image">
 			<img src="assets/images/boxers.jpg" alt="Site et boutique des Boxers" data-position="top center" />
 		</a>
 		<div class="content">
@@ -101,7 +101,7 @@ nav-menu: true
 	</section>-->
 
 	<section>
-		<a href="generic.html" class="image">
+		<a href="https://www.tennis-ayguesvives.fr/" target="_blank" class="image">
 			<img src="assets/images/tennis-ayguesvives.jpg" alt="Site et boutique des Boxers" data-position="25% 25%" />
 		</a>
 		<div class="content">
