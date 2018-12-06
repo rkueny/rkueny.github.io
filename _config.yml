@@ -1,7 +1,7 @@
 # site settings
 title: R.Kueny
 subtitle: expert Syfmony
-email: raphael@kueny.fr
+email: raphael@kueny.me
 description: Expert Symfony (mais PHP avant tout), et aussi habile<br /> dans le domaine JS notamment avec React & React Native.
 baseurl: # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
