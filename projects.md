@@ -18,14 +18,14 @@ nav-menu: true
 		<p>
 			Je ne résume pas le fait de coder à mon travail. Depuis mes débuts le code
 			est, et restera, une passion. Voici donc une sélection de projets réalisés
-			seul ou avec un associé allant du site web à l'application mobile.
+			allant du site web à l'application mobile.
 		</p>
 	</div>
 </section>
 
 <!-- Two -->
 <section id="two" class="spotlights">
-	<section>
+	<!--<section>
 		<a href="https://loverpass.fr" target="_blank" class="image">
 			<img src="assets/images/logo_loverpass.jpg" alt="Site et application mobile L'Overpass" data-position="center center" />
 		</a>
@@ -48,7 +48,7 @@ nav-menu: true
 				</ul>
 			</div>
 		</div>
-	</section>
+	</section>-->
 	<section>
 		<a href="https://www.hockey-boxers-de-bordeaux.fr/" target="_blank" class="image">
 			<img src="assets/images/boxers.jpg" alt="Site et boutique des Boxers" data-position="top center" />
@@ -59,7 +59,7 @@ nav-menu: true
 					<h3>Boxers de Bordeaux</h3>
 				</header>
 				<p>
-					Avec un associé nous avons réalisé le site (Wordpress) et la boutique
+					Réalisation du site (Wordpress) et de la boutique
 					(Prestashop) pour l'équipe de hockey des Boxers de Bordeaux. <br />
 					Au programme : <br />
 					- Création d'un thème Wordpress <br />
@@ -102,25 +102,43 @@ nav-menu: true
 
 	<section>
 		<a href="https://www.tennis-ayguesvives.fr/" target="_blank" class="image">
-			<img src="assets/images/tennis-ayguesvives.jpg" alt="Site et boutique des Boxers" data-position="25% 25%" />
+			<img src="assets/images/intermarche.jpg" alt="Site et boutique des Boxers" data-position="25% 25%" />
 		</a>
 		<div class="content">
 			<div class="inner">
 				<header class="major">
-					<h3>Tennis Club Ayguesvives</h3>
+					<h3>Webalogue Intermarché</h3>
 				</header>
 				<p>
-					Étant membre du bureau du club de tennis d'Ayguesvives (31), j'ai
-					réalisé le site du club en utilisant Wordpress. Le but étant de
-					propulser rapidement un site avec une admin facile et utilisable par
-					des personnes non formés au web.
+					Amélioration et évolution de l'API pour la gestion des webalogues.<br />
+					Création et évolution du plugin ReactJs.
 				</p>
 				<ul class="actions">
-					<li><a href="https://www.tennis-ayguesvives.fr/" target="_blank" class="button">Voir le site</a></li>
+					<li><a href="https://www.intermarche.com/home/prospectus.html" target="_blank" class="button">Voir le site</a></li>
 				</ul>
 			</div>
 		</div>
 	</section>
+
+	<section>
+		<a href="https://www.hockey-boxers-de-bordeaux.fr/" target="_blank" class="image">
+			<img src="assets/images/rk.jpg" alt="Autres projets" data-position="top center" />
+		</a>
+		<div class="content">
+			<div class="inner">
+				<header class="major">
+					<h3>Projets en cours</h3>
+				</header>
+				<p>
+					Différents projets en cours, basés sur Symfony 4.x, ReactJs, NextJs ...
+				</p>
+				<p>
+					Refonte de l'application et du site <strong>L'Over Pass</strong> (Symfony 4.2, React Native).
+				</p>
+			</div>
+		</div>
+	</section>
+
 </section>
 
 </div>
