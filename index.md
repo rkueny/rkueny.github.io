@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-landing-title: 'R.Kueny, expert Symfony'
+landing-title: 'R.Kueny, Consultant & Développeur Web'
 description: kkkk
 image: null
 author: null
