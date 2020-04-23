@@ -1,36 +1,36 @@
-# site settings
-title: R.Kueny
-subtitle: Consultant & Développeur Web
-email: raphael@kueny.me
-description: Expert Symfony - Fervent développeur avec ReactJs et React Native.
-baseurl: # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
-author:
-street_address: 12 impasse des violettes
-city: Ayguesvives
-state: ""
-zip_code: 31450
-country: France
-phone: ""
+title: CTO et Consultant Web
+description: > # this means to ignore newlines until "baseurl:"
+  R.Kueny CTO & Consultant Web
+  Dans le monde du web depuis plus de 10 ans, mon expertise se porte principalement sur Symfony et l'écosystème PHP.
+  Je suis aussi un fervent utilisateur de React et React Native.
+permalink: ":title/"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: #if your site has a twitter account, enter it here
 
-# homepage tiles
-tiles-source: pages # accepts "posts" or "pages"
-tiles-count: 6
+# Author Settings
+author: Raphaël Kueny # add your name
+author-img: rkueny.jpg # add your photo
+social-twitter: rkueny # add your Twitter handle
+social-facebook: # add your Facebook handle
+social-github: rkueny # add your Github handle
+social-linkedin: rkueny # add your Linkedin handle
+social-email: raphael@kueny.me # add your Email address
 
-# social settings
-500px_url:
-facebook_url:
-github_url: https://github.com/rkueny
-gitlab_url:
-googleplus_url:
-instagram_url:
-linkedin_url: https://www.linkedin.com/in/rkueny
-pinterest_url:
-slack_url:
-twitter_url: https://twitter.com/rkueny
+# Disqus
+discus-identifier: # add your discus identifier
 
-# build settings
+# Tracker
+analytics: # Google Analytics
+
+# Build Settings
 markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
 
-sass:
-  style: compressed
+paginate: 8
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
