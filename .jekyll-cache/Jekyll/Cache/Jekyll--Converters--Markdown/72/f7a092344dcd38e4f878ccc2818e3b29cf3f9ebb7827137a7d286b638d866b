@@ -1,0 +1,103 @@
+I".<p>Vous avez déjà dû vouloir forcer l’orientation de votre application. Nous allons rapidement voir comment faire cela pour iOS et Android.</p>
+
+<h2 id="forcer-lorientation-pour-ios">Forcer l’orientation pour iOS</h2>
+
+<p>Commençons par le plus simple. En effet, pour iOS, il vous suffit d’enlever quelques lignes. Cela se passe dans le fichier <code class="highlighter-rouge">tiapp.xml</code> :</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;ti:app</span> <span class="na">xmlns:ti=</span><span class="s">"http://ti.appcelerator.org"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ios&gt;</span>
+        <span class="nt">&lt;plist&gt;</span>
+            <span class="nt">&lt;dict&gt;</span>
+                <span class="nt">&lt;key&gt;</span>UISupportedInterfaceOrientations~iphone<span class="nt">&lt;/key&gt;</span>
+                <span class="nt">&lt;array&gt;</span>
+                    <span class="nt">&lt;string&gt;</span>UIInterfaceOrientationPortrait<span class="nt">&lt;/string&gt;</span>
+                <span class="nt">&lt;/array&gt;</span>
+                <span class="nt">&lt;key&gt;</span>UISupportedInterfaceOrientations~ipad<span class="nt">&lt;/key&gt;</span>
+                <span class="nt">&lt;array&gt;</span>
+                    <span class="nt">&lt;string&gt;</span>UIInterfaceOrientationPortrait<span class="nt">&lt;/string&gt;</span>
+                    <span class="nt">&lt;string&gt;</span>UIInterfaceOrientationPortraitUpsideDown<span class="nt">&lt;/string&gt;</span>
+                    <span class="nt">&lt;string&gt;</span>UIInterfaceOrientationLandscapeLeft<span class="nt">&lt;/string&gt;</span>
+                    <span class="nt">&lt;string&gt;</span>UIInterfaceOrientationLandscapeRight<span class="nt">&lt;/string&gt;</span>
+                <span class="nt">&lt;/array&gt;</span>
+            <span class="nt">&lt;/dict&gt;</span>
+        <span class="nt">&lt;/plist&gt;</span>
+    <span class="nt">&lt;/ios&gt;</span>
+<span class="nt">&lt;/ti:app&gt;</span></code></pre></figure>
+
+<p>Si vous voulez n’avoir que l’orientation portrait il vous suffit d’enlever les lignes :
+<code class="highlighter-rouge">&lt;string&gt;UIInterfaceOrientationLandscapeLeft&lt;/string&gt;</code> et <code class="highlighter-rouge">&lt;string&gt;UIInterfaceOrientationLandscapeRight&lt;/string&gt;</code>.</p>
+
+<p>Pas bien compliqué n’est-ce pas ? Passons à Android.</p>
+
+<h2 id="forcer-lorientation-pour-android">Forcer l’orientation pour Android</h2>
+
+<p>L’opération est un poil plus compliquée. Tout d’abord, buildez votre application. Une fois le build fini, ouvrez le fichier <code class="highlighter-rouge">tiapp.xml</code>. Remplacez la ligne :
+<code class="highlighter-rouge">&lt;android xmlns:android="http://schemas.android.com/apk/res/android"/&gt;</code>
+par</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;android</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;manifest&gt;</span>
+  <span class="nt">&lt;/manifest&gt;</span>
+<span class="nt">&lt;/android&gt;</span></code></pre></figure>
+
+<p>Ouvrez ensuite le fichier <code class="highlighter-rouge">&lt;PROJECT_NAME&gt;/build/android/AndroidManifest.xml</code> et copiez le noeud <application> qui contient les noeuds <activity>.</activity></application></p>
+
+<p>Par exemple :</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;manifest</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span> <span class="na">package=</span><span class="s">"com.myapp.app"</span> <span class="na">android:versionCode=</span><span class="s">"1"</span> <span class="na">android:versionName=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;uses-sdk</span> <span class="na">android:minSdkVersion=</span><span class="s">"10"</span> <span class="na">android:targetSdkVersion=</span><span class="s">"19"</span><span class="nt">/&gt;</span>
+ 
+    <span class="c">&lt;!-- Start Copying Here --&gt;</span>
+ 
+  <span class="nt">&lt;application</span> <span class="na">android:icon=</span><span class="s">"@drawabe/appicon"</span> <span class="na">android:label=</span><span class="s">"MyApp"</span> <span class="na">android:name=</span><span class="s">"MyappApplication"</span> <span class="na">android:debuggable=</span><span class="s">"false"</span> <span class="na">android:theme=</span><span class="s">"@style/Theme.AppCompat"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">".MyappActivity"</span> <span class="err">android:label"@string/app_name"</span> <span class="na">android:theme=</span><span class="s">"@style/Theme.Titanium"</span> <span class="na">android:configChanges=</span><span class="s">"keyboardHidden|orientation|screenSize"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;intent-filter&gt;</span>
+        <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">"android.intent.action.MAIN"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">"android.intent.category.LAUNCHER"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;/intent-filter&gt;</span>
+    <span class="nt">&lt;/activity&gt;</span>
+    <span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">"org.appcelerator.titanium.TiActivity"</span> <span class="na">android:configChanges=</span><span class="s">"keyboardHidden|orientation|screenSize"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">"org.appcelerator.tianium.TiTranslucentActivity"</span> <span class="na">android:configChanges=</span><span class="s">"keyboardHidden|orientation|screenSize"</span> <span class="na">android:theme=</span><span class="s">"@style/Theme.AppCompat.Translucent"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">"ti.modules.titanium.ui.android.TiPreferencesActivity"</span> <span class="na">android:configChanges=</span><span class="s">"screenSize"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/application&gt;</span>
+ 
+    <span class="c">&lt;!-- Stop Copying Here --&gt;</span>
+  <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.INTERNET"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.ACCESS_WIFI_STATE"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.ACCESS_NETWORK_STATE"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.WRITE_EXTERNAL_STORAGE"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.ACCESS_COARSE_LOCATION"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.ACCESS_FINE_LOCATION"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.ACCESS_MOCK_LOCATION"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/manifest&gt;</span></code></pre></figure>
+
+<p>Collez cela entre les <manifest></manifest> de votre fichier <code class="highlighter-rouge">tiapp.xml</code>. Ensuite, dans chaque noeud <activity> ajoutez :</activity></p>
+
+<ul>
+  <li>android:screenOrientation=”VALUE”</li>
+</ul>
+
+<p>La liste des valeurs possibles est disponible <a href="http://developer.android.com/guide/topics/manifest/activity-element.html#screen" target="_blank">sur la documentation officielle</a>. (“portrait”, “landscape”, etc…).</p>
+
+<p>Cela donnerait par exemple :</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;android</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;manifest&gt;</span>
+    <span class="nt">&lt;application</span> <span class="na">android:icon=</span><span class="s">"@drawabe/appicon"</span> <span class="na">android:label=</span><span class="s">"MyApp"</span> <span class="na">android:name=</span><span class="s">"MyappApplication"</span> <span class="na">android:debuggable=</span><span class="s">"false"</span> <span class="na">android:theme=</span><span class="s">"@style/Theme.AppCompat"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;activity</span> <span class="na">android:screenOrientation=</span><span class="s">"portrait"</span> <span class="na">android:name=</span><span class="s">".MyappActivity"</span> <span class="err">android:label"@string/app_name"</span> <span class="na">android:theme=</span><span class="s">"@style/Theme.Titanium"</span> <span class="na">android:configChanges=</span><span class="s">"keyboardHidden|orientation|screenSize"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;intent-filter&gt;</span>
+          <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">"android.intent.action.MAIN"</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">"android.intent.category.LAUNCHER"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/intent-filter&gt;</span>
+      <span class="nt">&lt;/activity&gt;</span>
+      <span class="nt">&lt;activity</span> <span class="na">android:screenOrientation=</span><span class="s">"portrait"</span> <span class="na">android:name=</span><span class="s">"org.appcelerator.titanium.TiActivity"</span> <span class="na">android:configChanges=</span><span class="s">"keyboardHidden|orientation|screenSize"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;activity</span> <span class="na">android:screenOrientation=</span><span class="s">"portrait"</span> <span class="na">android:name=</span><span class="s">"org.appcelerator.tianium.TiTranslucentActivity"</span> <span class="na">android:configChanges=</span><span class="s">"keyboardHidden|orientation|screenSize"</span> <span class="na">android:theme=</span><span class="s">"@style/Theme.AppCompat.Translucent"</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;activity</span> <span class="na">android:screenOrientation=</span><span class="s">"portrait"</span> <span class="na">android:name=</span><span class="s">"ti.modules.titanium.ui.android.TiPreferencesActivity"</span> <span class="na">android:configChanges=</span><span class="s">"screenSize"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/application&gt;</span>
+  <span class="nt">&lt;/manifest&gt;</span>
+<span class="nt">&lt;/android&gt;</span></code></pre></figure>
+
+<p>C’est bon, vous savez désormais comment indiquer à votre application iOS ou Android l’orientation que vous désirez.</p>
+:ET

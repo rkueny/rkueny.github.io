@@ -1,0 +1,271 @@
+I"�u<p>Quoi de plus frustant lorsque vous utilisez votre clavier virtuel de ne pas pouvoir passer d’input en input lorsque vous remplissez un formulaire par exemple ? Ou quand vous arrivez au dernier input de ne pas pouvoir valider le formulaire directement depuis le clavier ?
+Il serait bien aussi si vous voulez qu’il vous donne son numéro de téléphone, vous lui proposiez le clavier adapté.</p>
+
+<p>Si vous voulez faciliter la vie de vos utilisateurs, et vous le voulez, on va voir comment faire cela très facilement avec Titanium Appcelerator.</p>
+
+<p>Pour définir votre input et son clavier vous utilisez surement déjà ce code :</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>C’est ici que vous pouvez spécifier le type de clavier avec <code class="highlighter-rouge">keyboardType</code> et le bouton avec <code class="highlighter-rouge">returnKeyType</code>. Cela donne :</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_DEFAULT</span><span class="p">,</span>
+  <span class="na">returnKeyType</span><span class="p">:</span> 	<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">RETURNKEY_NEXT</span> 
+<span class="p">});</span></code></pre></figure>
+
+<p>Voyons maintenant en code et en image les différents types de clavier et de boutons.</p>
+
+<h2 id="les-types-de-clavier">Les types de clavier</h2>
+
+<p>###Ti.UI.KEYBOARD_DEFAULT</p>
+
+<p>Le clavier par défaut :</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_DEFAULT</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/Ti.UI.KEYBOARD_DEFAULT.png" alt="Ti.UI.KEYBOARD_DEFAULT" class="center-image" /></p>
+
+<p>###Ti.UI.KEYBOARD_EMAIL</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_EMAIL</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/Ti.UI.KEYBOARD_EMAIL.png" alt="Ti.UI.KEYBOARD_EMAIL" class="center-image" /></p>
+
+<p>###Ti.UI.KEYBOARD_ASCII</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_ASCII</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/Ti.UI.KEYBOARD_ASCII.png" alt="Ti.UI.KEYBOARD_ASCII" class="center-image" /></p>
+
+<p>###Ti.UI.KEYBOARD_URL</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_URL</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/Ti.UI.KEYBOARD_URL.png" alt="Ti.UI.KEYBOARD_URL" class="center-image" /></p>
+
+<p>###Ti.UI.KEYBOARD_NUMBER_PAD</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_NUMBER_PAD</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/Ti.UI.KEYBOARD_NUMBER_PAD.png" alt="Ti.UI.KEYBOARD_NUMBER_PAD" class="center-image" /></p>
+
+<p>###Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_NUMBERS_PUNCTUATION</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION.png" alt="Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION" class="center-image" /></p>
+
+<p>###Ti.UI.KEYBOARD_PHONE_PAD</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_PHONE_PAD</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/Ti.UI.KEYBOARD_PHONE_PAD.png" alt="Ti.UI.KEYBOARD_PHONE_PAD" class="center-image" /></p>
+
+<p>Comme vous le voyez, il existe quand même des types de clavier très pratique. Voyons maintenant comment changer le bouton de retour.</p>
+
+<p>Une des choses à savoir est que si vous utilisez des claviers qui n’affichent que des chiffres, vous ne pourrez malheureusement pas modifier le bouton :/</p>
+
+<h2 id="les-types-de-return-key">Les types de “Return Key”</h2>
+
+<p>Les différents aperçus d’écrans sont fait avec le <code class="highlighter-rouge">Ti.UI.KEYBOARD_DEFAULT</code>.</p>
+
+<p>###Ti.UI.RETURNKEY_DEFAULT</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_DEFAULT</span><span class="p">,</span>
+  <span class="na">returnKeyType</span><span class="p">:</span>    <span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">RETURNKEY_DEFAULT</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/RETURNKEY_DEFAULT.png" alt="Ti.UI.RETURNKEY_DEFAULT" class="center-image" /></p>
+
+<p>###Ti.UI.RETURNKEY_GO</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_DEFAULT</span><span class="p">,</span>
+  <span class="na">returnKeyType</span><span class="p">:</span>    <span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">RETURNKEY_GO</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/RETURNKEY_GO.png" alt="Ti.UI.RETURNKEY_GO" class="center-image" /></p>
+
+<p>###Ti.UI.RETURNKEY_GOOGLE</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_DEFAULT</span><span class="p">,</span>
+  <span class="na">returnKeyType</span><span class="p">:</span>    <span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">RETURNKEY_GOOGLE</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/RETURNKEY_GOOGLE.png" alt="Ti.UI.RETURNKEY_GOOGLE" class="center-image" /></p>
+
+<p>###Ti.UI.RETURNKEY_JOIN</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_DEFAULT</span><span class="p">,</span>
+  <span class="na">returnKeyType</span><span class="p">:</span>    <span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">RETURNKEY_JOIN</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/RETURNKEY_JOIN.png" alt="Ti.UI.RETURNKEY_JOIN" class="center-image" /></p>
+
+<p>###Ti.UI.RETURNKEY_NEXT</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_DEFAULT</span><span class="p">,</span>
+  <span class="na">returnKeyType</span><span class="p">:</span>    <span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">RETURNKEY_NEXT</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/RETURNKEY_NEXT.png" alt="Ti.UI.RETURNKEY_NEXT" class="center-image" /></p>
+
+<p>###Ti.UI.RETURNKEY_ROUTE</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_DEFAULT</span><span class="p">,</span>
+  <span class="na">returnKeyType</span><span class="p">:</span>    <span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">RETURNKEY_ROUTE</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/RETURNKEY_ROUTE.png" alt="Ti.UI.RETURNKEY_ROUTE" class="center-image" /></p>
+
+<p>###Ti.UI.RETURNKEY_SEARCH</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_DEFAULT</span><span class="p">,</span>
+  <span class="na">returnKeyType</span><span class="p">:</span>    <span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">RETURNKEY_SEARCH</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/RETURNKEY_SEARCH.png" alt="Ti.UI.RETURNKEY_SEARCH" class="center-image" /></p>
+
+<p>###Ti.UI.RETURNKEY_SEND</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_DEFAULT</span><span class="p">,</span>
+  <span class="na">returnKeyType</span><span class="p">:</span>    <span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">RETURNKEY_SEND</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/RETURNKEY_SEND.png" alt="Ti.UI.RETURNKEY_SEND" class="center-image" /></p>
+
+<p>###Ti.UI.RETURNKEY_YAHOO</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_DEFAULT</span><span class="p">,</span>
+  <span class="na">returnKeyType</span><span class="p">:</span>    <span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">RETURNKEY_YAHOO</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/RETURNKEY_YAHOO.png" alt="Ti.UI.RETURNKEY_YAHOO" class="center-image" /></p>
+
+<p>###Ti.UI.RETURNKEY_DONE</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_DEFAULT</span><span class="p">,</span>
+  <span class="na">returnKeyType</span><span class="p">:</span>    <span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">RETURNKEY_DONE</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/RETURNKEY_DONE.png" alt="Ti.UI.RETURNKEY_DONE" class="center-image" /></p>
+
+<p>###Ti.UI.RETURNKEY_EMERGENCY_CALL</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nameText</span> <span class="o">=</span> <span class="nx">Titanium</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">createTextField</span><span class="p">({</span>
+  <span class="na">color</span><span class="p">:</span>			<span class="dl">'</span><span class="s1">#ffffff</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">hintText</span><span class="p">:</span> 		<span class="dl">'</span><span class="s1">Nom</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">clearOnEdit</span><span class="p">:</span> 		<span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingLeft</span><span class="p">:</span> 		<span class="mi">10</span><span class="p">,</span>
+  <span class="na">keyboardType</span><span class="p">:</span>		<span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">KEYBOARD_DEFAULT</span><span class="p">,</span>
+  <span class="na">returnKeyType</span><span class="p">:</span>    <span class="nx">Ti</span><span class="p">.</span><span class="nx">UI</span><span class="p">.</span><span class="nx">RETURNKEY_EMERGENCY_CALL</span>
+<span class="p">});</span></code></pre></figure>
+
+<p><img src="/img/2015-03-25/RETURNKEY_EMERGENCY_CALL.png" alt="Ti.UI.RETURNKEY_EMERGENCY_CALL" class="center-image" /></p>
+
+<p>Tout les aperçus d’écrans ont été faits sous l’émulateur iOs (clavier QWERTY). Si vous le faites sous votre iphone vous aurez l’équivalent en français bien entendu.</p>
+
+<p>Vous n’avez plus d’excuses pour ne pas faciliter la vie à vos utilisateurs désormais !</p>
+
+:ET

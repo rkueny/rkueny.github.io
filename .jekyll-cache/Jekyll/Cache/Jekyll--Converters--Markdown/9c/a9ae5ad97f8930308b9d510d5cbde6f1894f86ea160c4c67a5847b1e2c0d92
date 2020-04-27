@@ -1,0 +1,49 @@
+I"{<p>Si vous <a href="http://rkueny.fr/developpement-mobile/titanium-appcelerator/se-passer-de-titanium-studio-avec-sublime-text" title="Se passer de Titanium Studio avec Sublime Text">développez vos applications mobiles en vous passant de Titanium Studio avec Sublime Text, </a>on va voir comment créer des snippets.</p>
+
+<p>La création d’un snippet va vous permettre de faire par exemple : <strong>alloyview</strong> + **TAB **et de voir apparaitre :</p>
+
+<pre>&lt;Alloy&gt;
+    &lt;Window&gt;
+        &lt;Label&gt;&lt;/Label&gt;
+    &lt;/Window&gt;
+&lt;/Alloy&gt;</pre>
+
+<p>Ca peut vous faire gagner du temps n’est ce pas ? Voyons donc comment créer un snippet avec Sublime Text.</p>
+
+<!--more-->
+
+<p>Faites <strong>Tools &gt; New Snippet</strong>. Vous voici avec un snippet de base. Reprenons l’exemple d’avant, nous allons écrire :</p>
+
+<pre>&lt;snippet&gt;
+    &lt;content&gt;&lt;![CDATA[
+&lt;Alloy&gt;
+    &lt;Window&gt;
+        &lt;Label&gt;$1&lt;/Label&gt;
+    &lt;/Window&gt;
+&lt;/Alloy&gt;
+]]&gt;&lt;/content&gt;
+    &lt;tabTrigger&gt;alloyview&lt;/tabTrigger&gt;
+&lt;/snippet&gt;</pre>
+
+<p>Dans la balise <strong>&lt;![CDATA[]]&gt;</strong> vous mettez donc le code que vous voulez voir être généré. Ici le <strong>$1</strong>, sert à indiquer où le curseur se trouvera après avoir fait un <strong>TAB</strong>.</p>
+
+<p>Dans la balise **<tabTrigger>** vous mettez le nom du raccourci qui déclenchera le snippet. Si vous mettez un $2, vous pourrez passer de l&rsquo;un à l&rsquo;autre via un tab. Vous pouvez aussi mettre une variable par défaut en faisant : **${1:default}** par exemple.</tabTrigger></p>
+
+<p>Il ne vous reste plus qu’à enregistrer votre snippet au format <strong>lenomdusnippet.sublime-snippet</strong>.</p>
+
+<p>Et voilà, votre snippet est fonctionnel.</p>
+
+<p>Pour un exemple de plus, et une astuce, voici un snippet que j’utilise :</p>
+
+<p><strong>Un var-dump() avec Titanium :</strong></p>
+
+<pre>&lt;snippet&gt;
+    &lt;content&gt;&lt;![CDATA[Ti.UI.info(JSON.stringify($1));]]&gt;&lt;/content&gt;
+    &lt;tabTrigger&gt;tidump&lt;/tabTrigger&gt;
+&lt;/snippet&gt;</pre>
+
+<p> </p>
+
+<p>Have fun !</p>
+
+:ET

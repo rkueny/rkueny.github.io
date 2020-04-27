@@ -1,0 +1,6 @@
+I"�<p><img class="alignleft wp-image-2030 size-medium" style="margin: 0 25px 10px 0;" src="http://rkueny.fr/wp-content/uploads/2014/06/git-logo-300x125.png" alt="git-logo" width="300" height="125" />C’est quand même mieux d’avoir l’auto-complétion lorsque l’on utilise Git avec la console sous mac non ? Ce n’est même pas compliqué à mettre en place. Il vous suffit de créer un fichier ~/.git-autocomplete.bash par exemple, y mettre le contenu du fichier disponible à cette adresse : <a href="https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash" target="_blank">https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash</a> puis de mettre dans votre terminal :</p>
+
+<pre class="line-pre">echo "source ~/.git-autocomplete.bash" &gt;&gt; ~/.bash_profile</pre>
+
+<p>Redémarrez votre terminal et c’est ok. Ca facilite la vie quand même !</p>
+:ET

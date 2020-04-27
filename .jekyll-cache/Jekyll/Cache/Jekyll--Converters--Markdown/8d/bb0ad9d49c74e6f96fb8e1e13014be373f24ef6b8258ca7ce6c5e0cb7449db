@@ -1,0 +1,85 @@
+I"�<p>Troisième jour, troisième article. Nous allons enfin rentrer dans le plus concret. La phase que je vais aborder est essentiel pour toute création d’un jeu web (et même d’un site web en général).</p>
+
+<p><strong>Créateur de jeu web, mais avant tout concepteur</strong></p>
+
+<p>Concevoir un jeu web est la première étape de son projet. Voici comment il faut procéder à mon goût. Cette analyse s’appuie sur mes différents projets, la lecture de plusieurs tutoriels, la participation et la lecture de biens des débats sur plusieurs forums. J’estime que ce que je vais écrire est vérifié plusieurs fois et à fait ses preuves.</p>
+
+<!--more-->
+
+<p><em>1/ L’idée</em></p>
+
+<p>De nos jours, le monde des jeux web s’est grandement développé. Il existe une multitude de jeux sur la toile sur énormément de théme. Il faut vous démarquer de la foule déjà existante et cela provient de l’Idée.</p>
+
+<p>Prenons par exemple un jeu d’élevage. Il en existe des tonnes sur la toile. Mais si vous voulez faire un jeu de ce genre il faudra vous démarquer. Cela vient en ajoutant quelque chose ou en prenant la situation autrement. Par exemple le site <em>chicken fight</em>, s’est démarqué en proposant d’élever son poulet de combat.</p>
+
+<p>On voit bien trop souvent des jeux copié-collé… Marre des o-games like et autres !!! Innovez donc !!!</p>
+
+<p>Un dernier petit truc, astuce, lorsque vous avez une idée notez la. Faites-vous un petit carnet et vous écrivez toutes vos idées, concept et autres. Vous verrez que cela vous aidera pas mal.</p>
+
+<p>Je pense qu’il n’y a pas besoin de s’étaler sur ce sujet. Des idées il y en a par centaines, et il y a encore bien de la place pour l’innovation.</p>
+
+<p><em>2/ Le cahier des charges</em></p>
+
+<p>Le cahier des charges est ultra important. En effet, vous devez définir comment sera votre jeu, les possibilités etc… Cela vous permettre de respecter une autre régle : « <em>Ne recommencez pas</em>« . Et oui, nombre de projets sont tombés à l’eau n’étant pas bien défini à la base. Vous arrivez à la moitié du développement puis vous voulez ajouter l’idée de la mort qui tue et … vous recomencez tout. NON !!! Dites-vous que la première version de votre jeu ne sera pas parfaite !!! Pas grave, vous pourrez toujours évoluer via une v2, ce n’est pas un soucis.</p>
+
+<p>J’espère que vous avez bien compris le paragraphe précédent ;). Et vu que je suis très gentil, je vais un peu plus vous expliquer le cahier des charges.</p>
+
+<p>Il n’y a pas de cahier des charges type. Il en existe une multitude selon les projets. Voici ce qu’il doit contenir au minimum :</p>
+
+<ul>
+  <li>
+    <p>But du jeu
+<em>Etre le plus fort ? Gagner la coupe ? Explorer le plus la carte ?</em></p>
+  </li>
+  <li>
+    <p>Public visé
+<em>Moyenne d’âge, temps requis, …</em></p>
+  </li>
+  <li>
+    <p>Scénario
+<em>Comment le joueur débute, enchainement des buts,…</em></p>
+  </li>
+  <li>
+    <p>Background
+<em>L’environnement de votre jeu, l’histoire, …</em></p>
+  </li>
+  <li>
+    <p>Modules
+<em>Inscription, connexion, messagerie internet, création joueur, combat, match, …</em></p>
+  </li>
+  <li>
+    <p>Plan de la base de donnée
+<em>BDD, interaction, …</em>&lt;/ul&gt;</p>
+  </li>
+</ul>
+
+<p>Voilà le minimum vital qu’il faut dans votre cahier des charges. Un dernier conseil sur le sujet, n’hésitez pas à le poser sur le papier !!! Je sais que le support informatique est tentant mais croyez moi ça passe mieux sur le papier.</p>
+
+<p>La rédaction d’un cahier des charges est une longue tâche. Mais dites vous bien que tout le temps passé, à coucher sur le papier vos idées, est du temps gagné lors du développement.</p>
+
+<p>Voici plusieurs liens sur le sujet. Prenez le temps de les lire. Cette étape est la fondation de votre projet, le sang de ses veines <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /></p>
+
+<ul>
+  <li><a href="http://www.jeuweb.net/board/mmorpg-php-mon-cahier-des-charges-t-4695.html">Un exemple assez complet</a></li>
+  <li><a href="http://www.jeuweb.net/board/cahier-des-charges-t-3480.html">Petite discussion instructive</a></li>
+</ul>
+
+<p>Si vous avez des liens sur le sujet (constructif) n’hésitez pas à les poster en commentaire.</p>
+
+<p>Je n’écris pas beaucoup sur le cahier des charges mais j’insiste de nouveau pour dire que c’est un passage clé de la conception d’un jeu web. Je pense que la façon dont je l’ai présenté est claire, n’hésitez pas à poser vos questions (cela servira à étoffer le tutoriel ^^).</p>
+
+<p>*3/ Étude de la concurrence *</p>
+
+<p>Durant la rédaction de votre cdc (cahier des charges) n’hésitez pas à aller voir les autres sites du même genre que le votre. Inscrivez-vous, jouez, explorez, posez des questions. Documentez vous sur ce qui existe. Ainsi, vous pourrez améliorer vos idées, revoir certains point etc…</p>
+
+<p>Je pense qu’il faut que vous ayez une idée claire de votre projet avant cela tout de même. Pourquoi ? Pour ne pas faire un copier-coller <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> La copie est bien souvent bien plus fade que l’original, et surtout pas très utile…</p>
+
+<p>Demandez vous pourquoi les joueurs viendraient sur votre jeu et pas sur celui de voisin ???</p>
+
+<p>Nous allons achever là ce billet pour aujourd’hui. Retenez-en l’importance du cdc (oui je me répète).</p>
+
+<p>Demain, nous allons aborder une partie de la conception qui se tourne vers les joueurs. La partie traite de plusieurs petits sujets, vous verrez cela demain.</p>
+
+<p>See you later !</p>
+
+:ET

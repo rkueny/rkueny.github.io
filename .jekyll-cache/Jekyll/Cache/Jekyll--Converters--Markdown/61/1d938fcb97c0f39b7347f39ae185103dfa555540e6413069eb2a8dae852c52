@@ -1,0 +1,52 @@
+I"U<p>4ème jour, 4ème article.</p>
+
+<p>J’espère que les trois premiers vous ont plu. J’ai quelques critiques, des encouragements, je pense que cette série d’articles sert donc je continue :).</p>
+
+<p>J’ai annoncé dans le dernier article que nous allions aborder la conception qui se tourne vers les joueurs. Cela peut sembler flou et ça l’ait. Cet article va aborder plusieurs points tourné vers l’utilisateur. En effet, il ne faut pas oublier que votre jeu s’adresse aux joueurs. Ce n’est pas qu’un défi technique, ou une aventure.</p>
+
+<p>De part votre thème vous avez déjà choisi de viser un panel précis de joueurs. Mais comment les contenter ? Comment faire que votre jeu leur plaise ? Nous allons abordé ici ces point et nous attarder sur ce qu’il faut absolument dans un jeu. Etant donné que je parle de la conception d’un jeu web, et non pas d’un style défini, certains point seront à laisser pour votre propre jeu.</p>
+
+<!--more-->
+
+<p><strong>Créateur de jeu web, mais avant tout serviteur</strong></p>
+
+<p>Je l’ai déjà dit dans un précédent billet mais le premier point est le design de l’accueil. Il vous faut le soigner. L’utilisateur se fait une idée du site de part son visu. On ne voit pas le moteur de jeu ni le concept lors de la première visite. Sur ce point, je ne pourrai pas vous aider malheuresement ! Je peux tout de même vous dire qu’il y a deux façon de concevoir sa page d’accueil.</p>
+
+<p>– Immerger le joueur dans le jeu avant même son inscription. Dès la première page le joueur est dans le jeu. Pas de blabla sur le développement, sur la vie du chien de votre belle-mère ou billet de genre. On peut citer labrute.fr par exemple. Si vous ne voyez pas le concept voici un petit exemple.</p>
+
+<p>Vous faites un jeu où un dangereuse virus se propage. Tout les gens doivent prendre un vaisseau pour quitter la terre et coloniser une nouvelle planète. Il peut y avoir sur votre page d’accueil un lien « Je suis déjà parti » et un autre « Mettez moi le vaccin et go vers l’espace ». Vous voyez le genre ? Ainsi l’utilisateur n’est plus sur un site mais sur un jeu à part entière.</p>
+
+<p>– Vous pouvez aussi mettre une page d’accueil normale. C’est ce que choisissent la plupart des sites. Cela permet de tenir au courant les visiteurs de l’évolution du site, de votre vie si vous le désirez aussi.</p>
+
+<p>Les deux méthodes se valent même si je penche plutôt vers l’immersion totale du joueur. Pour tenir les joueurs au courant un blog de développement fait l’affaire je pense. A vous de choisir ! Et oui, c’est bien d’être le créateur vous pouvez choisir ce que vous voulez !</p>
+
+<p>Une fois le premier aperçu passé ne perdez pas le visiteur ! Le design, l’ergonomie et la navigation sont très liés. Ne polluez pas le joueur par des liens de partout, des boutons sans logique etc… L’interface de votre jeu doit être pensée jusque dans les détails. N’oubliez pas que même si vous avez la meilleure façon de résoudre les combats par exemple, il faut que votre interface soit intuitive et confortable.</p>
+
+<p>De nos jours, beaucoup de joueurs jugent un jeu sur son interface, son design. Pouvons-nous les blamer ? Que voient-ils ? Tous ne sont pas des développeur web en puissance ! J’avoue que moi-même je ne joue pas à certains jeux super bien pensé, car non-ergonomique,non-intuitif et franchement moche ! Prenez donc le temps de penser à cela c’est très important.</p>
+
+<p>Continuons le cheminement de l’utilisateur. Avant de s’inscrire le joueur aime savoir si cela vaut le coup. Il y a plusieurs façons de faire pour lui montrer un aperçu.</p>
+
+<p>– le compte test. Un login et un mot de passe de test pour lui montrer un peu comment est le jeu. Personnellement je n’aime pas ça. On n’est pas audébut du jeu sur ce compte, on fait un peu clic-clic et voilà. Mais je comprends que des personnes mettent cela, après tout on voit vraiment le jeu !</p>
+
+<p>– une page contenant des screenshots. On voit ainsi l’interface du jeu une fois que l’on est connecté. Il faut qu’il y en ait quelqu’uns, qu’ils montrent bien les différentes phases du jeu et qu’ils soient visibles en grande taille (plein écran par exemple). Cela est une solution sympa et rapide à mettre en place.</p>
+
+<p>– ma préférée, la visite guidée. Un sorte de mini-tutoriel du jeu. Le site chicken-fight le propose (pas très bien mis en page je trouve). Il y a aussi des screenshots mais accompagnés d’explication, d’aide. C’est un peu plus long à mettre en place mais c’est assez représentatif du jeu je trouve.</p>
+
+<p>Allez plus que deux points à aborder et nous arriverons à la fin de cet article ^^ courage ! Nous allons parlé de l’inscription et des premières minutes dans le jeu.</p>
+
+<p>Au niveau de l’inscription à votre jeu deux écoles s’affrontent. Certains disent que plus l’inscription est développée plus cela montre une profondeur de jeu, et il y a ceux qui fuient dès qu’il y a plus de trois champs. De mon côté je conseille un petit mix des deux. Je conseil une inscription en plusieurs temps.</p>
+
+<p>La première étape doit être rapide, il faut que les visiteurs puissent rapidement jouer s’ils veulent, et petit à petit dans le jeu vous étoffez les informations. Le plus bel exemple est le jeu « Morrowind » (ce n’est pas un jeu web). Vous débarquez d’un bateau, un homme vous demande quel est votre nom, puis on vous demande votre race pour un recensement. Ensuite on vous demande votre travail (classe) pour vous ficher. Et entre temps vous avez déjà eu le temps de diriger votre jouer, de voir le décor etc… Je trouve cela excellent et très role-play.</p>
+
+<p>Ensuite, l’inscription finie (courte, longue ou mix) le joueur se retrouve tout seul devant votre jeu. Dur !!! Pour vous tout est clair, simple (enfin je l’espère) mais pour lui… c’est pas le même topo. Il vous faut guider le joueur. Vous pouvez proposer un tutoriel par exemple. Un site qui le fait très bien est le nouveau jeu de Zeffyr : <a href="http://www.raidofchaos.com">Raid Of Chaos</a>.</p>
+
+<p>J’ai abandonné le jeu adelhian.net, par exemple, car je ne savais pas trop ce qu’il fallait faire. Pourtant, très beau graphisme, très belle ergonomie mais voilà… j’aime pas être perdu <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>Je ne peux que vous conseiller d’essayer le jeu <a href="http://www.raidofchaos.com">Raid Of Chaos</a>. Je pense que c’est un très bon exemple pour ce tutoriel. Inspirez vous en !
+J’espère que vous avez saisi les différentes pistes que je vous ai fournies. C’est une étape très importante et qui demande du travail. Quand je vous disais que ce n’est pas facile de créer un jeu !!!</p>
+
+<p>Je tiens aussi à dire que cette série d’article se concentre sur la conception théorique d’un jeu. Après cette série de billets il y aura d’autres articles (indépendants) sur la programmation d’un jeu web. Je dis cela au vu des différentes remarques que l’on m’a faites.</p>
+
+<p>See you later !</p>
+
+:ET

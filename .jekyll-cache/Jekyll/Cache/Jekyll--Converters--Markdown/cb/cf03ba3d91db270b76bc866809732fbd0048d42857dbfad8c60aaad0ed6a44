@@ -1,0 +1,90 @@
+I"s<p>Nous voici donc pour le 2ème article sur la création des applications Facebook. Si vous n’avez pas lu le premier article, vous pouvez le retrouver ici : « <a title="Débuter avec les applications Facebook" href="http://rkueny.fr/developpement-web/facebook-developpement-web/debuter-avec-les-applications-facebook" target="_blank">Débuter avec les applications Facebook</a>« .</p>
+
+<p>Nous allons donc aborder aujourd’hui la création de son compte développeur, la création de sa première application et les premières étapes de configuration.</p>
+
+<ul>
+  <li><a title="Débuter avec les applications Facebook" href="http://rkueny.fr/developpement-web/facebook-developpement-web/debuter-avec-les-applications-facebook" target="_blank">Les différentes applications Facebook</a></li>
+  <li><strong>Compte développeur et création de son application</strong></li>
+  <li>A la découverte des différentes sdk et de la Graph API</li>
+  <li>Application Canvas : « Devine le secret de tes amis ! »</li>
+  <li>Application Onglet : « Un petit jeu concours »</li>
+  <li>La puissance de Facebook hors de la plateforme – Plugins Facebook</li>
+  <li>Héberger son application Facebook avec Heroku</li>
+  <li>Open Graph, liez vos utilisateurs et engrangez de la visibilité</li>
+  <li>Astuces de développement en veux-tu ? En voilà</li>
+</ul>
+
+<!--more-->
+
+<h2 id="création-de-son-compte-développeur">Création de son compte développeur</h2>
+
+<p>Pour développer une application Facebook vous devez, bien sûr, avoir un compte Facebook. Nous allons voir ici comment l’assigner en tant que compte développeur et ainsi pouvoir accéder à la création d’application.</p>
+
+<p>Tout d’abord rendez-vous à l’url suivante :<a title="Developper Apps" href=" https://developers.facebook.com/apps" target="_blank"> https://developers.facebook.com/apps</a></p>
+
+<p style="text-align: center;">
+  <img class="aligncenter" alt="" src="http://rkueny.fr/wp-content/uploads/2012/10/Capture-d’écran-2012-10-14-à-15.14.28.png" width="421" height="332" />
+</p>
+
+<p>Cliquez sur le bouton « Register as a Developer ». Une pop-up va apparaitre vous demandant (si vous ne l’avez encore jamais fait) de vérifier votre compte. Cliquez sur « validez votre compte », entrez votre numéro de téléphone, validez le compte et revenez à cette étape.</p>
+
+<p style="text-align: center;">
+  <img class="aligncenter" alt="" src="http://rkueny.fr/wp-content/uploads/2012/10/Capture-d’écran-2012-10-14-à-15.14.46.png" width="490" height="188" />
+</p>
+
+<p> </p>
+
+<p>Une fois votre compte validé, continuez les 3 étapes en renseignant les champs demandés.</p>
+
+<p style="text-align: center;">
+  <img class="aligncenter" alt="" src="http://rkueny.fr/wp-content/uploads/2012/10/Capture-d’écran-2012-10-14-à-15.16.14.png" width="563" height="246" />
+</p>
+
+<p>Et voilà, vous êtes un développeur Facebook ! Enfin … vous en avez le titre quoi !</p>
+
+<h2 id="créer-et-configurer-sa-première-application-facebook">Créer et configurer sa première application Facebook</h2>
+
+<p>Ça y est vous avez votre compte développeur. Nous allons donc pouvoir créer une application et surtout la configurer. Nous nous attardons sur les différents champs bien que nous y reviendrons tout au long des articles.</p>
+
+<p>Retournez sur l’url de départ : <a title="Developper Apps" href=" https://developers.facebook.com/apps" target="_blank">https://developers.facebook.com/apps</a> et cliquez cette fois ci sur « + Créer une application ». Vous aurez la pop-up suivante qui apparaitra.</p>
+
+<p><a href="http://rkueny.fr/wp-content/uploads/2012/10/Capture-d’écran-2012-10-14-à-15.17.121.png" rel="lightbox[1655]"><img class="aligncenter size-full wp-image-1700" title="Créer une application Facebook" alt="" src="http://rkueny.fr/wp-content/uploads/2012/10/Capture-d’écran-2012-10-14-à-15.17.121.png" width="633" height="216" /></a></p>
+
+<p>Les champs à remplir sont assez simple :</p>
+
+<ul>
+  <li><strong>- Nom de l’application :</strong> Le nom de votre application</li>
+  <li><strong>- App Namespace :</strong> Le nom qui apparaitre dans l’url de votre application (https://app.facebook.com/app-namespace ). Il doit être unique.</li>
+  <li><strong>- Web Hosting :</strong> Ne cochez pas cette case pour le moment. Vous devez la cocher pour utiliser l’hébergement avec Heroku. Nous y reviendrons plus tard dans cette série d’article.</li>
+</ul>
+
+<p>Une fois les 2 champs renseignés cliquez sur « Continuer » et voilà, votre première application est enregistrée ! Vous verrez apparaitre vos clés (après avoir validé un captcha).</p>
+
+<p><a href="http://rkueny.fr/wp-content/uploads/2012/10/Capture-d’écran-2012-10-15-à-15.50.22.png" rel="lightbox[1655]"><img class="aligncenter size-full wp-image-1701" title="Frelance facebook" alt="" src="http://rkueny.fr/wp-content/uploads/2012/10/Capture-d’écran-2012-10-15-à-15.50.22.png" width="749" height="189" /></a></p>
+
+<p>Votre App Secret doit rester secrète. (je l’affiche ici mais je l’ai ensuite réinitialisée).</p>
+
+<p>Pour cette première description du panel de votre application, nous allons rester dans l’onglet « Essentiel ». Nous reviendrons plus tard sur les différents onglets. Nous avons donc au programme :</p>
+
+<p><a href="http://rkueny.fr/wp-content/uploads/2012/10/Capture-d’écran-2012-10-15-à-15.53.52.png" rel="lightbox[1655]"><img class="size-full wp-image-1704 alignnone" style="margin: 10px;" title="Panel d'application" alt="" src="http://rkueny.fr/wp-content/uploads/2012/10/Capture-d’écran-2012-10-15-à-15.53.52.png" width="692" height="556" /></a></p>
+
+<h3 id="infos-générales-">Infos générales :</h3>
+
+<ul>
+  <li><strong>- Display name :</strong> vous pouvez changer ici le nom qui s’affiche.</li>
+  <li><strong>- Namespace :</strong> vous pouvez changer ici le nom apparaissant dans l’url</li>
+  <li><strong>- Adresse électronique de contact :</strong> le mail de contact depuis votre appli et celui par lequel Facebook peut vous contacter pour votre application. Mettez en un valide et que vous consultez régulièrement !</li>
+  <li><strong>- App Domains :</strong> le domaine de votre application. Vous pouvez en mettre plusieurs. Attention à bien le renseigner ! Pas mal de messages d’erreurs peuvent venir de là.</li>
+  <li><strong>- Catégorie :</strong> choisissez la catégorie de votre application.</li>
+  <li><strong>- Hosting URL :</strong> si vous êtes hébergé par Heroku.</li>
+  <li><strong>- Mode bac à sable :</strong> l’application ne sera disponible qu’aux admins ou testeurs de l’application.</li>
+</ul>
+
+<p>Nous verrons les autres parties au moment opportun. Néanmoins les noms sont assez explicites à mon goût.</p>
+
+<p>N’hésitez pas à vous balader dans le panel de configuration de votre application.Nous aborderons le début de la partie technique avec les SDK et la Graph API.</p>
+
+<p> </p>
+
+<p> </p>
+:ET

@@ -1,0 +1,103 @@
+I"<blockquote>
+  <p>Cet article est une traduction/adaptation du post de Javier Eguiluz : <a href="http://symfony.com/blog/meet-the-bundle-mobiledetectbundle">“Meet the bundle: MobileDetectBundle”</a>.</p>
+
+  <p>Cet article fait partie d’une série intitulé “Meet the bundle” qui présente plusieurs bundles Symfony2. Merci à Javier Eguiluz pour cette initiative.</p>
+</blockquote>
+
+<h2 id="meet-the-bundle--mobiledetectbundle">Meet the bundle : MobileDetectBundle</h2>
+
+<p>Les téléphones portables sont de plus en plus utilisés de par le monde et, par extension, sur le web. Mis à part la croissance du 
+responsive design, de plus en plus de sites développent une version spécifique de leur site pour les utilisateurs mobiles.</p>
+
+<p>Dans cet article, nous allons parler de <a href="https://github.com/suncat2000/MobileDetectBundle">MobileDetectBundle</a> qui détecte les mobiles 
+et vous aide à rediriger l’utilisateur vers la bonne version de votre site. Une fois installé, ceci est la seule configuration dont vous 
+aurez besoin pour rediriger les utilisateurs mobiles vers le sous-domaine <code class="highlighter-rouge">.m</code> de votre site :</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="c1"># app/config/config.yml</span>
+<span class="na">mobile_detect</span><span class="pi">:</span>
+    <span class="na">redirect</span><span class="pi">:</span>
+        <span class="na">mobile</span><span class="pi">:</span>
+            <span class="na">is_enabled</span><span class="pi">:</span> <span class="no">true</span>
+            <span class="na">host</span><span class="pi">:</span> <span class="s">http://m.example.com</span>
+            <span class="na">action</span><span class="pi">:</span> <span class="s">redirect</span>
+        <span class="na">detect_tablet_as_mobile</span><span class="pi">:</span> <span class="no">true</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Lisez la <a href="https://github.com/suncat2000/MobileDetectBundle/blob/master/README.md">documentation officielle</a> du bundle pour apprendre 
+comment configurer des scénarios de redirection plus complexes.</p>
+
+<p>En plus de rediriger les utilisateurs, ce bundle fournit également un service appellé : <code class="highlighter-rouge">mobile_detector</code> qui va vous permettre de 
+détecter le type de mobile et l’OS :</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="code"><pre><span class="nv">$device</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'mobile_detect.mobile_detector'</span><span class="p">);</span>
+
+<span class="c1">// détection du mobile</span>
+<span class="nv">$device</span><span class="o">-&gt;</span><span class="na">isMobile</span><span class="p">();</span>
+<span class="nv">$device</span><span class="o">-&gt;</span><span class="na">isTablet</span><span class="p">();</span>
+
+<span class="c1">// détection plus poussée</span>
+<span class="nv">$device</span><span class="o">-&gt;</span><span class="na">isIphone</span><span class="p">();</span>
+<span class="nv">$device</span><span class="o">-&gt;</span><span class="na">isIpad</span><span class="p">();</span>
+<span class="nv">$device</span><span class="o">-&gt;</span><span class="na">isSamsung</span><span class="p">();</span>
+
+<span class="c1">// détection de l'OS du mobile</span>
+<span class="nv">$device</span><span class="o">-&gt;</span><span class="na">isIOS</span><span class="p">();</span>
+<span class="nv">$device</span><span class="o">-&gt;</span><span class="na">isAndroidOS</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Toutes ces méthodes sont aussi disponibles dans vos templates Twig :</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="p">{</span><span class="o">%</span> <span class="kd">extends</span> <span class="nx">is_mobile</span><span class="p">()</span> <span class="p">?</span> <span class="dl">'</span><span class="s1">mobile/layout.html.twig</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">layout.html.twig</span><span class="dl">'</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="nx">is_android_os</span><span class="p">()</span> <span class="o">%</span><span class="p">}</span>
+    <span class="nx">Download</span> <span class="nx">our</span> <span class="nx">application</span> <span class="k">from</span> <span class="nx">the</span> <span class="nx">store</span><span class="p">.</span>
+<span class="p">{</span><span class="o">%</span> <span class="nx">endif</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="nx">is_device</span><span class="p">(</span><span class="dl">'</span><span class="s1">samsung</span><span class="dl">'</span><span class="p">)</span> <span class="o">%</span><span class="p">}</span>
+    <span class="nx">Thinking</span> <span class="nx">about</span> <span class="nx">buying</span> <span class="nx">an</span> <span class="nx">iPhone</span><span class="p">?</span> <span class="nx">Check</span> <span class="nx">out</span> <span class="nx">our</span> <span class="nx">deals</span><span class="o">!</span>
+<span class="p">{</span><span class="o">%</span> <span class="nx">endif</span> <span class="o">%</span><span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="à-propos-de-lauteur">À propos de l’auteur</h3>
+
+<p><a href="https://github.com/suncat2000/MobileDetectBundle">MobileDetectBundle</a> est développé par 
+<a href="https://connect.sensiolabs.com/profile/kotovsky">Nikolay Ivlev</a>, un développeur Symfony de Moscou (Russie).</p>
+
+<h3 id="à-propos-de-meet-the-bundle">À propos de “Meet the bundle”</h3>
+
+<p>Cette série d’article est publiée sur le site officiel de Symfony. Je ne fais ici que traduire ces articles pour 
+que les personnes ayant énormément de mal en anglais, puissent profiter du travail de Javier Eguiluz. Encore 
+merci à lui pour tout le travail qu’il abat dans la communauté Symfony. Le prochain article sera la traduction 
+du premier billet : <a href="http://symfony.com/blog/meet-the-bundle-controllerextrabundle">Meet the bundle: ControllerExtraBundle</a></p>
+:ET

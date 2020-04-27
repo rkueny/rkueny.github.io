@@ -1,0 +1,53 @@
+I"q<p>Hier au boulot, (en stage) j’ai eu une petite découpe à faire. Et bien sûr IE6 est venu y mettre son grain de sel. Vivement qu’il meurt lui d’ailleurs ^^.</p>
+
+<p>Certains développeurs on d’ailleurs arrêté d’assurer la compatibilité pour cette version d’internet explorer. Autant je suis d’accord avec eux pour les projets personnelles,  mais bon dans le cadre d’une entreprise… le client est roi parait-il :).</p>
+
+<p>Bref, je pense que vous avez été confronté au moins une fois à ce problème voici comme j’ai résolu le mien.</p>
+
+<!--more-->
+<p>Tout d’abord dans la page html, pour la sélection du css :</p>
+
+<pre id="line1"><em> &lt;<span class="start-tag">style</span><span class="attribute-name"> type</span>=<span class="attribute-value">"text/css"</span>&gt;
+    &lt;!--
+    @import url("style/style.css");
+    --&gt;
+    &lt;/<span class="end-tag">style</span>&gt;
+</em></pre>
+
+<pre id="line16"><em>    <span class="comment">&lt;!--[if lte IE 6]&gt;
+    &lt;style type="text/css"&gt;
+    &lt;!--
+    @import url("style/ie6.style.css");
+    --&gt;
+    &lt;/style&gt;
+    &lt;![endif]--&gt;</span></em></pre>
+
+<p>Le premier &lt;style type= »text/css »&gt; correspond à la feuille de style pour tout les naviguateurs et la seconde est spéciale pour IE6 (comme son nom l’indique).</p>
+
+<p>Ensuite dans : ie6.style.css, là où je veux gérer la transparence voici ce que j’ai mis :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.div_png {
+    background: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='ADRESSE_DE_L_IMAGE.png', sizingMethod='scale');
+}
+</code></pre></div></div>
+
+<p>L’adresse de l’image doit être sans les ../ même si c’est dans un autre répertoire.</p>
+
+<p>Pour l’attribut <em>sizingMethod</em> voici ce qu’il peut recevoir :</p>
+
+<ul>
+  <li><em>image</em> —Valeur par défaut, adapte le bloc à l’image,</li>
+  <li><em>scale</em> — Adapte l’image au bloc,</li>
+  <li><em>crop</em> — Coupe l’image pour qu’elle tienne dans le bloc.</li>
+</ul>
+
+<p>J’espère que cela a pu vous aider.</p>
+
+<p>Ah oui, un dernier point. Je conseille d’utiliser les <em>@import</em> plutôt que les  <em>«span class=”start-tag”&gt;link&lt;/span&gt;<span class="attribute-name"> href</span>=<span class="attribute-value">«  » </span><span class="attribute-name">rel</span>=<span class="attribute-value">« stylesheet » </span><span class="attribute-name">type</span>=<span class="attribute-value">« text/css » </span><span class="error"><span class="attribute-name">/</span></span></em>&gt;. Pourquoi ?</p>
+
+<p>Je dois dire que j’utilisais <em>link</em> jusqu’à pas longtemps. Mais <a href="http://methylbro.titaxium.org/">Methylbro</a> m’a donné une bonne raison qui est d’ailleurs très bien expliquée chez <a href="http://www.alsacreations.com/actu/lire/160-link-ou-import.html">Alsacreations</a>. Les vieux navigateurs, tel que Netscape 4, n’interpréteront pas le <em>@import</em>. Il vaut mieux ne rien interpréter que mal l’interpréter. Les personnes utilisant cela navigueront donc sans feuille de style mais pourront tout de même avoir une navigation plus ou moins agréable (à vous de faire un code html comme il faut).</p>
+
+<p>See you later <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /></p>
+
+:ET

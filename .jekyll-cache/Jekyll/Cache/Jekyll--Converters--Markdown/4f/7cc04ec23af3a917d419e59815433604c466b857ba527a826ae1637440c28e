@@ -1,0 +1,62 @@
+I"�<p>Après une grosse phase de gestation, j’ai enfin sorti l’application “L’Over pass” ce 12 mai. Celle-ci est bien entendue développée avec Titanium appcelerator et le framework Alloy.</p>
+
+<h2 id="lover-pass-cest-quoi-">L’Over pass c’est quoi ?</h2>
+
+<p><a href="http://loverpass.fr">L’Over pass</a> est une carte de réduction valable à Toulouse. Les réductions sont disponibles chez tout les partenaires de cette carte. Je m’occupe, pour ma part, de tout ce qui est numérique et communication sur les réseaux sociaux.</p>
+
+<p>Nous nous sommes vite aperçu qu’une application devenait indispensable pour savoir quels sont les offres en cours et quels jours. L’application devait donc en priorité :</p>
+
+<ul>
+  <li>Lister tout nos partenaires et mettre en avant les offres du jour</li>
+  <li>Permettre aux utilisateurs de localiser les partenaires</li>
+  <li>Nous contacter par mail depuis l’application</li>
+</ul>
+
+<p>Nous l’avons donc lancée le 12 mai, et en 4 jours nous sommes aux alentours de 200 téléchargements sur iOs/Android (à peu près 60/40%). Nous en sommes content tout en espérant de plus en plus de téléchargements bien sûr !</p>
+
+<h2 id="et-elle-ressemble-à-quoi-cette-appli-">Et elle ressemble à quoi cette appli ?</h2>
+
+<p>Si vous voulez déjà la tester, elle est disponible :</p>
+
+<ul>
+  <li><a href="https://itunes.apple.com/fr/app/lover-pass/id989976180?l=fr&amp;ls=1&amp;mt=8">L’Over pass sur iOS</a></li>
+  <li><a href="https://play.google.com/store/apps/details?id=fr.loverpass.loverpass">L’Over pass sur Android</a></li>
+</ul>
+
+<p>Je vous mets ici la présentation de l’application sur iOS :</p>
+
+<div style="width:100%;margin-bottom:15px;">
+  <img src="http://localhost:4000/img/ios/screen1.jpg" alt="Screen 1 iOS" style="width:48%;margin-right:4%;display:inline;" />
+  <img src="http://localhost:4000/img/ios/screen2.jpg" alt="Screen 2 iOS" style="width:47%;display:inline;" />
+</div>
+
+<div style="width:100%;margin-bottom:15px;">
+  <img src="http://localhost:4000/img/ios/screen3.jpg" alt="Screen 3 iOS" style="width:48%;margin-right:4%;display:inline;" />
+  <img src="http://localhost:4000/img/ios/screen5.jpg" alt="Screen 4 iOS" style="width:47%;display:inline;" />
+</div>
+
+<p>D’ailleurs, j’ai généré cette présentation avec le site <a href="https://launchkit.io/screenshots/onboard">LaunchKit.io</a>, je vous le conseille pour faire votre présentation pour votre application iOS.</p>
+
+<h2 id="beaucoup-de-difficultés-">Beaucoup de difficultés ?</h2>
+
+<p>Il y en a eu oui ! Cette application est le fil rouge de mon apprentissage avec Titanium. Je l’ai souvent recommencée à zéro pour l’améliorer et utiliser un meilleur code. Je n’avais par exemple pas débuté avec les Models. Et j’avais bien tort.</p>
+
+<p>J’ai eu aussi des soucis avec Android. En effet, je n’utilisai pratiquement jamais cette plateforme. J’ai depuis rattrapé mon retard et je saisi mieux toutes les différences entre iOS et Android.</p>
+
+<p>Les quelques conseils que je ressors de cette 1ère version de l’application :</p>
+
+<ul>
+  <li>Ne faites pas toute une version de l’application avant de la porter sur l’autre plateforme. Faites les 2 petit à petit.</li>
+  <li>Commencez par Android et améliorez sur iOS.</li>
+  <li>Faites assez rapidement tester par vos amis et votre cercle proches. Quand vous êtes la tête de le code vous passez à côté de pleins de choses. Et surtout, vous ne naviguez pas comme les autres.</li>
+  <li>Réservez du temps à la soumission de votre application (screenshot, description, mots clés, etc…)</li>
+</ul>
+
+<h2 id="et-la-suite-">Et la suite ?</h2>
+
+<p>J’ai encore pleins de projets sur mobile. Les prochaines versions de L’Over pass, une autre application qui listera les Happy hours et autres bons plans pour sortir sur Toulouse (dans un premier temps, puis Bordeaux, Lyon, Nantes et Paris par la suite).</p>
+
+<p>Je suis aussi en train de finir un service web et je continue de jouer avec Unity3D pour sortir un jeu sur mobile sous peu.</p>
+
+<p><strong>De plus, si vous désirez faire développer une application iOS et/ou Android, n’hésitez pas <a href="http://localhost:4000/contact">à me contacter</a> pour travailler avec moi</strong></p>
+:ET

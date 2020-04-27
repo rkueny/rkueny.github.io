@@ -1,0 +1,32 @@
+I"�<p>Lorsque l’on a fini de développer son application, on a qu’une seule hâte, la publier sur les différents stores. La tâche peut cependant se révéler assez longue. Voici 2 outils pour vous faciliter la vie.</p>
+
+<h2 id="launchkit---screenshot-builder">LaunchKit - Screenshot Builder</h2>
+
+<p>Si vous publiez votre application sur l’Apple Store, n’hésitez pas à utiliser ce service. En quelques clics, et en uploadant vos screenshots vous obtiendrez ce genre d’images : (vous pouvez éditer la couleur, choisir un iPhone blanc ou noir choisir le texte et sa position)</p>
+
+<p><img src="http://localhost:4000/img/ios/screen1.jpg" alt="Screen 1 iOS" style="margin:0 auto" /></p>
+
+<p>Vos screenshots seront en format : 640×960, 640×1136, 750×1334 et 1242×2208. Autant vous dire que ça vous économise pas mal de temps.</p>
+
+<p style="text-align:center;"><a href="https://launchkit.io/screenshots/">LaunchKit - Screenshot Builder</a></p>
+
+<h2 id="ticons">TiCons</h2>
+
+<p>Un autre service qui vous aidera si vous développez avec Titanium. Un générateur d’icones et de “splash”. 
+Pas mal d’options et un gain de temps assez énorme.</p>
+
+<p style="text-align:center;"><a href="http://ticons.fokkezb.nl/">TiCons</a></p>
+
+<p>Si vous connaissez d’autres services dans ce genre pour faciliter la vie, n’hésitez pas à laisser un commentaire. J’enrichirai cet article avec la plus grande joie.</p>
+
+<h2 id="un-petit-bonus--tifiddle">Un petit bonus : tiFiddle</h2>
+
+<p>Le JsFiddle pour Titanium et Alloy.</p>
+
+<p>Vous voulez montrer rapidement un bout de code Titanium/Alloy à une personne ? Utilisez ce service sans hésiter.
+Vous pouvez mettre votre code (en étant loggué via Github ou non), et voir le résultat en direct dans un émulateur iOS ou Android.</p>
+
+<p style="text-align:center;"><a href="http://tifiddle.com/">tiFiddle</a></p>
+
+<p>Merci à toutes les personnes réalisant ces services, ça facilite grandement la vie !</p>
+:ET

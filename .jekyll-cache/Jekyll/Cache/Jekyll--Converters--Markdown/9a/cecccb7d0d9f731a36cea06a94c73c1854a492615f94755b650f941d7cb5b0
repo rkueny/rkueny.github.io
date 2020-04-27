@@ -1,0 +1,77 @@
+I"]<p>Lors de mon premier article « <a href="http://rkueny.fr/developpement-web/creer-developper-un-plugin-wordpress" target="_blank">Créer, développer un plugin wordpress</a>« , nous avons abordé les grandes lignes ainsi que la conception du cartouche wordpress. Avec l’article d’aujourd’hui nous allons entré dans le vif du sujet. Pour que vous suiviez bien le tutoriel nous allons nous appuyer sur un exemple. Cet exemple sera mon <a href="http://rkueny.fr/developpement-web/myranks-plugin-et-site" target="_blank">plugin « My Ranks »</a> (encore en cours de réalisation). Le but de ce plugin est de permettre au propriétaire du blog de connaitre son positionnement Google sur différentes requêtes. Nous n’allons donc pas agir sur l’affichage des visiteurs mais simplement dans la partie admin. Une fois ce tutoriel fini, je le compléterai avec la partie visiteur (ajout d’un widget par exemple).</p>
+
+<p>Bon, trêve de bavardage, on y va !!!</p>
+
+<!--more-->
+
+<p>Après avoir regardé si le nom de<a href="http://wordpress.org/extend/plugins/search.php?q=myranks" target="_blank"> mon plugin était unique</a>, je l’ai donc nommé « My Ranks ». Ce qui dans l’architecture donne : <em>wp-content/plugins/myranks/myranks.php</em>.</p>
+
+<p>Je vais développer en utilisant une classe et en PHP5. Pourquoi une classe ? Tout d’abord cela est bien plus propre. Ensuite, je suis habitué à développer en objet désormais. Enfin, chaque fonction doit être unique dans tout les plugins activés dans votre blog. En passant par une classe il n’y a que le nom de la classe qui doit être unique. Vu que c’est le même que le nom de mon plugin ça passe. A ce stade, mon fichier php ressemble à ça :</p>
+
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="php" style="font-family:monospace;"><span style="color: #666666; font-style: italic;">/* ----------------------------------------------------
+			CARTOUCHE D'IDENTIFICATION
+---------------------------------------------------- */</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">/*
+	Plugin Name: My Ranks
+	Plugin URI: http://rkueny.fr
+	Description: Plugin servant à suivre la position de mots clés
+                     choisis sur le moteur de recherche google
+	Author: R.Kueny
+	Version: 0.1
+	Author URI: http://rkueny.fr
+*/</span>
+<span style="color: #000000; font-weight: bold;">class</span> myranks<span style="color: #009900;">&#123;</span>
+&nbsp;
+     <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">function</span> __construct<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span>
+     <span style="color: #009900;">&#125;</span>
+<span style="color: #009900;">&#125;</span>
+&nbsp;
+<span style="color: #000088;">$ranks</span> <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> myranks<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p>Je ne vous représente pas la cartouche d’identification. Si vous avez loupé le premier tutoriel sur la <a href="http://rkueny.fr/developpement-web/creer-developper-un-plugin-wordpress" target="_blank">création d’un plugin wordpress</a> retournez le lire ;).</p>
+
+<p>Ici donc, rien de bien compliqué. Je déclare ma classe et son constructeur. Ensuite je l’initialise. A chaque fois que vous irez dans la partie plugins ou sur le plugin vous créez donc un objet <em>myranks</em>.</p>
+
+<p>**Installer/activer son plugin<br />
+**</p>
+
+<p>Lorsqu’un admin met en route un plugin il y a deux étapes. L’installation et l’activation. Vous pouvez commencer à agir lors de l’activation. Pour cela, WordPress met à votre disposition des <em>hooks</em>. Un <em>hook</em> vous permets d’agir sur le cœur du système wordpress. Nous allons ici voir votre premier hook, celui de l’activation.</p>
+
+<p>Syntaxe : <span style="color: #3366ff;"><em>register_activation_hook($file, $fonctions);</em></span><br />
+Documentation : ce hook va agir lors de l’activation de votre plugin.</p>
+
+<p>Le premier paramètre $file correspond au chemin de votre fichier principal (<em>myranks.php</em> dans ce cas là). Étant donné que vous êtes déjà dessus vous pouvez utiliser <a href="http://www.php.net/manual/fr/language.constants.predefined.php" target="_blank"><strong>FILE</strong></a>. Ce paramètre est obligatoire.</p>
+
+<p>Le second paramètre correspond à la fonction à exécuter lors de l’activation de votre plugin. Ici nous allons faire appel à une fonction dans notre classe <em>myranks</em>. Ce sera la fonction <em>install()</em>. Du coup on l’appellera ainsi : <em><a href="http://www.php.net/manual/fr/language.types.array.php" target="_blank">array</a>(‘myranks’,’install’)</em>. Si la fonction n’avait pas été dans une classe nous aurions juste fait <em>‘install’</em></p>
+
+<p>Cela va donc vous donner :</p>
+
+<p><span style="color: #3366ff;"><em>register_activation_hook(<a href="http://www.php.net/manual/fr/language.constants.predefined.php" target="_blank"><strong>FILE</strong></a>, <a href="http://www.php.net/manual/fr/language.types.array.php" target="_blank">array</a>(‘myranks’,’install’));</em></span></p>
+
+<p><strong>Désinstaller/désactiver son plugin</strong></p>
+
+<p>De nouveau, vous ne pourrez agir que lors de la désactivation du plugin. Cela se passe de la même façon mais avec cette syntaxe :</p>
+
+<p><span style="color: #3366ff;"><em>register_deactivation_hook(<a href="http://www.php.net/manual/fr/language.constants.predefined.php" target="_blank"><strong>FILE</strong></a>, <a href="http://www.php.net/manual/fr/language.types.array.php" target="_blank">array</a>(‘myranks’,’desinstall’));</em></span></p>
+
+<p>Un point important à souligner. Vos fonctions install et desinstall doivent être en accès public, sinon le <em>hook</em> ne pourra pas y accéder.</p>
+
+<p>Pour la documentation officielle des deux hooks :</p>
+
+<p><a href="http://codex.wordpress.org/Function_Reference/register_activation_hook" target="_blank">Hook activation</a></p>
+
+<p><a href="http://codex.wordpress.org/Function_Reference/register_deactivation_hook" target="_blank">Hook desactivation</a></p>
+
+<p>C’est fini pour aujourd’hui. Dans le prochain billet nous verrons l’accès à la base de donnée et peut-être la création d’un menu dans la partie admin.</p>
+
+<p>See you later <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /></p>
+:ET

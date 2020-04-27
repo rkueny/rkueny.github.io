@@ -1,0 +1,56 @@
+I"I<p>J’espère que les articles vous plaisent pour le moment. Je pense que cela peut aider les personnes à démarrer leur projet. Si vous voulez que j’aborde des points précis (hors programmation) n’hésitez pas à me le dire via les commentaires.</p>
+
+<p>Aujourd’hui on va un peu parler du développement. Comme je l’ai dit il n’y aura pas de ligne de codes mais je pense qu’il faut mettre les choses aux clairs sur le sujet.</p>
+
+<!--more-->
+
+<p><strong>Créateur de jeu web, et bien sur codeur</strong></p>
+
+<p>Je l’ai souvent dit dans cette série d’article, il faut un bon niveau de programmation. Voici le genre de profil qui se présente concernant les développeur : (c’est de la caricature je précise ^_^)</p>
+
+<p>– Je sors du sdz, je connais le tuto par coeur je veux m’exercer et créer mon jeu web.</p>
+
+<p><em>Attention ! Warning ! Attenzione ! Faites gaffe <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> Le niveau à la sortie du tutoriel php du sdz ne permet pas de créer un jeu web !!! Je suis catégorique là dessus et je pense que tout ceux qui baignent dans ce domaine sont d’accord avec moi.</em></p>
+
+<p>– J’ai un peu d’expérience, pleins de projets débutés, je veux intégrer l’équipe.</p>
+
+<p><em>Pleins de projets débutés ? Attention ! Développer un jeu web demande du temps, énormément de temps. De plus cela demande aussi un suivi (au moins au début dans le pire des cas). Pleins de projets débutés… pas bon signe.</em></p>
+
+<p>– Je suis un boss</p>
+
+<p>*Pour moi un développeur qui est un boss c’est le minimum lol. Je dis par là que ça demande un bon niveau. S’il le développeur ne connait même pas la notion de POO ou de MVC…  Je ne dis pas de maitriser ou d’utiliser mais de connaitre. *</p>
+
+<p>Si vous êtez développeur web et que vous voulez vous lancer dans un jeu web il vous faut de l’expérience. Avez vous codé votre propre module de news ? commentaires ? système membre ? Quand je dis développé c’est sécurisé, clair et optimisé bien entendu. Une fois ces modules là développé vous pouvez entrevoir d’aller plus loin. N’oubliez pas que l’on devient bon développeur en codant et en se cultivant. Lisez des tutoriels, essayez des choses, soyez imaginatif. Ne faites pas du copier-coller… ça ne sert à rien !</p>
+
+<p>On va aborder les modules nécessaires, primordiaux même à un jeu. Voici un super schéma (merci Pascal ;)) qui traite bien du sujet.</p>
+
+<div style="width: 412px" class="wp-caption aligncenter">
+  <img title="Modules indispensables" src="http://b.imagehost.org/0531/modulesDuJeu.jpg" alt="http://www.creajeu.net/forum/viewtopic.php?pid=963#p963" width="402" height="342" />
+  
+  <p class="wp-caption-text">
+    http://www.creajeu.net/forum/viewtopic.php?pid=963#p963
+  </p>
+</div>
+
+<p>Je pense que cela résume bien ce qu’il faut faire. On va un peu détailler cela.</p>
+
+<p><strong>Eléments transversaux</strong></p>
+
+<p>Accès à la DB : primordial bien entendu. A vous de voir ce que vous préférez. Personnellement j’utilise PDO pour mes projets, du coup tout est fait déjà <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>Gestion de langue : c’est pas mal d’y penser dès le début. Si votre jeu a du succès par la suite vous ne serez pas obligé de reprendre tout votre code pour modifier cela.</p>
+
+<p>Log : je pense que c’est vraiment un très bon plus d’avoir ça. Savoir ce qui se passe sur votre jeu, les erreurs etc… Cela vous permettra d’être réactif plus rapidement.</p>
+
+<p>Je pense que la suite est assez clair pour ne pas être commenté. Pensez que cela est vraiment un bon plan de modules.</p>
+
+<p>Je vais arrêter ici cette série de billets. Je les reprendrais sûrement plus tard. Je vais orienter mes billets vers le développement de modules. Ce ne sera toujours pas du copier-coller mais de l’explicatif avec des exemples.</p>
+
+<p>J’espère que cette série d’article a pu vous aider, vous guider. Si vous désirez que j’aborde d’autres points laissez un commentaire sur cette article. J’y reviendrai si le sujet en vaut la peine. N’hésitez pas à émettre vos critiques non plus. Cette série n’est pas finie, je pense qu’on peut même dire qu’elle est en perpétuelle ouverture <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>See you later <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /></p>
+
+<p style="text-align:center">
+  <br />
+</p>
+:ET

@@ -1,0 +1,79 @@
+I"9<p>Il y a quelques temps, dans les commentaires sur l’article traitant de <a href="http://rkueny.fr/developpement-web/ovh-et-php5" target="_blank">OVH et PHP 5</a>, nous avons abordé le problème des <a href="http://fr3.php.net/magic_quotes" target="_blank">magic quotes</a> et du <a href="http://fr.php.net/manual/fr/ini.core.php" target="_blank">register globals</a>.</p>
+
+<p>Pour des questions de sécurité il est conseillé de les désactiver. Pour les magic_quotes, PHP 6 s’en chargera … Mais bon, quand on voit que OVH est encore en PHP 4, on se dit que le problème n’est pas encore réglé ^^.</p>
+
+<p>Dans tout mes projets, lorsque j’appelle mon fichier de configuration je désactive les magic_quotes et je mets le register_globals à off. Voici donc le contenu de mon init.conf.php :</p>
+
+<!--more-->
+
+<p>Désactivation des magic_quotes :</p>
+
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="php" style="font-family:monospace;"><span style="color: #666666; font-style: italic;">/*
+   suppression des magic quotes
+   pour raisons de sécurités
+- on met magic_quotes_runtime à 0 (désactivé)
+- on désactive magic_quotes_runtime (0)
+- si magic_quotes_gpc est activé, on le désactive
+  pour tout les types de variable
+*/</span>
+&nbsp;
+<span style="color: #990000;">ini_set</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'magic_quotes_runtime'</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;"></span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #990000;">set_magic_quotes_runtime</span><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;"></span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">if</span> <span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">1</span> <span style="color: #339933;">==</span> <span style="color: #990000;">get_magic_quotes_gpc</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span>
+     <span style="color: #000000; font-weight: bold;">function</span> remove_magic_quotes_gpc<span style="color: #009900;">&#40;</span><span style="color: #339933;">&amp;</span>amp<span style="color: #339933;">;</span><span style="color: #000088;">$value</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span>
+          <span style="color: #000088;">$value</span> <span style="color: #339933;">=</span> <span style="color: #990000;">stripslashes</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$value</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+     <span style="color: #009900;">&#125;</span>
+&nbsp;
+     <span style="color: #990000;">array_walk_recursive</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$_GET</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'remove_magic_quotes_gpc'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+     <span style="color: #990000;">array_walk_recursive</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$_POST</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'remove_magic_quotes_gpc'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+     <span style="color: #990000;">array_walk_recursive</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$_COOKIE</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'remove_magic_quotes_gpc'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p>Désactivation du register_globals :</p>
+
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="php" style="font-family:monospace;"><span style="color: #666666; font-style: italic;">/*
+&nbsp;
+ Mise à off de register_globals (de base si version PHP &gt; 4.2)
+ pour des raisons de sécurité
+&nbsp;
+- si register_globals est activé :
+- on le désactive pour les sessions
+- on le désactive pour toutes les variables
+- on le met à off
+*/</span>
+&nbsp;
+<span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">ini_get</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'register_globals'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span>
+     <span style="color: #000088;">$superglobals</span> <span style="color: #339933;">=</span> <span style="color: #990000;">array</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$_SERVER</span><span style="color: #339933;">,</span> <span style="color: #000088;">$_ENV</span><span style="color: #339933;">,</span> <span style="color: #000088;">$_FILES</span><span style="color: #339933;">,</span> <span style="color: #000088;">$_COOKIE</span><span style="color: #339933;">,</span> <span style="color: #000088;">$_POST</span><span style="color: #339933;">,</span> <span style="color: #000088;">$_GET</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+     <span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">isset</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$_SESSION</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span>
+          <span style="color: #990000;">array_unshift</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$superglobals</span><span style="color: #339933;">,</span> <span style="color: #000088;">$_SESSION</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span>
+&nbsp;
+    <span style="color: #b1b100;">foreach</span> <span style="color: #009900;">&#40;</span><span style="color: #000088;">$superglobals</span> <span style="color: #b1b100;">as</span> <span style="color: #000088;">$superglobal</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span>
+         <span style="color: #b1b100;">foreach</span> <span style="color: #009900;">&#40;</span><span style="color: #000088;">$superglobal</span> <span style="color: #b1b100;">as</span> <span style="color: #000088;">$global</span> <span style="color: #339933;">=&amp;</span>gt<span style="color: #339933;">;</span> <span style="color: #000088;">$value</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span>
+              <span style="color: #990000;">unset</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$GLOBALS</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$global</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+         <span style="color: #009900;">&#125;</span>
+    <span style="color: #009900;">&#125;</span>
+&nbsp;
+     <span style="color: #990000;">ini_set</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'register_globals'</span><span style="color: #339933;">,</span> <span style="color: #009900; font-weight: bold;">false</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p>Voilà, vous avez ma version pour partir sur de bonnes bases.</p>
+:ET

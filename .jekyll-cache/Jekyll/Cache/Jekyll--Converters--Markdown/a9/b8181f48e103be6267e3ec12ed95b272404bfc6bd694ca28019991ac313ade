@@ -1,0 +1,64 @@
+I"�<p>Comme je vous le disais dans un précédent post, je fais mon petit chemin dans le monde du développement mobile avec Titanium Appcelerator.</p>
+
+<p>L’une des choses qui m’a le plus embêté n’est rien d’autre que le temps de compilation. Quand je dev avec PHP aucun soucis de ce côté la <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> Il suffit de rafraichir le navigateur (ou d’avoir un outil qui le fait) et c’est bon on a le résultat en direct. Là, il faut compiler son code, ça relance le simulateur iPhone (ou android) et enfin on peut voir les modifs. Autant vous dire que c’est une perte de temps assez énorme !</p>
+
+<p>Je me doutais bien que des gens avait trouvés une solution à ce problème. C’est là qu’intervient TiShadow.</p>
+
+<p><img class="aligncenter size-full wp-image-2128" src="http://rkueny.fr/wp-content/uploads/2014/11/tishadow-919496-l-124x124.png" alt="tishadow-919496-l-124x124" width="124" height="124" /></p>
+
+<p>J’ai un peu galéré à trouver comment le faire fonctionner, je vais donc vous expliquer en quoi consiste TiShadow et comment le faire fonctionner pour améliorer grandement votre productivité !</p>
+
+<!--more-->
+
+<p><strong>TIShadow : ça fait quoi ?</strong></p>
+
+<p>Comme je le disais, la compilation du code prends énormément de temps. Une compil prend environ 20sec. Le calcul est vite fait pour se rendre compte qu’on perd beaucoup de temps <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>TiShadow descend ce temps là autour de 2 secondes. Le temps d’aller sur son simulateur quoi <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> En fait, TiShadow va builder ce qui a changé et afficher directement le résultat dans le (ou les) simulateur. Le schéma du site officiel illustre bien le fonctionnement :</p>
+
+<p><a href="http://tishadow.yydigital.com"><img class="aligncenter wp-image-2131 size-full" src="http://rkueny.fr/wp-content/uploads/2014/11/diagram.png" alt="TiShadow" width="480" height="400" /></a></p>
+
+<p> </p>
+
+<p><strong>TiSahdow : comment on mets ça en place ?</strong></p>
+
+<p>Tout d’abord il faut installer TiShadow Server.</p>
+
+<pre>npm install -g tishadow</pre>
+
+<p>Ensuite, il vous faut créer l’appli TiShadow qui embarquera vos applis par la suite. Pour cela rendez-vous dans votre dossier préféré, et créez votre app :</p>
+
+<pre>cd ~/
+tishadow app -d tishadowapp</pre>
+
+<p>Vous avez la base. Une fois ceci fait, lancez le serveur :</p>
+
+<pre>tishadow server</pre>
+
+<p>Cela lance le serveur TiShadow sur le port 3000. Vous pouvez vous rendre sur http://localhost:3000 pour vérifier.</p>
+
+<p>Ensuite, rendez vous dans le dossier de votre appli « tishadowapp » et buildez la.</p>
+
+<pre>cd ~/tishadowapp
+titanium build</pre>
+
+<p>Enfin, rendez-vous dans le dossier de votre appli mobile sur laquelle vous travaillez et lancez la dans TiShadow</p>
+
+<pre>cd ~/votreAppliMobile
+tishadow @ run --platform ios --update</pre>
+
+<p>Et voilà, votre appli se reload à chacune de vos modifs dans le simulateur <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p> </p>
+
+<p><a href="http://rkueny.fr/wp-content/uploads/2014/11/390.gif" rel="lightbox[2127]"><img class="aligncenter size-full wp-image-2138" src="http://rkueny.fr/wp-content/uploads/2014/11/390.gif" alt="Good Job !" width="300" height="169" /></a></p>
+
+<p>L’option –update lance le build à chaque fois que vous faites une modif de vos fichiers et l’option –platform ios cible uniquement votre build iOs.</p>
+
+<p>Voilà ! Vous avez les bases pour gagner du temps avec TiShadow. N’hésitez pas à partager vos astuces de dev avec Appcelerator Titanium et Alloy. Je ferais un article dans les semaines à venir avec quelques tips pour TiShadow.</p>
+
+<p> </p>
+
+<p> </p>
+
+:ET

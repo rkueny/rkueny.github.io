@@ -1,0 +1,50 @@
+I"�<p>Utiliser <code class="highlighter-rouge">persist()</code> ou ne pas utiliser <code class="highlighter-rouge">persist()</code> telle est la question … Le <code class="highlighter-rouge">persist()</code>, <code class="highlighter-rouge">flush()</code> est un couple que l’on sépare rarement alors qu’en fait s’il y a deux méthodes ce n’est pas pour rien.</p>
+
+<p>Je me suis aperçu que cela n’était pas clair pour tout le monde, donc voici un petit rappel qui pourra vous être utile.</p>
+
+<blockquote>
+  <p>Notice that calling <code class="highlighter-rouge">$em-&gt;persist($product)</code> isn’t necessary. 
+Recall that this method simply tells Doctrine to manage or “watch” the $product object. 
+In this case, since you fetched the $product object from Doctrine, it’s already managed.
+<a href="http://symfony.com/doc/current/book/doctrine.html#updating-an-object">Source</a></p>
+</blockquote>
+
+<p>Cela vous explique simplement, que lorsque vous déclarez un nouvel objet, vous devez dire à Doctrine de le garder en mémoire 
+avec le <code class="highlighter-rouge">persist()</code>.</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="nv">$product</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Product</span><span class="p">();</span>
+<span class="nv">$product</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s1">'Product name'</span><span class="p">);</span>
+
+<span class="nv">$em</span><span class="o">-&gt;</span><span class="na">persist</span><span class="p">(</span><span class="nv">$product</span><span class="p">);</span>
+<span class="nv">$em</span><span class="o">-&gt;</span><span class="na">flush</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>En revanche, si vous récupérez l’objet depuis Doctrine, vous n’avez pas besoin de lui redire de le garder en mémoire.</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="nv">$product</span> <span class="o">=</span> <span class="nv">$em</span><span class="o">-&gt;</span><span class="na">getRepository</span><span class="p">(</span><span class="s2">"AppBundle:Product"</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">findOneById</span><span class="p">(</span><span class="nv">$id</span><span class="p">);</span>
+<span class="nv">$product</span><span class="o">-&gt;</span><span class="na">setName</span><span class="p">(</span><span class="s1">'Product name'</span><span class="p">);</span>
+
+<span class="nv">$em</span><span class="o">-&gt;</span><span class="na">flush</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>De plus, Doctrine est suffisament évolué pour savoir que si vous ne modifiez pas l’objet qu’il vous a donné, il n’aura pas 
+besoin de faire un <code class="highlighter-rouge">UPDATE</code> lors du <code class="highlighter-rouge">flush()</code>.</p>
+
+<p>Le <code class="highlighter-rouge">flush()</code> équivaut en fait à ouvrir une transaction et à enregister tout les données surveillées depuis le dernier <code class="highlighter-rouge">flush()</code>.</p>
+
+<blockquote>
+  <p>Un dernier petit point, n’oubliez pas qu’à chaque fois que vous faites un/des 
+<code class="highlighter-rouge">persist()</code> puis un <code class="highlighter-rouge">flush()</code>, Doctrine fera autant d’<code class="highlighter-rouge">INSERT</code> que de <code class="highlighter-rouge">persist()</code>.</p>
+</blockquote>
+
+<p>C’est tout pour aujourd’hui, je ne veux plus voir trainer de <code class="highlighter-rouge">persist()</code> la où ça n’a pas lieu d’être !</p>
+:ET

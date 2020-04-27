@@ -1,0 +1,8 @@
+I"�<p>Je trouve que Facebook essaye de plus en plus de fournir des outils de qualité aux devs facebook. Serait l’approche de l’obligation de l’utilisation des crédits ? ou encore le retour des outils de viralité pour le développement d’application ? En tout cas, c’est avec joie que j’ai accueilli la version 3.0.0 du SDK PHP de facebook.</p>
+
+<p>De plus, l’adaptation de votre code existant pour ce nouvel SDK est vraiment facile. Je vais profiter de passage pour refaire un tutoriel de développement d’application facebook. Celui-ci devrait arriver après le week-end.</p>
+
+<p>Pour trouver le nouvel sdk et regarder comment l’intéger, rendez vous sur le github : https://github.com/facebook/php-sdk</p>
+
+<p>@+</p>
+:ET

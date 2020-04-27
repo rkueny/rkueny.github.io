@@ -1,0 +1,21 @@
+I"�<p>Un sympathique billet est apparu hier sur le <a href="http://methylbro.titaxium.org/" target="_blank">blog de méthylbro</a> traitant de la <a href="http://methylbro.titaxium.org/post/2009/05/29/display_errors-%C3%A0-On-sur-un-serveur-de-production-c-est-mal-!" target="_blank">gestion des erreurs php en serveur de production</a>.</p>
+
+<p>En effet, on ne paramètre pas de la même façon un serveur où on bosse en local et le serveur final de production. Il traite ici du non-affichage des erreurs php.</p>
+
+<p><img class="aligncenter size-full wp-image-185" title="php-display-errors-on-serveur-production (source : methylbro.titaxium.org)" src="http://rkueny.fr/wp-content/uploads/2009/05/php-display-errors-on-serveur-production.jpg" alt="php-display-errors-on-serveur-production (source : methylbro.titaxium.org)" width="539" height="165" /></p>
+
+<p>Si une personne mal-intentionné (bouh le méchant hacker) arrive sur cette erreur, c’est du pain béni !!! En effet, il va manipuler un peu le formulaire et obtenir pas mal d’infos. Ici on a par exemple un peu l’arborescence. Puis on s’aperçu qu’une méthode manque. Bref, cela peut s’avérer être une véritable mine d’informations pour les méchants <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>En conclusion, en production : php.ini</p>
+
+<p><code class="highlighter-rouge">error_reporting = E_ALL&lt;br /&gt;
+display_errors = off&lt;br /&gt;
+log_errors = on&lt;br /&gt;
+error_log = /chemin/vers/le/log</code></p>
+
+<p>ou alors via le .htacces :</p>
+
+<p><code class="highlighter-rouge">php_value display_errors off</code></p>
+
+<p>A bon entendeur <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /></p>
+:ET

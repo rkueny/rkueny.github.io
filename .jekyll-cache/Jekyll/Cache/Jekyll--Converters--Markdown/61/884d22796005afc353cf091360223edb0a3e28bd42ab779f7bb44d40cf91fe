@@ -1,0 +1,59 @@
+I"<p>Au tout début de l’apprentissage de php, on apprend de façon assez disparate. Bien souvent, c’est du copier-coller de différents tutoriels, de différents personnes (se prétendant développeur ou pas). Du coup, on se retrouve avec différentes syntaxes plus ou moins proches. On peut se retrouver avec ce genre de choses :</p>
+
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="php" style="font-family:monospace;">     <span style="color: #b1b100;">echo</span> <span style="color: #0000ff;">"Hello world"</span><span style="color: #339933;">;</span>
+     <span style="color: #b1b100;">require</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'conf.php'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+     <span style="color: #b1b100;">echo</span> <span style="color: #0000ff;">'Stop'</span><span style="color: #339933;">;</span>
+     <span style="color: #b1b100;">include_once</span><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">"stop.php"</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p>Et là… ben voilà quoi. Si vous tombez un jour sur un code comme celui là, soyez sûr que le type qui est passé avant vous à usé et abusé des Ctrl+C, Ctrl+V…</p>
+
+<p>On va voir aujourd’hui la différence entre : ‘ et  » ainsi qu’entre require, include, require_once et include_once.</p>
+
+<!--more-->
+
+<p><strong>Simple quotes et guillements</strong></p>
+
+<p>Comme vous avez pu le voir dans l’exemple de code que j’ai montré plus haut on peut entouré du texte avec des simple quotes ou des guillements. Cela est valable pour plusieurs autres instructions dans php (include, echo, mail, …).</p>
+
+<p>Il existe donc deux syntaxes. S’il y a deux possibilités cela implique automatiquement une différence entre le deux. Celle-ci est simple. Ce qui est contenu dans des simples quotes (‘) n’est pas interprété par PHP tandis qu’entre guillemets oui. Ceci devrait vous expliquer ce comportement :</p>
+
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="php" style="font-family:monospace;"><span style="color: #000088;">$texte</span> <span style="color: #339933;">=</span> <span style="color: #0000ff;">'bonjour'</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">// affichera bonjour toi !</span>
+<span style="color: #b1b100;">echo</span> <span style="color: #0000ff;">"<span style="color: #006699; font-weight: bold;">$texte</span> toi !"</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #666666; font-style: italic;">// affichera $texte toi !</span>
+<span style="color: #b1b100;">echo</span> <span style="color: #0000ff;">'$texte toi !'</span><span style="color: #339933;">;</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p>Du coup, utilisez ces syntaxes en sachant pourquoi vous les utilisez. Avec des guillemets le temps de traitement sera plus long qu’avec des simples quotes. Le tout est de savoir ce que vous faites et de le faire bien <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p><strong>Require, include et  _once</strong></p>
+
+<p>Il existe plusieurs façons d’intégrer un fichier dans un autre. Les fonctions <em>require</em> et <em>include</em> ont ce rôle là. Un rôle, deux fonctions. Quelles sont les différences ?  Une fois de plus, le manuel PHP est là pour nous aider.</p>
+
+<p>La différence se situe au niveau des erreurs générées lorsque un fichier appellé n’existe pas. La fonction <em>require()</em> va génèrer une <a href="http://www.php.net/manual/fr/errorfunc.constants.php#errorfunc.constants.errorlevels.e-error">erreur fatale</a>{.link}, tandis que <em>include()</em> ne fera qu’une simple Warning. Ainsi, <em>require()</em> stoppera l’exécution du fichier tandis que <em>include()</em> n’en fera rien.</p>
+
+<p>Si vous incluez un fichier ce que vous devez en avoir sûrement besoin… Du coup j’utilise tout le temps *require() *personnellement.</p>
+
+<p>Regardons maintenant <em>include_once()</em> et <em>require_once()</em>. Ces fonctions vérifient si le fichier demandé n’a pas déjà été inclus. La consommation en ressource est donc plus grande. De plus, en structurant bien votre pensée et donc votre code vous ne devriez pas être amené à inclure plusieurs fois le même fichier. C’est pourquoi je n’utilise jamais ces fonctions là.</p>
+
+<p>Voilà, j’espère que vous aurez appris quelque chose et que cela pourra vous aider par la suite.<br />
+See you later <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /></p>
+
+:ET

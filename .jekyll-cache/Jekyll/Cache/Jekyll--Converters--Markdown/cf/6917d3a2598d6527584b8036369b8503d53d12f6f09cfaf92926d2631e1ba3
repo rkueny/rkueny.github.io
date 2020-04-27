@@ -1,0 +1,30 @@
+I"�<p>Cela fait un petit moment que je n’avais pas pris le temps de poster un billet ici. Il faut dire que depuis que je suis entièrement à mon compte, le temps est une denrée un peu plus rare.</p>
+
+<p>Bref, abordons le sujet qui nous intéresse aujourd’hui : les notifications Facebook.</p>
+
+<p>Facebook avait supprimé la possibilité donnée aux développeurs d’utiliser les notifications. Vous avez dû vous rendre compte que les applications n’utilisez plus cela. Seulement, désormais Facebook reviens sur ses pas avec cette fonctionnalité qui est encore en phase bêta.</p>
+
+<p>Si vous voulez en savoir plus sur comment cela est implémenté niveau utilisateur, jetez un oeil sur l<a title="Notifications Facebook" href="http://developers.facebook.com/docs/app_notifications/" target="_blank">e blog des développeurs Facebook.</a></p>
+
+<p><a href="http://rkueny.fr/wp-content/uploads/2012/10/app_notifications_three.png" rel="lightbox[1586]"><img class="aligncenter size-full wp-image-1591" title="Applications Facebook" src="http://rkueny.fr/wp-content/uploads/2012/10/app_notifications_three.png" alt="Applications Facebook" width="300" height="118" /></a><!--more--></p>
+
+<p>Etant donné que désormais nous pouvons à nouveau utiliser ce levier, nous allons voir rapidement comment mettre cela en place.</p>
+
+<p>Avec le SDK PHP :</p>
+
+<pre>$fb-&gt;api('/' . $uid . '/notifications/', 'post',  array(
+  'access_token' =&gt; $fb-&gt;getAppId() . '|' . $fb-&gt;getApiSecret(),
+  'href' =&gt; '?',
+  'template' =&gt; '180 caractères maximum',
+  'ref' =&gt; 'Notification sent '.$date("Y-m-d") // pour les insights Facebook
+));</pre>
+
+<p>Simple non ? En revanche, il ne faut pas oublier que vous ne pouvez envoyer de notifications aux utilisateurs ayant acceptés votre application.</p>
+
+<p>N’oubliez pas non plus qu’il ne faut pas trop envoyer de notifications aux utilisateurs.C’est assez mal vu <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>Et si vous avez besoin d’un <a href="http://rkueny.fr" title="Freelance Facebook">freelance facebook</a>, n’hésitez pas à penser à moi !</p>
+
+<p> </p>
+
+:ET

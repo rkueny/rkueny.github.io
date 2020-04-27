@@ -19,8 +19,9 @@ tags:
   - twitter
   - twitter connect
 ---
+
 > Avertissement : Cet article estime que vous savez travailler avec Symfony2, que vous savez récupérer vos clés d&rsquo;API pour Twitter et Facebook qui seront nécessaires lors de la configuration.
-> 
+>
 > De plus, j&rsquo;utiliserai uniquement Doctrine lors de ce tutoriel. La version de Symfony est la 2.1.
 
 ## Configurer FosUserBundle
@@ -211,7 +212,7 @@ security:
 
 La partie acces_control est largement modulable par vous. Cela vous évitant de vérifier si votre utilisateur est bien identifié dans vos controlers. Le contrôle se fait directement par le path, un gain de temps et de lisibilité assez appréciable, n&rsquo;est ce pas ?
 
-La partie role\_hierarchy vous permet d&rsquo;établir l&rsquo;ordre d&rsquo;importances des différents rôles pour les utilisateurs. Ici les droits de ROLE\_ADMIN contiennent les droits de ROLE\_USER en plus des siens, et ROLE\_SUPER\_ADMIN contient les droit détenus par ROLE\_ADMIN et donc ROLE_USER.
+La partie role_hierarchy vous permet d&rsquo;établir l&rsquo;ordre d&rsquo;importances des différents rôles pour les utilisateurs. Ici les droits de ROLE_ADMIN contiennent les droits de ROLE_USER en plus des siens, et ROLE_SUPER_ADMIN contient les droit détenus par ROLE_ADMIN et donc ROLE_USER.
 
 Nous retoucherons pas mal ces fichiers pour intégrer les connexion Facebook et Twitter.
 
@@ -635,7 +636,7 @@ En ce qui concerne l&rsquo;intégration dans vos templates, c&rsquo;est une nouv
       <td class="code">
         <pre class="html" style="font-family:monospace;">\{\{ facebook_initialize({'xfbml': true, 'fbAsyncInit': 'onFbInit();'}) }}&lt;script type="text/javascript"&gt;// &lt;![CDATA[
 function goLogIn(){
-      window.location.href="{{path('_security_check')}}";
+      window.location.href="\{\{ path('_security_check') \}\}";
    }
    function onFbInit(){
       if(typeof(FB)!='undefined' &#038;&#038; FB!=null ) {
@@ -643,7 +644,7 @@ function goLogIn(){
             if(response.session||response.authResponse){
                goLogIn();
             }else{
-               window.location.href="{{ path('_security_logout') }}";
+               window.location.href="\{\{ path('_security_logout') \}\}";
             }
          });
       }
@@ -975,7 +976,7 @@ Cela vous permettant de faire facilement dans vos templates :
   <table>
     <tr>
       <td class="code">
-        <pre class="html" style="font-family:monospace;">&lt;a href="{{ path ('connect_twitter')}}"&gt;Twitter Connect&lt;/a&gt;</pre>
+        <pre class="html" style="font-family:monospace;">&lt;a href="\{\{ path ('connect_twitter')\}\}"&gt;Twitter Connect&lt;/a&gt;</pre>
       </td>
     </tr>
   </table>

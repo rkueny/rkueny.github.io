@@ -1,0 +1,23 @@
+I"�<p>Lorsque l’on travaille à plusieurs développeurs sur un projet versionné, on a souvent tendance à mettre dans le .gitignore du projet les dossiers et fichiers générés par notre IDE pour ne pas pourrir le projet. C’est déjà mieux de faire ça que pas du tout. Mais ce n’est pas la bonne façon de faire.</p>
+
+<p>Le .gitignore du projet appartient au projet et peut aider à la compréhension du projet parfois. Les réglages pour votre machine n’ont pas à apparaitre là. Il existe une solution très simple pour cela, et qui vous servira pour tout vos projets. Il vous suffit d’utiliser un .gitignore global sur votre machine.</p>
+
+<p>Tout d’abord créez votre fichier ~/.gitignore_global. Pour ceux qui utilise PhpStorm par exemple, votre fichier contiendra ceci :</p>
+
+<pre>.idea</pre>
+
+<p>Une fois ceci fait, configurez Git en conséquence de cette façon :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global core.excludesfile ~/.gitignore_global
+</code></pre></div></div>
+
+<p> </p>
+
+<p>Vous avez désormais des commits propres <strong>et</strong> un .gitignore du projet propre.</p>
+
+<p> </p>
+
+<p><a href="http://rkueny.fr/wp-content/uploads/2015/02/memegj.jpg" rel="lightbox[2196]"><img class="aligncenter  wp-image-2198" src="http://rkueny.fr/wp-content/uploads/2015/02/memegj.jpg" alt="memegj" width="231" height="231" /></a></p>
+
+<p> </p>
+:ET

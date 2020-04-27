@@ -1,0 +1,58 @@
+I"�<p>Je vous l’ai déjà dit dans un billet précédent<a href="http://rkueny.fr/developpement-web/lutilisation-du-bas-de-page-footer" target="_blank"> « L’utilisation du bas de page (footer) »</a>, chaque élément doit avoir son importance sur une page web. Aujourd’hui nous allons analyser une page d’accueil d’un jeu web. Le jeu en question se nomme <a href="http://www.ko-champs.com/" target="_blank">« K.O. Champs »</a>, édité par le studio <a href="http://www.mindvent.de" target="_blank">mindvent GmbH</a>. Il s’agit d’un jeu de management de boxeur. Je précise que ce n’est pas le test d’un jeu mais juste de la page d’accueil (je n’y ai d’ailleurs pas joué ^^).</p>
+
+<p>Allez on y va !</p>
+
+<!--more-->
+
+<p><strong>Utilité de la page d’accueil</strong></p>
+
+<p>La première chose que voit un potentiel joueur est votre page d’accueil, plus précisement le design et l’ergonomie de votre page d’accueil. C’est là où se joue une grande partie des choses. En effet, une bonne page d’accueil pourra l’amener à s’inscrire, une moche, mal pensée,… pourrait l’amener à quitter votre site, et donc ne pas s’y inscrire.</p>
+
+<p>Cependant, attention ! La page d’accueil est aussi une vitrine de votre jeu. Du coup, ne faites pas des promesses que vous ne serez tenir… En effet, le graphisme intérieur, le gameplay, l’univers, etc… doivent être à la hauteur (au minimum) des espérances du joueur en voyant la page d’accueil.</p>
+
+<p>Du coup, certaines personnes pensent que le graphisme sert, en quelque sorte, de bouclier anti-boulet. <caricature> Plus mon jeu sera moche, moins j&rsquo;aurai de boulets </caricature> Ce n’est peut-être pas faux, mais pourquoi priver les autres joueurs d’un environnement agréable ? De plus, certains peuvent ne pas s’inscrire alors qu’ils ont tout pour réussir dans le jeu… Se couper d’une partie du public est néfaste je pense, surtout par le biais du design de son jeu !</p>
+
+<p>Bref, revenons en à notre analyse. Vous n’êtes pas encore allé voir à quoi le site ressemblait ? Bande de fainéants <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /> ! Allez je suis gentil, je vous montre un aperçu :</p>
+
+<div id="attachment_544" style="width: 511px" class="wp-caption aligncenter">
+  <a href="http://rkueny.fr/wp-content/uploads/2009/10/page_accueil_ko_champs.jpg" rel="lightbox[543]"><img class="size-full wp-image-544" title="page_accueil_ko_champs" src="http://rkueny.fr/wp-content/uploads/2009/10/page_accueil_ko_champs.jpg" alt="Cliquez sur l'image pour la voir en taille réelle" width="501" height="294" /></a>
+  
+  <p class="wp-caption-text">
+    Cliquez sur l'image pour la voir en taille réelle
+  </p>
+</div>
+
+<p>Je ne parlerai pas ici des éléments que doit contenir la page d’accueil. Cela  fera l’objet d’un autre article. (il me semblait l’avoir rapidement abordé dans ma série d’article sur la conception d’un jeu web, mais je n’arrive pas à retrouver).</p>
+
+<p>Néanmoins, on s’aperçoit vite qu’on a toutes les informations à portée de vue et de façon intelligente. Inscription, nom du jeu, style du jeu, exemple, screenshots, …</p>
+
+<p><strong>Les bons points de cette page d’accueil</strong></p>
+
+<p>N’étant pas un génie de l’ergonomie, du design, je ne vais qu’effleurer ces domaines là. Si quelqu’un juge bon de me reprendre ou d’approfondir mon propos, qu’il n’hésite pas.</p>
+
+<p>Ce qui m’a beaucoup plu dans cette page d’accueil est le fait que toutes les infos soient présentes sans trop envahir l’espace. On a pas des tonnes de texte, juste l’essentiel pour nous mettre dans le bain. C’est un point important je pense, amener rapidement le joueur à ce que l’on désire –&gt; l’inscription.</p>
+
+<p>Un point que j’aime aussi, est le point de vue. En effet, nous sommes directement assimilé à un futur-entraineur. On est directement pris dans le jeu. On peut regarder un combat, admirer les boxeurs (les images des 6 personnages sont vraiment pas mal)… En un mot :** interactivité**. Pas besoin d’être inscrit pour se voir près du ring à crier des ordres à son poulain, à hurler et à souffrir avec lui… ok je m’égare. C’est ici un choix. On peut aussi choisir de ne pas prendre le joueur au jeu dès le début. Les deux points de vue se défendent bien que je préfère le premier de loin. Mais cela dépend aussi du type de jeu bien entendu.</p>
+
+<p>Une fois que l’on est inscrit, on ne veut pas perdre de temps sur la page d’accueil. C’est pourquoi le formulaire de login est bien placé ici. En haut (sens de lecture), au centre et assez gros. On ne perd pas de temps, excellent !!! Que demande le peuple ?</p>
+
+<p>Pour ne pas divaguer encore et encore, je vais aborder les quelques problèmes qui résident sur cette page.</p>
+
+<p><strong>Les défauts de cette page d’accueil</strong></p>
+
+<p>Un truc que je déteste… le scroll bar pour des infos inutiles au visiteur. Ici scroll pour voir :</p>
+
+<div style="float: left; display: inline;">
+  <p>
+    © 2009 mindvent GmbH                            Legal info | Terms &amp; conditions (SV 1)
+  </p>
+</div>
+
+<p>Super !!! Mais bas de page inutile. Pourquoi ne pas l’avoir intégré un peu plus haut ? Vers le pied du boxeur ? Un scroll inutile…. et ça gâche le design global de la page en plus.</p>
+
+<p>Un autre point : 5000$… inintéressant, mais on ne comprend pas trop ce que cela vient faire là… C’est quoi ? Ce qu’on gagne pour de vrai ? Ce qu’on doit payer ? Aucune idée… Ça ne sert à rien de balancer des trucs sans rapport avec le reste, ou alors mal mis en valeur…</p>
+
+<p>Voilà. Ma courte analyse s’arrête là. J’espère juste vous avoir fait réfléchir sur l’importance de la page d’accueil et surtout du pourquoi et du comment. Si vous avez des exemples de super pages d’accueil de jeu n’hésitez pas à les partager. S’inspirer du travail des autres et une bonne méthode d’avancer n’est ce pas ?</p>
+
+<p>Allez, à bientôt pour un autre article dans le même genre <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /></p>
+:ET

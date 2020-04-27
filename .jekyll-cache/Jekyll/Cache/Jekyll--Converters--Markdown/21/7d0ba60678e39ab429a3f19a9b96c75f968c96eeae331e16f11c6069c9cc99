@@ -1,0 +1,33 @@
+I"�	<p>Tout le monde le sait, protéger ses images sur le net n’est qu’utopie. Dès que celle-ci est affichée, elle peut être piquée. Ne venez pas me parler d’empêcher un clic-droit, je vous montrerai l’impression d’écran <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>En revanche, vous pouvez empêchez qu’on fasse ceci :</p>
+
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="php" style="font-family:monospace;"><span style="color: #339933;">&lt;</span>img src<span style="color: #339933;">=</span><span style="color: #0000ff;">"http://votresiteavous/image.jpg"</span> alt<span style="color: #339933;">=</span><span style="color: #0000ff;">"héhé"</span> <span style="color: #339933;">/&gt;</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p>En effet, une personne faisant ceci pique votre image et <strong>votre bande passante</strong> !</p>
+
+<p>Voici un moyen simple d’empêcher cela depuis votre .htaccess :</p>
+
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="php" style="font-family:monospace;">RewriteEngine On
+RewriteCond <span style="color: #339933;">%</span><span style="color: #009900;">&#123;</span>HTTP_REFERER<span style="color: #009900;">&#125;</span> <span style="color: #339933;">!</span>^$
+RewriteCond <span style="color: #339933;">%</span><span style="color: #009900;">&#123;</span>HTTP_REFERER<span style="color: #009900;">&#125;</span> <span style="color: #339933;">!</span>^http<span style="color: #339933;">:</span><span style="color: #666666; font-style: italic;">//(.+\.)?votresite\.votretld(/)?.*$ [NC]</span>
+RewriteRule <span style="color: #339933;">.*</span>\<span style="color: #339933;">.</span><span style="color: #009900;">&#40;</span>gif<span style="color: #339933;">|</span>jpe?g<span style="color: #339933;">|</span>png<span style="color: #009900;">&#41;</span>$ <span style="color: #339933;">-</span> <span style="color: #009900;">&#91;</span>F<span style="color: #339933;">,</span>NC<span style="color: #009900;">&#93;</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p>Une fois ceci en place, plus de risque que l’on vous pique votre bande passante. Et si vous ne voulez pas qu’on vous pique d’image du tout —&gt; n’en mettez pas <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+:ET

@@ -1,0 +1,42 @@
+I""	<p>Doctrine indexe de 0 à X les résultats de vos requêtes, mais vous avez peut être envie d’avoir l’id de l’entity en index ?</p>
+
+<p>Voici une astuce toute simple à utiliser dans la méthode de votre repository.</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_em</span><span class="o">-&gt;</span><span class="na">createQueryBuilder</span><span class="p">();</span>
+
+<span class="k">return</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="s2">"p"</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s2">"AppBundle:Post"</span><span class="p">,</span> <span class="s2">"p"</span><span class="p">,</span> <span class="s1">'p.id'</span><span class="p">)</span>
+   <span class="o">-&gt;</span><span class="na">getQuery</span><span class="p">()</span>
+   <span class="o">-&gt;</span><span class="na">getResult</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Il vous suffit donc d’ajouter un paramètre à la fonction <code class="highlighter-rouge">-&gt;from()</code>. Ici en ajoutant <code class="highlighter-rouge">"p.id"</code>, le tableau de retour sera :</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre>array
+    1 =&gt; object(AppBundle\Entity\Post)
+        private 'id' =&gt; int 1
+        private 'name' =&gt; string 'XXXY fjidshif'
+        private 'slug' =&gt; string 'test'
+    2 =&gt; object(AppBundle\Entity\Post)
+        private 'id' =&gt; int 2
+        private 'name' =&gt; string 'XXXY Bonjour tout le monde !fjidshif'
+        private 'slug' =&gt; string 'bonjour-tout-le-monde'
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Le paramètre doit faire parti du select. Et attention, s’il n’est pas unique la clé écrasera une précédente.</p>
+:ET

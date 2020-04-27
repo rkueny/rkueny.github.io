@@ -1,0 +1,16 @@
+I"L<p>Si vous personalisez votre page d’erreur (404 par exemple), et j’espère bien que vous le faites, avec Symfony2, vous pouvez écrire quelques chose du genre dans votre controller :</p>
+
+<pre>throw $this-&gt;createNotFoundException('Cette url n\'est pas accessible de cette façon');</pre>
+
+<p>Pour récupérer le message d’erreur dans votre template Twig, cela se fait de cette façon :</p>
+
+<pre></pre>
+
+<p><a href="http://rkueny.fr/wp-content/uploads/2014/11/design-error-message-271.png" rel="lightbox[2150]"><img class="aligncenter  wp-image-2151" src="http://rkueny.fr/wp-content/uploads/2014/11/design-error-message-271.png" alt="design-error-message-271" width="503" height="246" /></a></p>
+
+<p>Voilà <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p> </p>
+
+<p> </p>
+:ET

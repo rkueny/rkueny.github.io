@@ -1,0 +1,34 @@
+I"h<p>En me baladant un peu de site en site, je suis tombé sur un billet assez intéressant. Il s’intitule : <a href="http://minhd.net/2009/10/14/handy-php-code-snippets/" target="_blank">« Handy PHP Code snippets »</a>. On y trouve quelques scripts très simples qu’on a souvent l’occasion d’utiliser.</p>
+
+<div id="attachment_565" style="width: 513px" class="wp-caption aligncenter">
+  <a href="http://minhd.net/2009/10/14/handy-php-code-snippets/"><img class="size-full wp-image-565" title="minhdnet" src="http://rkueny.fr/wp-content/uploads/2009/10/minhdnet.jpg" alt="Mindh.net" width="503" height="186" /></a>
+  
+  <p class="wp-caption-text">
+    Mindh.net
+  </p>
+</div>
+
+<p>En voici la liste :</p>
+
+<!--more-->
+
+<ul>
+  <li>Envoyer un mail simple</li>
+  <li>Lister un répertoire</li>
+  <li>Supprimer un répertoire</li>
+  <li>Envoyer un fichier via un FTP</li>
+  <li>Compresser (zip) un fichier</li>
+  <li>Décompresser un fichier</li>
+  <li>Parser du JSON</li>
+  <li>Parser du XML</li>
+  <li>Obtenir la réelle adresse IP du client</li>
+  <li>Forcer le téléchargement d’un fichier</li>
+  <li>Tag cloud generation</li>
+  <li>Utiliser gravatar</li>
+  <li>Redimensionner une image</li>
+  <li>Valider une adresse email</li>
+  <li>Valider un nom de domaine.</li>
+</ul>
+
+<p>Voilà c’est tout, et c’est pas mal. Vous avez des snippets sous le coude vous aussi ?</p>
+:ET

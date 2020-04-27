@@ -1,0 +1,45 @@
+I"<p>Enfin je prends le temps de rédiger un nouveau billet sur les jeux web <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> Aujourd’hui je vais essayer de vous éclairer sur le difficile sujet du lancement de son jeu web.</p>
+
+<p>J’aborde ce sujet suite à cette question: <a href="http://www.jeuweb.net/board/-debat-quand-lancer-son-jeu-t-5733.html" target="_blank">Quand lancer son jeu ?</a> posée sur le <a href="http://www.jeuweb.net/board/" target="_blank">forum Jeu Web</a>.</p>
+
+<p>C’est en effet, un moment crucial qu’il vous faudra gérer de la bonne manière pour que le jeu engrange le plus possible de succés lors de son lancement. Et oui, après des durs mois de labeurs intenses, votre bébé, votre merveille prend enfin vie sur le web avec un superbe tld www.le-plus-beau-jeu-au-monde.fr ! Vous le savez, votre jeu est le meilleur, le plus innovant, l’unique sur le thème des moutons dans la tête des fous en Allemagne lors de l’année 800… (oui je rédige ce billet tard, ça se voit ?) C’est bien beau ça, mais à part vous et votre équipe, qui est au courant ?</p>
+
+<!--more-->
+
+<p><strong>I] Bien définir son jeu</strong></p>
+
+<p>Comme je l’ai dit dans mes précédents billets sur <a href="http://rkueny.fr/developpement-web/developper-un-jeu-web" target="_blank">la création de jeu web</a>, il vous faut d’abord bien définir votre jeu. Qu’est ce que j’entends par « définir » ?</p>
+
+<p>Comme tout créateurs vous avez 1001 idées, pleins d’optimisations à effectuer et des désirs en pagaille. Il vous faut cadrer ce qui sera au lancement et ce qui n’y sera pas. N’oubliez pas vos idées, mais mettez les de cotés pour des mises à jours par la suite.</p>
+
+<p>Je pense que c’est ce qui est le plus dur à faire. En effet, si vous ne cadrez pas le résultat que vous voulez pour la sortie du jeu… vous ne le sortirez jamais !!!</p>
+
+<p><strong>II] Les phases de sorties</strong></p>
+
+<p>Pour ma part je vois une sortie d’un jeu en 3, voir 4 étapes.</p>
+
+<ul>
+  <li>Alpha</li>
+  <li>Bêta</li>
+  <li>Bêta 2 si besoin</li>
+  <li>Sortie officielle</li>
+</ul>
+
+<p>Durant la phase « Alpha », le jeu peut être encore en production. Cette phase sert à voir quelques bugs, voir si le l’interface est bonne, si les joueurs s’y plaisent. Cette période est dite « fermée ». Vous sélectionnez qui testera. La durée peut-être très variable mais ne doit pas trop s’étendre non plus. N’oubliez pas de continuer à bosser durant cette période <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>La phase suivante est dit « Bêta ». Celle-ci sert à juger l’équilibre du jeu, le bon fonctionnement sur la durée, la charge, la chasse au bug… Elle peut soit être ouverte sans limite de joueurs soit limitée. C’est à vous de voir ce que vous préférez.</p>
+
+<p>La deuxième Bêta est dans le cas ou les résultats de la première étaient très mauvais. Si le jeu était vraiment trop déséquilibrés, s’il y avait vraiment trop de bug. Vous retoucher grandement au code et le présentez à nouveau aux testeurs. Cette phase n’est nullement obligatoire.</p>
+
+<p>La sortie officielle. Ca y est, les batteries de tests sont passées, le jeu est stable. Vous pouvez enfin ouvrir les inscriptions et commencer le battage médiatique !!!</p>
+
+<p><strong>A retenir</strong></p>
+
+<p>N’annoncez pas votre jeu trop longtemps à l’avance ! Mais ne l’annoncez pas trop tard non plus <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>Ne sortez pas votre jeu officiellement sans passer au moins par une alpha et une bêta. La Bêta est le test le plus important.</p>
+
+<p>Si vous annoncez la sortie, prévoyez large. Il vaut mieux le sortir avant la date qu’un mois plus tard.</p>
+
+<p>Une petite astuce. Si un événement proche de votre jeu est prévu (roland garros pour le tennis par exemple), essayez de le sortir en même temps !</p>
+:ET

@@ -1,0 +1,41 @@
+I"7	<p>Combien de fois ai-je ragé sur l’émulateur Android ? Je ne saurais vous le dire … Mais c’était bien trop souvent. Je n’ai jamais eu aucun soucis avec mon émulateur iOs (en étant sur mac of course), mais quelle galère avec Android.</p>
+
+<p>Depuis peu j’en ai, enfin, découvert un qui me redonne plaisir à faire des applis Android (non c’est pas vrai, mais c’est déjà « moins pire » ;)).</p>
+
+<!--more-->
+
+<div id="attachment_2212" style="width: 265px" class="wp-caption aligncenter">
+  <a href="http://rkueny.fr/wp-content/uploads/2015/02/oh-yeah.jpg" rel="lightbox[2210]"><img class=" wp-image-2212" src="http://rkueny.fr/wp-content/uploads/2015/02/oh-yeah.jpg" alt="Oh ! Un troll !" width="255" height="254" /></a>
+  
+  <p class="wp-caption-text">
+    <strong>Oh ! Un troll !</strong>
+  </p>
+</div>
+
+<p> </p>
+
+<p>Pour couper court au mystère je vous présente donc <a title="GenyMotion" href="https://www.genymotion.com/" target="_blank">GenyMotion</a>. Il utilise VirtualBox donc vous devez l’avoir aussi installé au préalable.</p>
+
+<div id="attachment_2214" style="width: 141px" class="wp-caption aligncenter">
+  <a href="http://rkueny.fr/wp-content/uploads/2015/02/genymotion.png" rel="lightbox[2210]"><img class="wp-image-2214" src="http://rkueny.fr/wp-content/uploads/2015/02/genymotion.png" alt="genymotion" width="131" height="131" /></a>
+  
+  <p class="wp-caption-text">
+    GenyMotion
+  </p>
+</div>
+
+<p> </p>
+
+<p>Après, pas de mystère, vous installez GenyMotion, vous configurez l’émulateur que vous voulez puis c’est parti.</p>
+
+<p>Une erreur, risque de vous arriver :</p>
+
+<pre>Error: Failed to start ADB (code 255): ADB server didn't ACK</pre>
+
+<p>Pas de panique ! Rendez vous dans la configuration de GenyMotion et changez le chemin vers le sdk Android vers celui que vous avez sur votre ordi. Sous mac, ça devrait se trouver dans votre dossier Library</p>
+
+<p>Je vous conseille grandement d’utiliser GenyMotion pour vos tests sous émulateur pour Android. Si vous avez suivi mon article pour <a href="http://rkueny.fr/developpement-mobile/titanium-appcelerator/se-passer-de-titanium-studio-avec-sublime-text" title="Se passer de Titanium Studio avec Sublime Text">utiliser Titanium Appcelerator avec Sublime Text</a>, GenyMotion est supporté pour les builds directement.</p>
+
+<p>Have fun !</p>
+
+:ET

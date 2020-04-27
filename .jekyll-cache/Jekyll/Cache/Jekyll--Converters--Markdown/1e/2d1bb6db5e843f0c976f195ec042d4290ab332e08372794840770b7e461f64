@@ -1,0 +1,10 @@
+I"�<p>Bug du soir de Facebook … bonsoir <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> On le sait la plateforme n’est pas l’une des moins buggée. Je suis tombé sur un qui peut vous embêter je me suis dit que j’allais le répertorier ici.</p>
+
+<p><a href="http://rkueny.fr/wp-content/uploads/2011/03/Facebook-bug.jpg" rel="lightbox[1133]"><img class="size-full wp-image-1134 aligncenter" title="Facebook-bug" src="http://rkueny.fr/wp-content/uploads/2011/03/Facebook-bug.jpg" alt="Facebook-bug" width="183" height="146" /></a></p>
+
+<p>Il s’agit ici de l’affiche d’un onglet avec une Iframe dans une page. Tout marche nickel lorsque vous êtes connecté à Facebook. Cependant, si vous n’êtes pas connectés rien ne s’affiche, pas de panique !!! C’est normal pour le moment.</p>
+
+<p>Voici le billet du <a title="Bug tracker iframe tab" href="http://bugs.developers.facebook.net/show_bug.cgi?id=15166" target="_blank">bug tracker facebook.</a></p>
+
+<p>Voilà, vous êtes au courant, cela vous évitera de perdre un temps précieux <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+:ET

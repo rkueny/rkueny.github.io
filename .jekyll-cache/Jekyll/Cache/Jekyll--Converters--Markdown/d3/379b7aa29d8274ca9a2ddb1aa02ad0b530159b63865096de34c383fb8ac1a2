@@ -1,0 +1,28 @@
+I"z<p>Comme promis, je continue sur les applications facebook. <a title="Créer une application facebook" href="http://rkueny.fr/developpement-web/facebook-developpement-web/premier-pas-avec-la-creation-dapplications-facebook" target="_blank">Dans le précédent tutoriel</a>, la connexion se faisait via le JS. Je vous avais dit que je vous montrerai comment faire en PHP. Chose promise, chose due.</p>
+
+<p>Pour effectuer une connexion via php, nous allons nous appuyer sur les méhodes getLoginUrl() et getLogoutUrl() du SDK pour l’API facebook.</p>
+
+<p style="text-align: center;">
+  <img class="size-full wp-image-880 aligncenter" title="elephant-elephant-php-logo" src="http://rkueny.fr/wp-content/uploads/2010/06/elephant-elephant-php-logo.png" alt="elephant-elephant-php-logo" width="168" height="127" />
+</p>
+
+<p><strong>Entrons dans le code</strong></p>
+
+<pre>if($fbme){
+	$logoutUrl = $facebook-&gt;getLogoutUrl();
+	echo '&lt;a href="'.$logoutUrl.'"&gt;Logout&lt;/a&gt;';
+}else{
+       $loginUrl = $facebook-&gt;getLoginUrl();
+       echo '&lt;a href="'.$loginUrl.'&gt;Login&lt;/a&gt;';
+}</pre>
+
+<!--more-->
+<p>Si vous vous souvenez</p>
+
+<p><a title="Coder une application facebook" href="http://rkueny.fr/developpement-web/facebook-developpement-web/premier-pas-avec-la-creation-dapplications-facebook" target="_blank">du code du billet précédent</a>, je vous avais rapidement parlé de la variable $fbme. Elle intervient ici. Littérallement, nous pouvons dire :</p>
+
+<p>– Si on a les infos de l’utilisateur ($fbme), cela veut dire qu’il est connecté, on lui affiche donc l’url de déconnexion.<br />
+– Sinon, on lui affiche l’url de connexion.</p>
+
+<p>Ce n’est pas plus compliqué que cela <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> Si vous avez des questions ou des problèmes sur ce point là, n’hésitez pas à réagir.</p>
+:ET

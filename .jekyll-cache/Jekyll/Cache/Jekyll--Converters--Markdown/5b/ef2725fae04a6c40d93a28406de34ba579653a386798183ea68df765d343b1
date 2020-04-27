@@ -1,0 +1,16 @@
+I"<p>Si vous utilisez TiShadow dans vos développements Titanium Appcelerator (et si vous ne le faites pas voici <a href="http://rkueny.fr/developpement-mobile/titanium-appcelerator/tishadow-pour-titanium-appcelerator" title="TiShadow pour Titanium Appcelerator">comment utiliser TiShadow avec Titanium Appcelerator</a>), vous êtes peut-être déjà tombé sur cette erreur lors de la build de votre tishadowApp :</p>
+
+<pre>[TRACE] clang: error: linker command failed with exit code 1 (use -v to see invocation)
+[ERROR] ** BUILD FAILED **
+[ERROR] The following build commands failed:
+[ERROR]         Ld build/TiShadow.build/Debug-iphonesimulator/TiShadow-universal.build/Objects-normal/i386/TiShadow normal i386
+[ERROR]         Ld build/TiShadow.build/Debug-iphonesimulator/TiShadow-universal.build/Objects-normal/x86_64/TiShadow normal x86_64
+[ERROR] (2 failures)</pre>
+
+<p>Pour corrigez cela, il vous faut cleaner votre app de cette façon :</p>
+
+<pre>titanium clean</pre>
+
+<p>Re-buildez votre App TiShadow et tout est ok !</p>
+
+:ET

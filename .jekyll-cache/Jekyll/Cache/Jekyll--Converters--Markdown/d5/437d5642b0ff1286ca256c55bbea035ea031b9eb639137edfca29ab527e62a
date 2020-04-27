@@ -1,0 +1,14 @@
+I"B<p>Une newsletter. Qui ne s’est jamais penché sur le sujet ? Que se soit pour son jeu, blog ou site. Pour tenir aux courants vos joueurs de l’ouverture ou tout simplement de l’actualité de votre site.</p>
+
+<p>Qu’elle est la façon de faire la plus fréquente ? L’utilisation de la fonction « mail » dans une boucle. Il faut l’avouer ça facilite tout cette petite fonction… Pourtant… c’est le mal !!! <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>Je vous invite à lire ces deux liens :</p>
+
+<p>– le manuel PHP et surtout sa deuxième note : <a href="http://php.net/manual/en/function.mail.php" target="_blank">La fonction mail</a> </p>
+
+<p>– ces billets de <a href="http://methylbro.titaxium.org" target="_blank">Méthylbro</a> sur la fonction mail : <a href="http://methylbro.titaxium.org/post/2009/07/03/la-fonction-mail-dans-une-boucle" target="_blank">La fonction mail dans une boucle</a></p>
+
+<p>Le schéma de l’article de <a href="http://methylbro.fr" target="_blank">Méthylbro</a> est vraiment clair je trouve. Imaginez si vous effectuez une boucle la consommation en ressources que cela fera…</p>
+
+<p>Comme quoi, un passage dans le manuel avant d’utiliser une fonction comme pilier central de son script est toujours bon à prendre…</p>
+:ET

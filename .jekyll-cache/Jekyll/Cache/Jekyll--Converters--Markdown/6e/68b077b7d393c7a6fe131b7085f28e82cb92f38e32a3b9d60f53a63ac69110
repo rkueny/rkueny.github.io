@@ -1,0 +1,66 @@
+I"l<p>Comme base pour mes projets Symfony, j’utilise <a href="https://github.com/maxpou/docker-symfony">le multicontainer Docker créé par Maxpou et partagé sur Github (merci à lui)</a>.</p>
+
+<p>Cependant, ça rame sévère sur MacOs. Le rendu d’une simple page me prends entre 4 et 6 secondes. Autant vous dire que c’est loin d’être ce qu’il me faut !</p>
+
+<p>Voici 2 étapes permettant d’avoir une vitesse de rendu normal en dev.</p>
+
+<blockquote>
+  <p>Note : J’utilise ici Symfony 3.3+</p>
+</blockquote>
+
+<h2 id="1-sortir-le-dossier-vendor">1/ Sortir le dossier /vendor</h2>
+
+<p>La première chose à faire est de sortir le dossier vendor/ de notre container.</p>
+
+<p>Pour cela, il vous faut modifier votre fichier composer.json en ajoutant :</p>
+
+<p>composer.json</p>
+
+<p>Il vous faut ensuite modifier l’appel à votre fichier autoload.php. Vous devez donc modifier cela dans les fichiers : bin/console, web/app_dev.php et web/app.php :</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">require</span> <span class="s1">'/app-vendor/autoload.php'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Vous pouvez désormais lancer votre composer install qui installera les différentes dépendances de votre projet.
+Bien sûr, il vous faut aussi ajouter le volume /app-vendor dans votre fichier docker-compose.yml</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">php</span><span class="pi">:</span>
+<span class="na">build</span><span class="pi">:</span>
+<span class="na">context</span><span class="pi">:</span> <span class="s">php7-fpm</span>
+<span class="na">args</span><span class="pi">:</span>
+<span class="na">TIMEZONE</span><span class="pi">:</span> <span class="s">${TIMEZONE}</span>
+    <span class="s">volumes</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">${SYMFONY_APP_PATH}:/var/www/symfony</span>
+        <span class="pi">-</span> <span class="s">./logs/symfony:/var/www/symfony/logs</span>
+        <span class="pi">-</span> <span class="s">/app-vendor</span>
+</code></pre></div></div>
+
+<h2 id="2-sortir-les-dossiers-cache-et-logs">2/ Sortir les dossiers /cache et /logs</h2>
+
+<p>Ici, c’est la même idée. On va sortir les dossiers de cache et de log du container.</p>
+
+<p>Il vous faut updater le fichier app/AppKernel.php :</p>
+
+<p>Une fois ceci fait, il faut ajouter les volumes à votre docker-compose.yml.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">php</span><span class="pi">:</span>
+<span class="na">build</span><span class="pi">:</span>
+<span class="na">context</span><span class="pi">:</span> <span class="s">php7-fpm</span>
+<span class="na">args</span><span class="pi">:</span>
+<span class="na">TIMEZONE</span><span class="pi">:</span> <span class="s">${TIMEZONE}</span>
+    <span class="s">volumes</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">${SYMFONY_APP_PATH}:/var/www/symfony</span>
+        <span class="pi">-</span> <span class="s">./logs/symfony:/var/www/symfony/logs</span>
+        <span class="pi">-</span> <span class="s">/app-vendor</span>
+        <span class="pi">-</span> <span class="s">/app-cache</span>
+        <span class="pi">-</span> <span class="s">/app-logs</span>
+</code></pre></div></div>
+
+<p>Si vous relancez votre application, vous devriez avoir un temps de réponse décent.</p>
+
+<p>Un environnement de dev décent :)</p>
+
+<p>N’hésitez à pas à commenter si vous avez des soucis ou d’autres solutions.</p>
+
+<p>Bon dev !</p>
+:ET

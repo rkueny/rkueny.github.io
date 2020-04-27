@@ -1,0 +1,202 @@
+I"RQ<p>Récemment, pour le match France / Nouvelle-Zélande en rugby le compte twitter @avecleXV a organisé un jeu concours sur Twitter que je n’avais jamais vu jusque là. Cela fait un moment que je me demande comment organiser des jeux concours autre que Follow+RT et en voici la réponse.</p>
+
+<h2 id="remportez-la-bataille-face-aux-all-blacks">Remportez la bataille face aux All-Blacks</h2>
+
+<p><img src="/assets/img/twitter_orange_1.png" alt="Bataille All Blacks" /></p>
+
+<p>Ainsi, avec un tweet de départ, le compte invite les utilisateurs à jouer.</p>
+
+<p>Une fois la personne ayant répondu, un tweet automatique lui répond. Ici, il lui donne 3 cartes et attends sa réponse pour continuer le jeu.</p>
+
+<p><img src="/assets/img/twitter_orange_2.png" alt="Bataille All Blacks" /></p>
+
+<p>Une fois que la personne réponds, un nouveau tweet automatique arrive avec le résultat de l’action, et invite à nouveau l’utilisateur à jouer pour continuer, ou donne le résultat final de la partie.</p>
+
+<p>C’est ensuite un classique tirage au sort pour tous les participants et pour ceux ayant remporté leur partie la suite se passe en DM. Je ne m’attarderai pas plus sur le côté novateur et engageant de l’opération, mais voyons comment cela se passe côté technique.</p>
+
+<h2 id="bot-twitter-api-streaming-et-nodejs">Bot twitter, API Streaming et Node.js</h2>
+
+<blockquote>
+  <p>Disclaimer: je ne sais absolument pas comment est codé cette opération par les développeur d’Orange, j’ai juste imaginé un moyen de reproduire cela.</p>
+</blockquote>
+
+<p>Pour que tout fonctionne, il vous faut :</p>
+
+<ul>
+  <li>un tweet de départ. Ici “Remportez la bataille ….”</li>
+  <li>récupérer les réponses</li>
+  <li>faire les actions en conséquences, ici poster un nouveau tweet en réponse à la question.</li>
+</ul>
+
+<h3 id="configuration-du-projet">Configuration du projet</h3>
+
+<p>Tout d’abord, démarrez votre projet :</p>
+
+<p><code class="highlighter-rouge">npm init</code></p>
+
+<p>Remplissez les données comme il vous convient. Ensuite, nous allons utiliser la dépendance Twitter</p>
+
+<p><code class="highlighter-rouge">npm i twitter --save</code></p>
+
+<p>Vous devriez avoir un fichier <em>package.json</em> ressemblant à :</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"twittercontest"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0.1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A twitter contest"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.js"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo </span><span class="se">\"</span><span class="s2">Error: no test specified</span><span class="se">\"</span><span class="s2"> &amp;&amp; exit 1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rkueny"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MIT"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"twitter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.4.0"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="script-node">Script node</h2>
+
+<p>Ensuite créez un fichier <em>index.js</em></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#!/usr/bin/env node
+</span><span class="kd">const</span> <span class="nx">Twitter</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">twitter</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hi Twitter</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Ici, nous mettons que le fichier sera utilisé en cli et nous utilisons le package twitter.</p>
+
+<p>Si vous lancez node index.js dans votre terminal, vous verrez s’afficher</p>
+
+<p><strong>Hi Twitter</strong></p>
+
+<h3 id="application-twitter">Application Twitter</h3>
+
+<p>Créez votre application Twitter https://apps.twitter.com/, générez votre Token et renseignez tout cela dans votre fichier index.js</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">twitterApi</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Twitter</span><span class="p">({</span>
+  <span class="na">consumer_key</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+  <span class="na">consumer_secret</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+  <span class="na">access_token_key</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+  <span class="na">access_token_secret</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="twitter-streaming-api">Twitter Streaming API</h3>
+
+<p>Pour voir comment cela fonctionne, n’hésitez pas à jeter un oeil à la documentation : <a href="https://dev.twitter.com/streaming/overview">https://dev.twitter.com/streaming/overview</a></p>
+
+<p>Nous allons d’abord streamer tout ce qui passe sur le hashtag #NewYork</p>
+
+<p>Il vous suffit d’écrire (toujours dans votre fichier <em>index.js</em>) :</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#!/usr/bin/env node
+</span><span class="kd">const</span> <span class="nx">Twitter</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">twitter</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">twitterApi</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Twitter</span><span class="p">({</span>
+  <span class="na">consumer_key</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+  <span class="na">consumer_secret</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+  <span class="na">access_token_key</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+  <span class="na">access_token_secret</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+<span class="p">});</span>
+<span class="nx">twitterApi</span><span class="p">.</span><span class="nx">stream</span><span class="p">(</span><span class="dl">"</span><span class="s2">statuses/filter</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">track</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#NewYork</span><span class="dl">"</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">stream</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">text</span><span class="p">);</span>
+  <span class="p">});</span>
+  <span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Si vous lancez la commande node index.js vous devriez voir défiler les tweets avec le hashtag #NewYork. Vous voila branchés sur le stream des tweets !</p>
+
+<p><img src="/assets/img/twitter_orange_3.png" alt="Console" /></p>
+
+<p>Pour notre jeu, nous allons streamer les tweets mentionnant notre compte. Ici, je vais streamer tout ce qui mentionne mon compte <a href="https://twitter.com/rkueny">@rkueny</a> :</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">twitterApi</span><span class="p">.</span><span class="nx">stream</span><span class="p">(</span><span class="dl">"</span><span class="s2">statuses/filter</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">track</span><span class="p">:</span> <span class="dl">"</span><span class="s2">@rkueny</span><span class="dl">"</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">stream</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">tweet</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">createdAt</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">created_at</span><span class="p">,</span>
+      <span class="na">id</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">id_str</span><span class="p">,</span>
+      <span class="na">message</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">text</span><span class="p">,</span>
+      <span class="na">reply</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">in_reply_to_status_id</span><span class="p">,</span>
+      <span class="na">from</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+        <span class="na">name</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">screen_name</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">};</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">tweet</span><span class="p">);</span>
+  <span class="p">});</span>
+  <span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Dès qu’une personne vous mentionnera vous aurez le tweet. De plus, si c’est une reply à un de vos messages vous aurez l’id dans <strong>tweet.reply</strong>.</p>
+
+<p>Si vous voulez répondre, il vous suffit d’ajouter :</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">twitterApi</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span>
+  <span class="dl">"</span><span class="s2">statuses/update</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">{</span>
+    <span class="na">status</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hi @</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">tweet</span><span class="p">.</span><span class="k">from</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="dl">"</span><span class="s2"> you are playing now !</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">in_reply_to_status_id</span><span class="p">:</span> <span class="nx">tweet</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="kd">function</span> <span class="p">(</span><span class="nx">stream</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">stream</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>Le champ status étant le tweet, et le champ <strong>in_reply_to_status_id</strong> étant l’id du tweet auquel répondre. Attention, si vous voulez répondre à un tweet, vous devez obligatoirement mentionner la personne dans votre tweet avec le @.</p>
+
+<h3 id="le-code-complet">Le code complet</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#!/usr/bin/env node
+</span><span class="kd">const</span> <span class="nx">Twitter</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">twitter</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">twitterApi</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Twitter</span><span class="p">({</span>
+  <span class="na">consumer_key</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+  <span class="na">consumer_secret</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+  <span class="na">access_token_key</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+  <span class="na">access_token_secret</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+<span class="p">});</span>
+<span class="nx">twitterApi</span><span class="p">.</span><span class="nx">stream</span><span class="p">(</span><span class="dl">"</span><span class="s2">statuses/filter</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">track</span><span class="p">:</span> <span class="dl">"</span><span class="s2">@rkueny</span><span class="dl">"</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">stream</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">tweet</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">createdAt</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">created_at</span><span class="p">,</span>
+      <span class="na">id</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">id_str</span><span class="p">,</span>
+      <span class="na">message</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">text</span><span class="p">,</span>
+      <span class="na">reply</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">in_reply_to_status_id</span><span class="p">,</span>
+      <span class="na">replyUser</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">in_reply_to_screen_name</span><span class="p">,</span>
+      <span class="na">from</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+        <span class="na">name</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">screen_name</span><span class="p">,</span>
+      <span class="p">},</span>
+    <span class="p">};</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">tweet</span><span class="p">);</span>
+    <span class="nx">twitterApi</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span>
+      <span class="dl">"</span><span class="s2">statuses/update</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">{</span>
+        <span class="na">status</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hi @</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">tweet</span><span class="p">.</span><span class="k">from</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="dl">"</span><span class="s2"> you are playing now !</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">in_reply_to_status_id</span><span class="p">:</span> <span class="nx">tweet</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="kd">function</span> <span class="p">(</span><span class="nx">stream</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">stream</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">);</span>
+  <span class="p">});</span>
+  <span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">"</span><span class="s2">error</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Il vous suffit ensuite de faire tourner votre bot en permanence avec <a href="https://github.com/foreversd/forever">forever</a> par exemple.</p>
+
+<p>Vous avez désormais tout les ingrédients en main pour utiliser l’API Streaming de Twitter.</p>
+
+<p>Have fun ! ;)</p>
+:ET

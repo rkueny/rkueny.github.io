@@ -1,0 +1,13 @@
+I"x<p>Une fois n’est pas coutume, OVH m’a bien déçu aujourdhui….</p>
+
+<p>Voulant tester un petit script en PHP5, je l’upload sur mon serveur OVH et une jolie erreur apparait :</p>
+
+<p><em>Parse error: syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or ‘}’</em></p>
+
+<p>Je ne comprends tout d’abord pas, en effet mon script marche en local !!!</p>
+
+<p>Après une petite recherche sur le net, je connais la raison désormais.<br />
+OVH met par défaut en PHP 4…. honte à eux !!!!!!!!!</p>
+
+<p>Du coup pour résoudre ce problème, il vous suffir d’ajouter <em>SetEnv PHP_VER 5</em> dans votre .htaccess. Il faudra tout de même m’expliquer pourquoi ils laissent par défaut PHP4… qu’en sera t’il lors de la sortie de PHP 6 ? <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+:ET

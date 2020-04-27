@@ -1,0 +1,56 @@
+I"�<p>Deuxième jour, deuxième article. On tient le rythme !!!</p>
+
+<p>Après cette petite mise au point abordons désormais les rôles lors de la création. Et oui, lors de la réalisation d’un jeu il y a plusieurs domaines à couvrir. Nous allons voir lesquels. Sachez qu’un jeu est réalisable tout seul mais qu’une équipe est tout de même un sacré gros plus.</p>
+
+<p><strong>Créateur de jeux web … homme à tout faire ?</strong></p>
+
+<p>Voici les grosses catégories de la conception d’un jeu web :</p>
+
+<p>– développeur</p>
+
+<p>– game-designeur</p>
+
+<p>– infographiste</p>
+
+<p>– référenceur, publieur</p>
+
+<p>Voici en gros les quatre catégories. Voyons un peu plus ce que cela représente.</p>
+
+<!--more-->
+
+<p><em>Développeur :</em></p>
+
+<p>Je pense que cela est clair. Celui (ou ceux) qui vont écrire les lignes de code. Nous allons en parler rapidement car ce n’est pas le but de notre article.</p>
+
+<p>Le développeur <strong>doit</strong> avoir un bon niveau. Si la POO, PDO ou framerwork ne sont pas obligés, les cours du <em>site du zéro *sont loin d’être suffisant. Il faut avoir un peu de bagage technique et une constante envie de s’améliorer. Coder un jeu web est un long travail qui demande un bon niveau en programmation orientée web. Si vous sortez du *site du zéro</em> (il faut que j’écrive un billet sur ce site d’ailleurs) ne vous dites pas que vous avez le niveau. Documentez vous, et codez des applications un peu plus haute. Un module de combat, un moteur de match ou je ne sais quoi encore. C’est en forgeant que l’on devient forgeron. Et surtout, ne limitez pas votre apprentissage à un seul cours. Le web est grand profitez en !!! Allez voir ailleurs (pour une fois qu’on vous le permet :p)</p>
+
+<p>Je sais que je vais m’attirer les foudres de certains sur le sujet mais soyez certains que cela demande un bon niveau. Bien souvent le projet ne sort jamais car le (les) codeur n’est pas à la hauteur de la tâche.</p>
+
+<p><em>Game-designeur :</em></p>
+
+<p>En voilà un poste important ! C’est d’ailleurs sur ce sujet là que l’on va traiter dans l’article principalement. Le game-design est traduisible par conception d’un jeu. C’est la phase papier du  jeu. <strong>C’est la plus importante !</strong> Tout commence et tout passe par là. Un concept et un système clair vous permettra de sortir votre jeu. En effet, le plus gros problème des jeux amateur vient de là. Ils sautent cette étape et du coup le projet s’écroule au bout d’un mois. Le codeur ne sait plus dans quelle direction il doit se diriger. C’est le cahier des charges, le squelette de votre projet. Retenez que c’est vital, nous y reviendrons plus loin.</p>
+
+<p><em>Infographiste :</em></p>
+
+<p>Dans le domaine du web je considère cette « loi » : le visiteur se fait une idée du site en 10 secondes. Qu’est-ce qu’il juge ? L’aspect graphique du site, l’ergonomie. Si vous réussissez à capturer l’intérêt du visiteur vous avez de grandes chances qu’il clique sur le lien « s’inscrire » et c’est ce que vous désirez non ?</p>
+
+<p>Ce n’est pas ce qui vient en premier mais il faut tout de même garder à l’esprit que c’est ce qui fera la différence entre deux sites sur le même thème. Nous y reviendrons lorsque nous parlerons de la conception du jeu sur le papier. Pas pour le graphisme mais pour le niveau de l’ergonomie et la gestion de l’interface.</p>
+
+<p><em>Référenceur, publieur :</em></p>
+
+<p>Une fois votre jeu en ligne c’est là qu’ils interviennent. En effet, votre site peut être le meilleur du monde s’il n’est pas visité ni connu… vous n’irez pas bien loin !!!</p>
+
+<p>Nous ne parlerons pas de cet aspect dans la série d’article mais il existe de très bons articles ou vidéos sur le référencement. Google is your friend <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /></p>
+
+<p>Vous devez maintenant voir que la création d’un jeu web c’est vaste !!! Si vous pouvez couvrir ces domaines à vous seul tant mieux. Sinon, une équipe est le mieux. Ce n’est pas facile d’en avoir une (le recrutement sur le web :s) mais vous verrez que si vous pouvez… c’est le pied ^^. En effet, vous pourrez avancer à plusieurs, avoir plus d’idées, vous soutenir lors des baisses de moral et votre productivité n’en sera que augmentée. En revanche travailler en équipe demande une certaine rigueur. Tout le monde n’en est pas capable.</p>
+
+<p>Comment recruter une équipe ? Il n’y a pas de méthodes miracle mais tout passe par la définition de votre projet et son cahier des charges. Nous aborderons ce sujet demain. Nous allons vraiment rentrer dans le vif du sujet à ce moment là.<br />
+See you later <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /></p>
+
+<p><a href="/developpement-web/developper-un-jeu-web-3">»&gt; 3ème article</a></p>
+
+<p style="text-align:center">
+  <br />
+</p>
+
+:ET

@@ -1,0 +1,24 @@
+I"^<p>J’ai récemment découvert via un collègue un petit code assez sympathique.</p>
+
+<p style="text-align: center;">
+  <a href="http://code.google.com/p/database-diagram/" target="_blank"><img class="size-full wp-image-919 aligncenter" title="database-diagramm" src="http://rkueny.fr/wp-content/uploads/2010/11/database-diagramm.jpg" alt="database diagramm" width="297" height="62" /></a>
+</p>
+
+<p style="text-align: left;">
+  <p style="text-align: left;">
+    Il s&rsquo;agit de la création d&rsquo;un diagramme à partir de votre structure sql. Cela peut être bien pratique si vous désirez l&rsquo;imprimer par exemple. C&rsquo;est toujours cool de pouvoir embrasser votre bdd d&rsquo;un seul coup d&rsquo;oeil.
+  </p>
+  
+  <p style="text-align: left;">
+    Le défaut de ce code réside dans le fait qu&rsquo;il faut le télécharger, et l&rsquo;installer en local. Du coup, j&rsquo;ai décidé de le mettre en ligne en y ajoutant quelques modifications. Vous pouvez donc ajuster la taille de la zone de votre bdd par exemple.
+  </p>
+  
+  <p style="text-align: left;">
+    Hop, l&rsquo;url : <a title="Db Diag" href="http://db-diag.rkueny.fr" target="_blank">http://db-diag.rkueny.fr</a>
+  </p>
+  
+  <p style="text-align: left;">
+    N&nbsp;&raquo;hésitez pas à me dire ce que vous en pensez. Le code utilise la balise canvas de html5 d&rsquo;ailleurs
+  </p>
+</p>
+:ET

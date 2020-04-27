@@ -1,0 +1,57 @@
+I"+<p>Lorsque l’on crée un site, le « problème » de la pagination apparait souvent. J’ai souvent vu dans des projets Symfony2 les personnes utiliser le bundle de KNP KnpPaginatorBundle (<a title="Github Repo KnpPaginatorBundle" href="https://github.com/KnpLabs/KnpPaginatorBundle" target="_blank">Repo Github</a>).</p>
+
+<p>Le problème de ce bundle est qu’il charge et hydrate tout les objets avant de faire la pagination. Ça va si vous n’avez pas beaucoup d’items, mais avec un très gros volume … c’est très loin d’être le top.</p>
+
+<div id="attachment_1926" style="width: 310px" class="wp-caption aligncenter">
+  <a href="http://rkueny.fr/wp-content/uploads/2013/07/ca-rame-au-gouter.jpg" rel="lightbox[1899]"><img class="size-full wp-image-1926" alt="Ça rame" src="http://rkueny.fr/wp-content/uploads/2013/07/ca-rame-au-gouter.jpg" width="300" height="300" /></a>
+  
+  <p class="wp-caption-text">
+    Ça rame &#8230;
+  </p>
+</div>
+
+<!--more-->
+
+<p>Je vous propose une autre solution, bien plus efficace et propre à mon goût. Il s’agit d’utiliser le paginator de Doctrine2.</p>
+
+<div id="attachment_1928" style="width: 222px" class="wp-caption aligncenter">
+  <a href="http://rkueny.fr/wp-content/uploads/2013/07/Capture-d’écran-2013-07-31-à-09.58.22.png" rel="lightbox[1899]"><img class="size-full wp-image-1928" alt="Paginons, paginons !" src="http://rkueny.fr/wp-content/uploads/2013/07/Capture-d’écran-2013-07-31-à-09.58.22.png" width="212" height="60" /></a>
+  
+  <p class="wp-caption-text">
+    Paginons, paginons !
+  </p>
+</div>
+
+<p>Pour cela, ce n’est pas très compliqué. Il vous faut passer par le Query builder, et ajouter (dans votre Repository bien sûr) :</p>
+
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="line_numbers">
+        <pre>1
+2
+3
+4
+</pre>
+      </td>
+      
+      <td class="code">
+        <pre class="php" style="font-family:monospace;"><span style="color: #000088;">$query</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">setFirstResult</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$page</span><span style="color: #339933;">-</span><span style="color: #cc66cc;">1</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">*</span> <span style="color: #000088;">$nombreParPage</span><span style="color: #009900;">&#41;</span>
+    <span style="color: #339933;">-&gt;</span><span style="color: #004000;">setMaxResults</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$nombreParPage</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #b1b100;">return</span> <span style="color: #000000; font-weight: bold;">new</span> Paginator<span style="color: #009900;">&#40;</span><span style="color: #000088;">$query</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p>Une fois ceci fait, dans votre vue (Twig)</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% for p in range(1, nombrePage) %}
+    <span class="nt">&lt;li</span><span class="err">{%</span> <span class="na">if</span> <span class="na">p =</span><span class="s">=</span> <span class="na">page</span> <span class="err">%}</span> <span class="na">class=</span><span class="s">"active"</span><span class="err">{%</span> <span class="na">endif</span> <span class="err">%}</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ path('sdzblog_accueil', {'page': p}) }}"</span><span class="nt">&gt;</span>{{ p }}<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+{% endfor %}</code></pre></figure>
+
+<p>Et voilà, Enjoy !</p>
+:ET

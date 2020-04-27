@@ -1,0 +1,54 @@
+I"�<p>Cela fait un petit moment maintenant que je traine dans le monde du jeu web amateur et je n’ai encore rien sorti. J’ai eu quelques projets mais je ne suis jamais allé jusqu’au bout. Il y a plusieurs raisons pour cela :</p>
+
+<ul>
+  <li>Tout d’abord, complexité trop grosse pour certains projets (monde trop ouvert, trop de design demandé, etc…)</li>
+  <li>Ensuite, manque de motivation, essoufflement</li>
+  <li>Enfin, tout simplement aucune envie une fois les principales difficultés techniques dépassés.</li>
+</ul>
+
+<p>Tout ça fait qu’à ce jour je n’ai aucun jeu en ligne. Et bien, il est temps de se résoudre à y remédier désormais <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>Je le précise tout de suite, rien n’est encore en ligne mais le développement est très proche de la fin et il sortira c’est certain. Abordons donc le vif du sujet !<!--more--></p>
+
+<h1 id="allez-vous-en-sortir-">« Allez vous en sortir ? »</h1>
+
+<blockquote>
+  <p style="text-align: left;">
+  Le jeu <strong>&laquo;&nbsp;Allez vous vous-en sortir ?&nbsp;&raquo;</strong> est très simple. On vous donne <em>un scénario</em>, <em>deux objets</em>, et grâce à <em>votre imagination</em> vous devez expliquer aux autre comment vous vous en sortez.
+</p>
+
+  <p>Enfin, chacun vote pour savoir <em>si vous avez été convaincant ou pas</em>. Vous même votez les récits des autres utilisateurs. Là où cela se corse, c’est que vous êtes en équipe mais vous ne savez pas avec qui !</p>
+
+  <p><strong>Les règles sont simples, les seules limites sont votre imagination !!!</strong></p>
+</blockquote>
+
+<p>Comme vous le voyez le principe est très simple. Pas de monde persistant ou quoi que se soit, il s’agit juste d’une mise en situation rapide. Après à vous de faire jouer votre imagination et de juger les autres objectivement <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>Que pensez vous du concept ?</p>
+
+<p>Avant de vous laisser, voici quelques aperçus du développement actuel :</p>
+
+<p style="text-align: center;">
+  <a href="http://rkueny.fr/wp-content/uploads/2012/03/big.png" rel="lightbox[1465]"><img class="size-medium wp-image-1467" title="big" src="http://rkueny.fr/wp-content/uploads/2012/03/big-300x188.png" alt="" width="300" height="188" /></a><br /> <a href="http://rkueny.fr/wp-content/uploads/2012/03/little2.png" rel="lightbox[1465]"></a><a href="http://rkueny.fr/wp-content/uploads/2012/03/little2.png" rel="lightbox[1465]"><img class="aligncenter size-medium wp-image-1469" title="little2" src="http://rkueny.fr/wp-content/uploads/2012/03/little2-300x111.png" alt="" width="300" height="111" /></a><br /> <a href="http://rkueny.fr/wp-content/uploads/2012/03/little1.png" rel="lightbox[1465]"><img class="size-medium wp-image-1468 " title="little1" src="http://rkueny.fr/wp-content/uploads/2012/03/little1-300x135.png" alt="" width="300" height="135" /></a>
+</p>
+
+<p style="text-align: center;">
+  &nbsp;
+</p>
+
+<p style="text-align: left;">
+  <strong>Quels sont les technos misent en place ?</strong>
+</p>
+
+<p>Qui dit projet amateur, dit découverte et utilisation de ses compétences. Du coup, voici ce que j’ai utilisé pour ce projet :</p>
+
+<ul>
+  <li>Symfony2</li>
+  <li>Twig</li>
+  <li>Doctrine2</li>
+  <li>MySQL</li>
+  <li>Twitter bootstrapp</li>
+</ul>
+
+<p>j’avoue que le développement est un véritable régal avec tout cela <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> Je reviendrais vers vous pour l’alpha fermé <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /></p>
+:ET

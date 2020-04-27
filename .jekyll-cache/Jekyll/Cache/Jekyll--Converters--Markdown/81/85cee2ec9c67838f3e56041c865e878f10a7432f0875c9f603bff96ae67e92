@@ -1,0 +1,68 @@
+I"�<p>Je me suis aperçu la dernière fois que tout le monde ne connaissait pas la puissance des logs qu’intègre directement PHP. Du coup, pour essayer de rectifier cela, je me suis dit qu’un petit article valait le coup <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>Tout d’abord, et parce que vous avez le droit de ne pas connaître, qu’est ce qu’un log ?</p>
+
+<p>C’est tout bête et ça simplifie la vie. Cela peut grandement vous aider à vous sortir d’un mauvais pas. Il s’agit d’enregistrer les erreurs dans un fichier. Cela vous sert d’historique par exemple. Un fichier de log se présente de cette façon (ou cela s’approche en tout cas) :</p>
+
+<pre>[01-Apr-2010] PHP Parse error:  syntax error, unexpected '}' in /Applications/www/index.php on line 6</pre>
+
+<p>On y retrouve donc souvent la date, l’erreur et le fichier avec la ligne concernée. Pratique n’est ce pas ?</p>
+
+<p>Et comment mettre cela en place avec le système de log propre à PHP ? Pas compliqué du tout.<!--more--></p>
+
+<hr />
+
+<p><strong>Première étape : Configurer le serveur</strong></p>
+
+<p>Normalement, vous devriez déjà avoir fait cela sur votre serveur. J’y fait mention dans l’article sur <a title="La gestion des erreurs php en production" href="http://rkueny.fr/developpement-web/la-gestion-des-erreurs-ph-en-production" target="_blank">la gestion des erreurs php en production</a> (relatif à un article sur le blog de <a href="http://methylbro.titaxium.org/post/2009/05/29/display_errors-%C3%A0-On-sur-un-serveur-de-production-c-est-mal-!" target="_blank">Méthylbro</a>)</p>
+
+<p>Il vous faut donc activer le système de log et définir un fichier de log. Cela se fait via deux lignes de votre php.ini fétiche.</p>
+
+<blockquote>
+  <p>log_errors = On</p>
+
+  <p>error_log = /www/log/log.txt</p>
+</blockquote>
+
+<p>Vous pouvez aussi affiner votre configuration en ignorant les erreurs répétées. Cela vous permettra d’y voir plus clair dans votre fichier en regroupant 100 lignes en 1 seule par exemple. Pour cela il vous faut activer la directive : ignore_repeated_errors</p>
+
+<blockquote>
+  <p>ignore_repeated_errors = On</p>
+</blockquote>
+
+<p>Une fois cela en place, vous pouvez utiliser les logs dans votre développement.</p>
+
+<p><strong>Deuxième étape : utilisation du système</strong></p>
+
+<p>Nous allons nous attarder sur l’utilisation manuelle du système. Je reviendrai dans un autre article sur l’utilisation d’un journal système.</p>
+
+<p>Le pivot de cette utilisation est la fonction <a title="error_log()" href="http://php.net/manual/en/errorfunc.configuration.php" target="_blank">error_log()</a>.</p>
+
+<p>Nous allons ici voir plusieurs utilisations. Tout d’abord une utilisation « basique ». Une simple écriture dans le fichier défini dans votre php.ini :</p>
+
+<p style="text-align: center;">
+  <em>error_log(&lsquo;une erreur est survenue ici&rsquo;);</em>
+</p>
+
+<p>Mais cette fonction est bien plus puissante que ça !!! Vous pouvez aussi être prévenu par mail d’une erreur. Il vous faudra l’utiliser ainsi :</p>
+
+<p style="text-align: center;">
+  <em>error_log(&lsquo;une erreur est survenue ici&rsquo;, 1, &lsquo;votre_mail@mail.fr&rsquo;);</em>
+</p>
+
+<p>Le 1 est ici pour indiquer que vous désirez être prévenu de cette erreur à l’adresse mail qui suit. Être prévenu par mail est une bonne pratique, quitte à vous mettre une adresse dédiée à cela. Je parle ici une fois votre site en publication et non plus en production.</p>
+
+<p>En effet, lorsque quelqu’un vient pirater votre site, il efface bien souvent son passage des logs. Cependant, si vous êtes prévenu par mail il ne pourra y toucher vu que cela sera stocké sur un autre serveur. Pas mal non ?</p>
+
+<p>Enfin, vous pouvez aussi dire à la fonction d’utiliser un autre fichier en utilisant le paramètre 3.</p>
+
+<p style="text-align: center;">
+  <em>error_log(&lsquo;une erreur est survenue ici&rsquo;, 3, &lsquo;votre_fichier.txt&rsquo;);</em>
+</p>
+
+<p>Et voilà, vous savez ce qu’il y a à savoir sur le système de log php. Si vous avez des questions ou des astuces à partager n’hésitez pas à laisser un commentaire !</p>
+
+<p style="text-align:center">
+  <br />
+</p>
+:ET

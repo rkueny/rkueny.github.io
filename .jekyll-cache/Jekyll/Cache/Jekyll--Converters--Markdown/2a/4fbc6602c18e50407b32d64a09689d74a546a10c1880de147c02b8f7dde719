@@ -1,0 +1,28 @@
+I"<p><a href="http://rkueny.fr/wp-content/uploads/2014/10/Capture-d’écran-2014-10-14-à-12.00.10.png" rel="lightbox[2112]"><img class="aligncenter  wp-image-2114" src="http://rkueny.fr/wp-content/uploads/2014/10/Capture-d’écran-2014-10-14-à-12.00.10.png" alt="Auto complétion Symfony2" width="840" height="101" /></a></p>
+
+<p>A force de chercher les commandes pour générer un bundle ou créer une entité, j’ai cherché pour une auto-complétion pour Symfony2. Je suis tombé sur l’autocomplète créée par KnpLabs et qui fonctionne nickel.</p>
+
+<p>Voici la démarche à suivre pour l’installer. Dans un de vos dossiers faites un :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/KnpLabs/symfony2-autocomplete
+</code></pre></div></div>
+
+<p>Ensuite dans votre .bash_profile :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi ~/.bash_profile
+</code></pre></div></div>
+
+<pre style="padding-left: 30px;"><code>source ~/Sites/symfony2-autocomplete/symfony2-autocomplete.bash</code></pre>
+
+<p>Ajoutez aussi :</p>
+
+<pre style="padding-left: 30px;"><code>if [ -e ~/symfony2-autocomplete.bash ]; then
+    . ~/symfony2-autocomplete.bash
+fi</code></pre>
+
+<p>Il ne vous reste plus qu’à redémarrer votre bash et vous aurez l’auto-complétion sur la commande ./app/console [TAB]</p>
+
+<p style="text-align: right;">
+  <a href="https://github.com/KnpLabs/symfony2-autocomplete" target="_blank">Source : dépôt GitHub</a>
+</p>
+:ET

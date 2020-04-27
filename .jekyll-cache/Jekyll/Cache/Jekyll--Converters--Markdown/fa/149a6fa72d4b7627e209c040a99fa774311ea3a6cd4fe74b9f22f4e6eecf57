@@ -1,0 +1,26 @@
+I"~<p>Cela peut parfois être utile de savoir si votre application tourne en tâche de fond ou si l’utilisateur y revient dessus par exemple.</p>
+
+<p>Voici la façon de faire pour iOs :</p>
+
+<pre>Ti.App.addEventListener('pause',function(e){
+   Ti.API.info("APP In background");
+});
+
+Ti.App.addEventListener('resume',function(e){
+   Ti.API.info("APP alive");
+});</pre>
+
+<p>Et pour Android :</p>
+
+<pre>Ti.Android.currentActivity.addEventListener('pause', function(e){
+  Ti.API.info("APP in background");
+});</pre>
+
+<pre>Ti.Android.currentActivity.addEventListener('resume', function(e){
+ Ti.API.info("APP alive");
+});
+
+</pre>
+
+<p> </p>
+:ET

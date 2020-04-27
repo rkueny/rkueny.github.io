@@ -1,0 +1,27 @@
+I"�<p>Symfony est actuellement LE framework PHP à la mode dans le monde de l’entreprise. Et beaucoup de jeunes sont tentés de devenir “Développeur Symfony”. Attention, piège !</p>
+
+<p>En 2015, si vous êtes un développeur web maitrisant le framework Symfony (dans sa version 2.*), vous n’êtes, sans doutes, pas au chomage. Pour peu que vous acceptiez de sortir 
+de votre village de 800 habitants (et encore, de plus en plus d’entreprises acceptent le télé-travail), vous ne devriez pas avoir de soucis si vous avez un bon niveau. Rien qu’en tapant <a href="https://remixjobs.com/Emploi-symfony">“Symfony” 
+sur le site RemixJobs</a>, on tombe sur plus de 100 offres en cours.
+Autant vous dire, que de plus en plus de jeunes sortis d’écoles se précipitent sur l’apprentissage de ce framework.</p>
+
+<p>Et ils ont raison !</p>
+
+<p>… Mais attention. Ils ont raison tout en n’ayant pas raison.</p>
+
+<blockquote>
+  <p>Devenez développeur PHP avant de devenir un développeur Symfony</p>
+</blockquote>
+
+<p>Si vous ne connaissez que le développement Symfony, vous ne connaissez en faites, que <strong>l’utilisation du framework Symfony</strong>. En quoi est-ce différent ? Et surtout, si on arrive à faire ce que l’on veut, 
+pourquoi je le déconseille ?</p>
+
+<p>Vous pouvez arriver à faire effectivement tout les sites/applications que vous voudrez, mais vous resterez toujours un simple utilisateur de Symfony. Là où développer devient intéressant c’est lorsque l’on 
+compred pourquoi on fait les choses. Si Symfony fait des choses <em>magiques</em> c’est simplement en utilisant certains patterns. Si vous étudiez <strong>Composer</strong>, en dehors de Symfony, vous allez bien mieux comprendre 
+comment il s’articule, comme il loade les classes, etc… Vous pouvez aussi utiliser Silex par exemple, en utilisant certains composant de Symfony. Fouillez la doc de Symfony pour comprendre comment il marche. 
+faites votre propre micro-framework pour comprendre comment est géré le MVC, etc, etc, etc…</p>
+
+<p>Au final, utilisez Symfony comme un outil mais non pas pour vous définir.</p>
+
+<p><strong>Devenez un développeur PHP et non un développeur Symfony.</strong> <em>(mais faites du Symfony, c’est cool)</em></p>
+:ET

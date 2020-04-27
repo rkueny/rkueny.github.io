@@ -1,0 +1,24 @@
+I"�<p>Il ya quelques temps de cela, Facebook annoncé que les application allaient devoir fournir un certificat ssl. Cela devient même obligatoire au 1er octobre selon la roadmap. Plusieurs développeurs ont montrés leur mécontentement mais Facebook avait prévu le coup. En effet, ils ont annoncés il y a peu un partenariat avec « Heroku » permettant d’héberger votre application très facilement. Nous allons rapidement voir comment faire.</p>
+
+<p><a href="http://rkueny.fr/wp-content/uploads/2011/09/facebook-security.gif" rel="lightbox[1376]"><img class="aligncenter size-medium wp-image-1377" title="http facebook application" src="http://rkueny.fr/wp-content/uploads/2011/09/facebook-security-300x175.gif" alt="http facebook application" width="300" height="175" /></a><!--more--></p>
+
+<h2 id="utiliser-heroku">Utiliser Heroku</h2>
+
+<p>Après avoir crée votre application (ou sur une application déjà existante), il vous suffit de vous rendre sur l’onglet « Basic » de la partie admin et de choisir le « Cloud Services » en cliquant sur Get started. Après avoir choisi Heroku et le language de votre application (PHP dans mon cas) vous devrez accepter les autorisations de l’application qui gère ce service.</p>
+
+<p><a href="http://rkueny.fr/wp-content/uploads/2011/09/cloudservices.png" rel="lightbox[1376]"><img class="aligncenter size-medium wp-image-1380" title="Heroku application Facebook" src="http://rkueny.fr/wp-content/uploads/2011/09/cloudservices-300x268.png" alt="Heroku application Facebook" width="300" height="268" /></a></p>
+
+<p>Une fois ceci fait, vous n’avez plus qu’à configurer votre compte Heroku et vous voila parti. Remplacez l’url de votre site par celle d’Heroku dans la partie admin de votre application pour que cela fonctionne. Pour alimenter le dépôt Heroku, il vous faudra passer par Git. Je ne vais pas m’attarder là dessus, vous trouverez pleins de tutoriels sur la toile.</p>
+
+<p>Si vous voulez voir plus en détail les démarches à effectuer : <a title="Developper facebook blog" href="https://developers.facebook.com/blog/post/558/" target="_blank">https://developers.facebook.com/blog/post/558/</a></p>
+
+<p><a href="http://rkueny.fr/wp-content/uploads/2011/09/heroku.jpg" rel="lightbox[1376]"><img class="aligncenter size-full wp-image-1381" title="Heroku" src="http://rkueny.fr/wp-content/uploads/2011/09/heroku.jpg" alt="Heroku" width="231" height="80" /></a></p>
+
+<h2 id="ce-que-cela-annonce">Ce que cela annonce</h2>
+
+<p>Comme je vous le dit depuis un moment maintenant, Facebook tend de plus en plus vers la professionnalisation de ses applications. Fini le temps des bidouilles (quoi que …), des applis pour tester, Facebook veut des applis pros fait pour ses utilisateurs. Le fait de s’associer avec Heroku, peut-être Amazon par la suite, montre bien la voie.</p>
+
+<p>Tout cela annonce du bon pour les développeurs Facebook. Cela est sûrement accéleré par la concurrence que commence à faire naitre Google+ d’ailleurs ….</p>
+
+<p> </p>
+:ET

@@ -1,0 +1,40 @@
+I"�	<p><a href="http://rkueny.fr/wp-content/uploads/2012/10/images.jpg" rel="lightbox[1594]"><img class=" wp-image-1600 alignleft" style="margin: 10px;" title="Freelance facebook" src="http://rkueny.fr/wp-content/uploads/2012/10/images.jpg" alt="Freelance facebook" width="83" height="156" /></a>Quand vous développez une application dans un onglet de page Facebook, il se peut que vous vouliez faire un lien depuis un autre site vers votre onglet en lui passant certains paramètres.</p>
+
+<p>Vous voudriez par exemple faire ceci : http://www.facebook.com/rkueny.freelance/app_253963564677097?data1=abc&amp;data2=def</p>
+
+<p>Seulement voilà, ça ne se fait pas comme cela <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>Voici la solution « magique ».</p>
+
+<pre>http://www.facebook.com/rkueny.freelance/app_253963564677097?&amp;<strong>app_data</strong>=xxx/aaa/bbb</pre>
+
+<p>Et pour récupérer :</p>
+
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="line_numbers">
+        <pre>1
+2
+3
+</pre>
+      </td>
+      
+      <td class="code">
+        <pre class="php" style="font-family:monospace;"><span style="color: #000088;">$signed_request</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$facebook</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">getSignedRequest</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #666666; font-style: italic;">// avec le PHP SDK</span>
+&nbsp;
+<span style="color: #000088;">$app_data</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$signed_request</span><span style="color: #009900;">&#91;</span><span style="color: #0000ff;">"app_data"</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span></pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p>Après, un simple<a title="Explode PHP" href="http://php.net/manual/fr/function.explode.php" target="_blank"> explode() </a>sur le $app_data pour récupérer vos différentes données (xxx – aaa – bbb) et le tour est joué <img src="http://rkueny.fr/wp-includes/images/smilies/icon_wink.gif" alt=";)" class="wp-smiley" /></p>
+
+<p> </p>
+
+<p>Et si vous avez besoin d’un <a href="http://rkueny.fr" title="Freelance Facebook">freelance facebook</a>, n’hésitez pas à penser à moi !</p>
+
+<p> </p>
+
+:ET

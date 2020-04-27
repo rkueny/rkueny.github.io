@@ -1,0 +1,22 @@
+I"<p>C’est tout de même plus sympa d’avoir la coloration dans votre console lorsque vous utilisez php app/console avec Symfony2.</p>
+
+<p style="text-align: center;">
+  <a href="http://rkueny.fr/wp-content/uploads/2013/04/symfony2.png" rel="lightbox[1879]"><img class="size-full wp-image-1882 aligncenter" alt="Symfony2" src="http://rkueny.fr/wp-content/uploads/2013/04/symfony2.png" width="323" height="111" /></a>
+</p>
+
+<p>Sur mac, rien de bien compliqué, il vous faut le paquet <strong>php-posix</strong>.</p>
+
+<p>Pour ça :</p>
+
+<div class="wp_syntax">
+  <table>
+    <tr>
+      <td class="code">
+        <pre class="batch" style="font-family:monospace;">sudo port install php5-posix</pre>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p>Et voilà, rien d’autre à faire.</p>
+:ET

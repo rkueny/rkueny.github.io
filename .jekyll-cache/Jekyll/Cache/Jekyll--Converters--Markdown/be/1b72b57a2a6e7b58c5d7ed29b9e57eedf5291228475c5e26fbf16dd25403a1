@@ -1,0 +1,102 @@
+I"<p>Débuter dans le monde des applications Facebook n’est pas toujours aisé il faut bien le dire. C’est pourquoi je rédige ce tutoriel. Il va s’articuler assez simplement et sera largement illustré par quelques petites applications.</p>
+
+<p>Le rythme de publication sera de deux chapitres par semaine. Un plan est déjà établi mais il pourra évoluer selon vos remarques (via les commentaires ou par mail).</p>
+
+<p>Voici le plan (les liens seront mis à jour au fil des billets) :</p>
+
+<ul>
+  <li><strong>- Les différentes applications Facebook</strong></li>
+  <li>
+    <ul>
+      <li>Compte développeur et création de son application</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>A la découverte des différentes sdk et de la Graph API</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>Application Canvas : « Devine le secret de tes amis ! »</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>Application Onglet : « Un petit jeu concours »</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>La puissance de Facebook hors de la plateforme – Plugins Facebook</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>Héberger son application Facebook avec Heroku</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>Open Graph, liez vos utilisateurs et engrangez de la visibilité</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>Astuces de développement en veux-tu ? En voilà</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Aujourd’hui, nous allons abord la présentation de l’écosystème des applications Facebook.</p>
+
+<!--more-->
+
+<h2><a href="http://rkueny.fr/wp-content/uploads/2012/10/Capture-d’écran-2012-10-09-à-14.47.48.png" rel="lightbox[1637]"><img class="aligncenter size-full wp-image-1641" title="Développer une application Facebook" src="http://rkueny.fr/wp-content/uploads/2012/10/Capture-d’écran-2012-10-09-à-14.47.48.png" alt="" width="671" height="80" /></a></h2>
+
+<h2 id="les-différentes-applications-facebook">Les différentes applications Facebook</h2>
+
+<p>Un point qu’il vous faut tout d’abord connaitre lorsque vous voulez développer une application Facebook. Rien n’est hébergé sur la plateforme. Vous devez avoir votre serveur (avec un certificat ssl) ou utiliser un services comme Heroku. Nous reviendrons sur cette solution un peu plus tard. Mais, revenons en au sujet, quel type d’applications pouvez-vous créer ?</p>
+
+<p>Il existe 3 types d’applications possibles :</p>
+
+<ul>
+  <li><strong>Application Canvas :</strong> Il s’agit d’applications intégrées à Facebook. Un exemple : <a title="Song Pop" href="http://apps.facebook.com/songpop/?fb_source=appcenter&amp;fb_appcenter=1#_=_" target="_blank">Song Pop</a>. Vous êtes toujours sur Facebook, mais vous êtes entièrement dans votre univers. Ce type d’application correspond bien pour les jeux ou des applications nécessitant de la place.</li>
+  <li></li>
+  <li><strong>Application en onglet :</strong> Ce sont les applications les plus utilisées par les sociétés à ce jour. Ces applications permettent d’ajouter un onglet à votre page fan. Les applications peuvent être des jeux concours, un formulaire de contact ou encore juste un descriptif de la société. Ces applications ont le plus souvent pour but d’augmenter le nombre de fans.</li>
+  <li></li>
+  <li><strong>Application hors facebook :</strong> Ces applications ne sont plus dans le cadre Facebook mais directement sur vos sites. Si votre site comporte un plugin « Like » on peut déjà le considérer comme étant une application Facebook de part le fait qu’il fasse parti de l’écosystème, de l’Open Graph.</li>
+</ul>
+
+<p> </p>
+
+<p>Maintenant que vous connaissez un peu les différentes possibilités des applications Facebook, nous allons voir comment créer votre compte développeur ainsi que votre première application. Nous verrons très vite comment la configurer.</p>
+
+<p>Pour clore ce chapitre, et en attendant le suivant, voici quelques liens avec lesquels vous pouvez commencer à vous familiariser :</p>
+
+<ul>
+  <li>
+    <ul>
+      <li><a title="Documentation Facebook" href="http://developers.facebook.com/docs/" target="_blank">La documentation Facebook</a></li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li><a title="Facebook SDK" href="https://github.com/facebook/facebook-php-sdk" target="_blank">Le Facebook Sdk</a></li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li><a title="StackOverflow Facebook" href="http://facebook.stackoverflow.com/" target="_blank">StackOverflow Facebook</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Bonne lecture !</p>
+
+<p> </p>
+
+<p style="text-align:center">
+  <br />
+</p>
+:ET

@@ -1,0 +1,36 @@
+I"�<p>Poster un tweet via l’API twitter est très facile est la doc est très bien fournie sur le sujet. En revanche, pour répondre à un tweet précis il y a une chose à laquelle faire attention.</p>
+
+<p>En effet, ceci ne marchera pas :</p>
+
+<pre>
+<code class="php">$this-&gt;twitterClient-&gt;post
+    (
+        'statuses/update.json',
+         null,
+         array
+         (
+             'in_reply_to_status_id' =&gt;  $idMessageToReply,
+             'status'                =&gt;  '@rkueny Réponse à ton tweet !'
+         )
+     )
+-&gt;send();</code></pre>
+
+<p>Mais ceci oui :</p>
+
+<pre>
+<code class="php">$this-&gt;twitterClient-&gt;post
+    (
+        'statuses/update.json',
+         null,
+         array
+         (
+             'in_reply_to_status_id' =&gt;  $idMessageToReply,
+             'status'                =&gt;  'Réponse à ton tweet @rkueny !'
+         )
+     )
+-&gt;send();</code></pre>
+
+<p>Il suffit de ne pas commencer votre message par un @ et le reply fonctionnera. En revanche, si vous ne mettez pas du tout le pseudo de la personne le reply ne fonctionnera pas.</p>
+
+<p>C’est tout bête, mais si ça vous évite une prise de tête tant mieux !</p>
+:ET

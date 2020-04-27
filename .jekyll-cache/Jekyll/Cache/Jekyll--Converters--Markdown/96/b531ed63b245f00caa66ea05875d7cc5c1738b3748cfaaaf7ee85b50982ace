@@ -1,0 +1,107 @@
+I"�<p>Cela faisait un moment que je n’avais pas publié ce genre d’article. Du coup je me rattrape aujourd’hui vu que j’ai quelques sources à vous conseiller.</p>
+
+<p>Voici la liste :</p>
+
+<p>– Un livre : <span id="btAsinTitle"><a href="http://www.amazon.fr/Symfony-Mieux-d%C3%A9velopper-avec-doctrine/dp/2212124945" target="_blank">Mieux développer en PHP avec Symfony 1.2 et doctrine</a></span></p>
+
+<p><span>- Un article d’un magazine : </span><span>Le pathfinding pour jeu en PHP (<a href="http://www.phpsolmag.org/prt/view/actualies/issue/1069.html" target="_blank">PHP Solutions 5/2009</a>)</span></p>
+
+<p><span>- Vidéo : <a href="http://grafikart.fr/tutoriels/video/url-rewriting-71" target="_blank">Tutoriel « Url rewriting »</a></span></p>
+
+<p><span><!--more--></span></p>
+
+<p><span style="text-decoration: underline;"><strong><a href="http://www.amazon.fr/Symfony-Mieux-d%C3%A9velopper-avec-doctrine/dp/2212124945" target="_blank"></a></strong></span></p>
+
+<p><span style="text-decoration: underline;"><strong><a href="http://www.amazon.fr/Symfony-Mieux-d%C3%A9velopper-avec-doctrine/dp/2212124945" target="_blank">Mieux développer en PHP avec Symfony 1.2 et doctrine</a></strong></span></p>
+
+<div style="width: 250px" class="wp-caption alignleft">
+  <img title="Symfony : Mieux développer en PHP avec Symfony 1.2 et doctrine" src="http://ecx.images-amazon.com/images/I/51pHFLEJFHL._SL500_AA240_.jpg" alt="Symfony : Mieux développer en PHP avec Symfony 1.2 et doctrine" width="240" height="240" />
+  
+  <p class="wp-caption-text">
+    Symfony : Mieux développer en PHP avec Symfony 1.2 et doctrine
+  </p>
+</div>
+
+<p>Je me suis récemment mis à l’apprentissage du framework « <a href="http://www.symfony-project.org/" target="_blank">Symfony</a>« . Pourquoi celui-ci plutôt qu’une autre ? Par choix personnel et ce n’est pas le sujet ici <img src="http://rkueny.fr/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+<p>J’ai donc acheté ce livre et je n’ai absolument pas été déçu ! Très bien écrit (il se dévore), complet et écrit de main de maitre (l’un des créateurs du framework tout de même). Bienq ue se ne soit que la traduction française du tutoriel <a href="http://www.symfony-project.org/jobeet/1_2/" target="_blank">Jobeet</a>, il est tout de même enrichi. De plus, je préfère le support papier pour ma part.</p>
+
+<p><em>de [Fabien Potencier][1] (Auteur), [Hugo Hamon][2] (Auteur) Prix : EUR 37,05 (amazon)</em></p>
+
+<p>————————————————————————————-</p>
+
+<p><span style="text-decoration: underline;"><strong><span>Le pathfinding pour jeu en PHP (<a href="http://www.phpsolmag.org/prt/view/actualies/issue/1069.html" target="_blank">PHP Solutions 5/2009</a>)</span></strong></span></p>
+
+<p><span style="text-decoration: underline;"><strong><span>&lt;/p&gt;</span></strong></span></p>
+
+<div style="width: 202px" class="wp-caption alignleft">
+  <img title="PHP Solutions (5/2009)" src="http://www.phpsolmag.org//files/phpsolmag/Cover/PHP_05_2009.jpg" alt="PHP Solutions (5/2009)" width="192" height="273" />
+  
+  <p class="wp-caption-text">
+    PHP Solutions (5/2009)
+  </p>
+</div>
+
+<p>
+  &lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;
+</p>
+
+<p>
+  Le dernier numéro nous propose un article d&rsquo;<span><em>Alexandre Gonzalez</em>. En voici le résumé :</span>
+</p>
+
+<p>
+  <span><br /> </span><span> <em>Le pathfinding ou comment trouver le chemin le plus court vers une destination au choix de l’algorithme d’Intelligence Artificielle. Cet article vous permettra de définir quel algorithme est le plus adapté aux besoins d’un jeu ou plus généralement d’un système de déplacement mais aussi sous quelle forme l’implémenter.</em></span>
+</p>
+
+<p>
+  <span>A lire si le sujet vous intéresse.</span>
+</p>
+
+<p>
+  <span><em>phpsolutions (5/2009) Prix : EUR 7,5</em></span>
+</p>
+
+<p>
+  &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+</p>
+
+<p>
+  <span style="text-decoration: underline;"><strong><span> <a href="http://grafikart.fr/tutoriels/video/url-rewriting-71" target="_blank">Tutoriel &laquo;&nbsp;Url rewriting&nbsp;&raquo;</a></span></strong></span>
+</p>
+
+<p style="text-align: left;">
+  <span style="text-decoration: underline;"><strong><span>&lt;/p&gt; 
+  
+  <div style="width: 391px" class="wp-caption alignleft">
+    <img title="Grafik Art" src="http://grafikart.fr/img/logo.png" alt="Grafik Art" width="381" height="52" />
+    
+    <p class="wp-caption-text">
+      Grafik Art
+    </p>
+  </div>
+  
+  <p>
+    &lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;
+  </p>
+  
+  <p>
+    <span>Je connais ce site depuis un petit moment et je vous le présente donc. Plusieurs tutoriels s&rsquo;adressant essentiellement aux personnes de niveau bas à moyen en php. Bien expliqué, assez bien réalisé. </span>
+  </p>
+  
+  <p>
+    <span>A voir : <a href="http://grafikart.fr/" target="_blank">Grafik Art</a><br /> </span>
+  </p>
+  
+  <p>
+    <span><br /> </span>
+  </p>
+  
+  <p>
+    <span><br /> </span>
+  </p>
+
+ [1]: http://www.amazon.fr/exec/obidos/search-handle-url?%5Fencoding=UTF8&amp;search-type=ss&amp;index=books-fr&amp;field-author=Fabien%20Potencier
+ [2]: http://www.amazon.fr/exec/obidos/search-handle-url?%5Fencoding=UTF8&amp;search-type=ss&amp;index=books-fr&amp;field-author=Hugo%20Hamon
+</span></strong></span></p>
+:ET
