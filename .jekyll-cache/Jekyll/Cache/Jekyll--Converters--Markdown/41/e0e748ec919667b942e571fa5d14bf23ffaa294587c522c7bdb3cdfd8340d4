@@ -1,4 +1,4 @@
-I"�<p>Après une grosse phase de gestation, j’ai enfin sorti l’application “L’Over pass” ce 12 mai. Celle-ci est bien entendue développée avec Titanium appcelerator et le framework Alloy.</p>
+I"V<p>Après une grosse phase de gestation, j’ai enfin sorti l’application “L’Over pass” ce 12 mai. Celle-ci est bien entendue développée avec Titanium appcelerator et le framework Alloy.</p>
 
 <h2 id="lover-pass-cest-quoi-">L’Over pass c’est quoi ?</h2>
 
@@ -26,13 +26,13 @@
 <p>Je vous mets ici la présentation de l’application sur iOS :</p>
 
 <div style="width:100%;margin-bottom:15px;">
-  <img src="http://localhost:4000/img/ios/screen1.jpg" alt="Screen 1 iOS" style="width:48%;margin-right:4%;display:inline;" />
-  <img src="http://localhost:4000/img/ios/screen2.jpg" alt="Screen 2 iOS" style="width:47%;display:inline;" />
+  <img src="/img/ios/screen1.jpg" alt="Screen 1 iOS" style="width:48%;margin-right:4%;display:inline;" />
+  <img src="/img/ios/screen2.jpg" alt="Screen 2 iOS" style="width:47%;display:inline;" />
 </div>
 
 <div style="width:100%;margin-bottom:15px;">
-  <img src="http://localhost:4000/img/ios/screen3.jpg" alt="Screen 3 iOS" style="width:48%;margin-right:4%;display:inline;" />
-  <img src="http://localhost:4000/img/ios/screen5.jpg" alt="Screen 4 iOS" style="width:47%;display:inline;" />
+  <img src="/img/ios/screen3.jpg" alt="Screen 3 iOS" style="width:48%;margin-right:4%;display:inline;" />
+  <img src="/img/ios/screen5.jpg" alt="Screen 4 iOS" style="width:47%;display:inline;" />
 </div>
 
 <p>D’ailleurs, j’ai généré cette présentation avec le site <a href="https://launchkit.io/screenshots/onboard">LaunchKit.io</a>, je vous le conseille pour faire votre présentation pour votre application iOS.</p>
@@ -58,5 +58,5 @@
 
 <p>Je suis aussi en train de finir un service web et je continue de jouer avec Unity3D pour sortir un jeu sur mobile sous peu.</p>
 
-<p><strong>De plus, si vous désirez faire développer une application iOS et/ou Android, n’hésitez pas <a href="http://localhost:4000/contact">à me contacter</a> pour travailler avec moi</strong></p>
+<p><strong>De plus, si vous désirez faire développer une application iOS et/ou Android, n’hésitez pas <a href="/contact">à me contacter</a> pour travailler avec moi</strong></p>
 :ET
